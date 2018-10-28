@@ -1,0 +1,26 @@
+{
+    "name": "zymawy/ironside",
+    "description": "Useful classes you can use for every Laravel project",
+	"keywords": ["laravel", "titan", "traits", "controllers", "models", "helpers"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hamza Zymawy",
+            "email": "zymawy@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+	"autoload": {
+		"psr-4": {
+			"Ironisde\\": "src/"
+		},
+		"files": [
+            "src/Helpers/helpers.php",
+            "src/Helpers/view_helpers.php",
+            "src/Helpers/form_helpers.php",
+            "src/Helpers/upload_helpers.php"
+		]
+	}
+}
