@@ -1,8 +1,8 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Traits;
+namespace Zymawy\Ironside\Http\Controllers\Traits;
 
-use Bpocallaghan\Titan\Models\Category;
+use Zymawy\Ironside\Models\Category;
 use ReflectionClass;
 
 trait ContentHelper

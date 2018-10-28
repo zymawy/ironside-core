@@ -1,8 +1,8 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models\Traits;
+namespace Zymawy\Ironside\Models\Traits;
 
-use Bpocallaghan\Titan\Models\Document;
+use Zymawy\Ironside\Models\Document;
 
 trait Documentable
 {

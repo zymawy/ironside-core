@@ -1,10 +1,10 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Website;
+namespace Zymawy\Ironside\Http\Controllers\Website;
 
 use Illuminate\Http\Request;
-use Bpocallaghan\Titan\Models\Page;
-use Bpocallaghan\Titan\Models\Banner;
+use Zymawy\Ironside\Models\Page;
+use Zymawy\Ironside\Models\Banner;
 use App\Http\Requests;
 
 class WebsiteController extends BaseWebsiteController

@@ -1,12 +1,12 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Website;
+namespace Zymawy\Ironside\Http\Controllers\Website;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use Bpocallaghan\Titan\Models\FeedbackContactUs;
-use Bpocallaghan\Titan\Events\ContactUsFeedback;
-use Bpocallaghan\Titan\Http\Controllers\Traits\GoogleCaptcha;
+use Zymawy\Ironside\Models\FeedbackContactUs;
+use Zymawy\Ironside\Events\ContactUsFeedback;
+use Zymawy\Ironside\Http\Controllers\Traits\GoogleCaptcha;
 
 class ContactUsController extends WebsiteController
 {

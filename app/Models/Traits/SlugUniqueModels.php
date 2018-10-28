@@ -1,6 +1,6 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models\Traits;
+namespace Zymawy\Ironside\Models\Traits;
 
 trait SlugUniqueModels
 {

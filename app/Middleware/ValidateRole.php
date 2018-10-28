@@ -1,10 +1,10 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Middleware;
+namespace Zymawy\Ironside\Http\Middleware;
 
 use Auth;
 use Closure;
-use Bpocallaghan\Titan\Models\NavigationAdmin;
+use Zymawy\Ironside\Models\NavigationAdmin;
 
 class ValidateRole
 {

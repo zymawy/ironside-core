@@ -1,10 +1,10 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models\Traits;
+namespace Zymawy\Ironside\Models\Traits;
 
 use DB;
-use Bpocallaghan\Titan\Models\News;
-use Bpocallaghan\Titan\Models\NewsTag;
+use Zymawy\Ironside\Models\News;
+use Zymawy\Ironside\Models\NewsTag;
 
 trait TaggedNews
 {

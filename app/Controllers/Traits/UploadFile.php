@@ -1,6 +1,6 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Traits;
+namespace Zymawy\Ironside\Http\Controllers\Traits;
 
 use Image;
 use Notify;

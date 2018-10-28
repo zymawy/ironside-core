@@ -1,6 +1,6 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models;
+namespace Zymawy\Ironside\Models;
 
 use App\User;
 use Illuminate\Database\Eloquent\Model;

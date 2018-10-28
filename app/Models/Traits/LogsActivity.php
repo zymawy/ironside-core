@@ -1,9 +1,9 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models\Traits;
+namespace Zymawy\Ironside\Models\Traits;
 
 use ReflectionClass;
-use Bpocallaghan\Titan\Models\LogAdminActivity;
+use Ironside\Titan\Models\LogDashboardActivity;
 
 trait LogsActivity
 {
@@ -44,7 +44,7 @@ trait LogsActivity
         }
 
         // log adjustment
-        LogAdminActivity::create([
+        LogDashboardActivity::create([
             'subject_id'   => $this->id,
             'subject_type' => get_class($this),
             'name'         => $this->getActivityName($this, $event),

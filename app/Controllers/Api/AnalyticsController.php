@@ -1,10 +1,10 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Api;
+namespace Zymawy\Ironside\Http\Controllers\Api;
 
 use Analytics;
 use App\Http\Requests;
-use Bpocallaghan\Titan\Http\Controllers\Traits\GoogleAnalyticsHelper;
+use Zymawy\Ironside\Http\Controllers\Traits\GoogleAnalyticsHelper;
 
 class AnalyticsController extends ApiController
 {

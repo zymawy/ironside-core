@@ -1,8 +1,8 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models;
+namespace Zymawy\Ironside\Models;
 
-use Bpocallaghan\Titan\Models\TitanCMSModel;
+use Zymawy\Ironside\Models\IronsideCMSModel;
 use Bpocallaghan\Sluggable\HasSlug;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * Class NewsCategory
  * @mixin \Eloquent
  */
-class NewsCategory extends TitanCMSModel
+class NewsCategory extends IronsideCMSModel
 {
     use SoftDeletes, HasSlug;
 

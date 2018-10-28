@@ -1,6 +1,6 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Api;
+namespace Zymawy\Ironside\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 

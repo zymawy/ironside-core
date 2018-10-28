@@ -251,6 +251,6 @@ if (!function_exists('log_activity')) {
      */
     function log_activity($title = '', $description = '', $eloquent = null)
     {
-        event(new Bpocallaghan\Titan\Events\ActivityWasTriggered($title, $description, $eloquent));
+        event(new Zymawy\Ironside\Events\ActivityWasTriggered($title, $description, $eloquent));
     }
 }

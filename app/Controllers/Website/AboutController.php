@@ -1,6 +1,6 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Website;
+namespace Zymawy\Ironside\Http\Controllers\Website;
 
 use Illuminate\Http\Request;
 

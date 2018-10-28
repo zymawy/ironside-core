@@ -1,8 +1,8 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Website;
+namespace Zymawy\Ironside\Http\Controllers\Website;
 
-use Bpocallaghan\Titan\Models\PhotoAlbum;
+use Zymawy\Ironside\Models\PhotoAlbum;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;

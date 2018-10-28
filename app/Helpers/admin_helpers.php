@@ -1,7 +1,7 @@
 <?php
 
 use App\User;
-use Bpocallaghan\Titan\Models\Role;
+use Zymawy\Ironside\Models\Role;
 
 if (!function_exists('notify_admins')) {
     function notify_admins($class, $argument, $forceEmail = "")

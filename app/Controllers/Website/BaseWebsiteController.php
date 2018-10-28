@@ -1,8 +1,8 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Website;
+namespace Zymawy\Ironside\Http\Controllers\Website;
 
-use Bpocallaghan\Titan\Models\Page;
+use Zymawy\Ironside\Models\Page;
 use App\Http\Controllers\Controller;
 
 class BaseWebsiteController extends Controller

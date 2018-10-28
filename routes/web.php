@@ -101,10 +101,10 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function () {
 
 /*
 |------------------------------------------
-| Admin (when authorized and admin)
+| Dashboard (when authorized and admin)
 |------------------------------------------
 */
-Route::group(['middleware' => ['auth', 'auth.admin'], 'prefix' => 'admin', 'namespace' => 'Admin'],
+Route::group(['middleware' => ['auth', 'auth.admin'], 'prefix' => 'dashboard', 'namespace' => 'Dashboard'],
     function () {
         Route::get('/', 'DashboardController@index')->name('admin');
 
@@ -124,7 +124,7 @@ Route::group(['middleware' => ['auth', 'auth.admin'], 'prefix' => 'admin', 'name
         // history
         Route::group(['prefix' => 'latest-activity', 'namespace' => 'History'], function () {
             Route::get('/', 'HistoryController@website');
-            Route::get('/admin', 'HistoryController@admin');
+            Route::get('/dashboard', 'HistoryController@admin');
             Route::get('/website', 'HistoryController@website');
         });
 
@@ -155,7 +155,7 @@ Route::group(['middleware' => ['auth', 'auth.admin'], 'prefix' => 'admin', 'name
         // blog
         Route::group(['prefix' => 'blog', 'namespace' => 'Blog'], function () {
             Route::get('/', function () {
-                return redirect('/admin/blog/articles');
+                return redirect('/dashboard/blog/articles');
             });
             Route::resource('categories', 'CategoriesController');
             Route::resource('articles', 'ArticlesController');

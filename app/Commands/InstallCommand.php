@@ -1,6 +1,6 @@
 <?php
 
-namespace Bpocallaghan\Titan\Commands;
+namespace Zymawy\Ironside\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\GeneratorCommand;

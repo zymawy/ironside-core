@@ -1,14 +1,14 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Traits;
+namespace Zymawy\Ironside\Http\Controllers\Traits;
 
 use ReflectionClass;
-use Bpocallaghan\Titan\Models\Video;
-use Bpocallaghan\Titan\Models\Gigapan;
-use Bpocallaghan\Titan\Models\Video360;
-use Bpocallaghan\Titan\Models\VirtualTour;
-use Bpocallaghan\Titan\Models\Photography;
-use Bpocallaghan\Titan\Models\Illustration;
+use Zymawy\Ironside\Models\Video;
+use Zymawy\Ironside\Models\Gigapan;
+use Zymawy\Ironside\Models\Video360;
+use Zymawy\Ironside\Models\VirtualTour;
+use Zymawy\Ironside\Models\Photography;
+use Zymawy\Ironside\Models\Illustration;
 
 trait PopupEntry
 {

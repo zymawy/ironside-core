@@ -1,6 +1,6 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Auth;
+namespace Zymawy\Ironside\Http\Controllers\Auth;
 
 use Password;
 use App\Http\Requests;

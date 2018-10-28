@@ -1,5 +1,5 @@
 <?php
-namespace Bpocallaghan\Titan\Seeds;
+namespace Zymawy\Ironside\Seeds;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

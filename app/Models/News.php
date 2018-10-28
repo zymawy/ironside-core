@@ -1,20 +1,19 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models;
+namespace Zymawy\Ironside\Models;
 
-use Bpocallaghan\Titan\Models\Traits\Photoable;
+use Zymawy\Ironside\Models\Traits\Photoable;
 use App\User;
 use Bpocallaghan\Sluggable\HasSlug;
 use Bpocallaghan\Sluggable\SlugOptions;
-use Bpocallaghan\Titan\Models\TitanCMSModel;
-use Bpocallaghan\Titan\Models\Traits\ActiveTrait;
+use Zymawy\Ironside\Models\Traits\ActiveTrait;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class News
  * @mixin \Eloquent
  */
-class News extends TitanCMSModel
+class News extends IronsideCMSModel
 {
     use SoftDeletes, HasSlug, ActiveTrait, Photoable;
 

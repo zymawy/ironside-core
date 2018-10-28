@@ -1,8 +1,8 @@
 <?php
 
-namespace Bpocallaghan\Titan\Mail;
+namespace Zymawy\Ironside\Mail;
 
-use Bpocallaghan\Titan\Models\UserInvite;
+use Zymawy\Ironside\Models\UserInvite;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;

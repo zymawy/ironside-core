@@ -1,9 +1,9 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models;
+namespace Zymawy\Ironside\Models;
 
-use Bpocallaghan\Titan\Models\Traits\Photoable;
-use Bpocallaghan\Titan\Models\TitanCMSModel;
+use Zymawy\Ironside\Models\Traits\Photoable;
+use Zymawy\Ironside\Models\IronsideCMSModel;
 use Bpocallaghan\Sluggable\HasSlug;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * Class PhotoAlbum
  * @mixin \Eloquent
  */
-class PhotoAlbum extends TitanCMSModel
+class PhotoAlbum extends IronsideCMSModel
 {
     use SoftDeletes, HasSlug, Photoable;
 

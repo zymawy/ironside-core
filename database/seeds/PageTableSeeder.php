@@ -1,11 +1,11 @@
 <?php
 
-namespace Bpocallaghan\Titan\Seeds;
+namespace Zymawy\Ironside\Seeds;
 
-use Bpocallaghan\Titan\Models\PageContent;
-use Bpocallaghan\Titan\Models\Photo;
+use Zymawy\Ironside\Models\PageContent;
+use Zymawy\Ironside\Models\Photo;
 use Illuminate\Database\Seeder;
-use Bpocallaghan\Titan\Models\Page;
+use Zymawy\Ironside\Models\Page;
 
 class PageTableSeeder extends Seeder
 {

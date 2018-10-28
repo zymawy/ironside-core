@@ -1,12 +1,12 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models;
+namespace Zymawy\Ironside\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use PhpParser\Node\Expr\AssignOp\Mod;
-use Bpocallaghan\Titan\Models\TitanCMSModel;
-use Bpocallaghan\Titan\Models\Traits\ModifyBy;
+use  Zymawy\Ironside\Models\IronsideCMSModel;
+use  Zymawy\Ironside\Models\Traits\ModifyBy;
 
 /**
  * Class Document

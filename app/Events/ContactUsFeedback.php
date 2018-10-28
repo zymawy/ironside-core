@@ -1,9 +1,9 @@
 <?php
 
-namespace Bpocallaghan\Titan\Events;
+namespace Zymawy\Ironside\Events;
 
-use Bpocallaghan\Titan\Events\Event;
-use Bpocallaghan\Titan\Models\FeedbackContactUs;
+use Zymawy\Ironside\Events\Event;
+use Zymawy\Ironside\Models\FeedbackContactUs;
 
 class ContactUsFeedback extends BaseEvent
 {

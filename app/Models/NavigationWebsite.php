@@ -1,10 +1,10 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models;
+namespace Zymawy\Ironside\Models;
 
-use Bpocallaghan\Titan\Models\TitanWebsiteNavigation;
+use Zymawy\Ironside\Models\IronsideWebsiteNavigation;
 
-class NavigationWebsite extends TitanWebsiteNavigation
+class NavigationWebsite extends IronsideWebsiteNavigation
 {
     /**
      * Get all the rows as an array (ready for dropdowns)

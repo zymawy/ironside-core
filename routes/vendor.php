@@ -50,7 +50,7 @@ Route::resource('pricing', 'Subscriptions\Controllers\Website\SubscriptionsContr
 |--------------------------------------------------------------------------
 */
 Route::group([
-    'prefix'     => 'admin',
+    'prefix'     => 'dashboard',
     'middleware' => ['auth', 'auth.admin']
 ], function () {
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Auth;
+namespace Zymawy\Ironside\Http\Controllers\Auth;
 
 use App\User;
 use Carbon\Carbon;
-use Bpocallaghan\Titan\Models\UserInvite;
+use Zymawy\Ironside\Models\UserInvite;
 use Illuminate\Http\Request;
-use Bpocallaghan\Titan\Events\UserRegistered;
-use Bpocallaghan\Titan\Notifications\UserConfirmedAccount;
+use Zymawy\Ironside\Events\UserRegistered;
+use Zymawy\Ironside\Notifications\UserConfirmedAccount;
 
 class RegisterController extends AuthController
 {

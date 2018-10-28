@@ -1,19 +1,25 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models;
+namespace Zymawy\Ironside\Models;
 
-use Bpocallaghan\Titan\Models\Traits\UserAdmin;
-use Bpocallaghan\Titan\Models\Traits\UserHelper;
-use Bpocallaghan\Titan\Models\Traits\UserRoles;
+use Zymawy\Ironside\Models\Traits\UserAdmin;
+use Zymawy\Ironside\Models\Traits\UserHelper;
+use Zymawy\Ironside\Models\Traits\UserRoles;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laratrust\Traits\LaratrustUserTrait;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
-    use Notifiable, SoftDeletes, UserHelper, UserRoles, UserAdmin;
+    use LaratrustUserTrait;
+
+    use Notifiable, SoftDeletes ,UserHelper;
+
 
     protected $appends = ['fullname'];
+
     /**
      * The attributes that are mass assignable.
      *
@@ -37,6 +43,7 @@ class User extends Authenticatable
         'confirmed_at',
         'disabled_at',
     ];
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -49,7 +56,7 @@ class User extends Authenticatable
         'deleted_at',
         'logged_in_at',
         'confirmation_token',
-        'disabled_at'
+        'disabled_at',
     ];
 
     protected $dates = ['confirmed_at', 'deleted_at', 'logged_in_at', 'activated_at'];
@@ -57,25 +64,48 @@ class User extends Authenticatable
     /**
      * Validation rules for this model
      */
-    static public $rules = [
+    public static $rules = [
         'firstname' => 'required',
-        'lastname'  => 'required',
+        'lastname' => 'required',
         //'gender'    => 'required|in:male,female',
-        'email'     => 'required|email|unique:users',
-        'password'  => 'required|min:4|confirmed',
+        'email' => 'required|email|unique:users',
+        'password' => 'required|min:4|confirmed',
         //'token'     => 'required|exists:user_invites,token',
+
         //'cellphone' => 'required|min:3:max:255',
         //'photo'     => 'required|image|max:6000|mimes:jpg,jpeg,png,bmp',
     ];
+
     /**
      * Validation rules for this model
      */
-    static public $rulesProfile = [
+    public static $rulesProfile = [
         'firstname' => 'required',
-        'lastname'  => 'required',
-        'gender'    => 'required|in:male,female',
-        'telephone' => 'nullable|min:9',
-        'password'  => 'nullable|min:4|confirmed',
-        'photo'     => 'required|image|max:6000|mimes:jpg,jpeg,png,bmp',
+        'lastname' => 'required',
+        'gender' => 'required|in:male,female',
+        'avter' => 'required|image|max:6000|mimes:jpg,jpeg,png,bmp',
     ];
+    /**
+     * Determine if the user has verified their email address.
+     *
+     * @return bool
+     */
+    public function hasVerifiedEmail()
+    {}
+
+    /**
+     * Mark the given user's email as verified.
+     *
+     * @return bool
+     */
+    public function markEmailAsVerified()
+    {}
+
+    /**
+     * Send the email verification notification.
+     *
+     * @return void
+     */
+    public function sendEmailVerificationNotification()
+    {}
 }

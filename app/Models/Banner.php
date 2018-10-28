@@ -1,15 +1,15 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models;
+namespace Zymawy\Ironside\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Bpocallaghan\Titan\Models\TitanCMSModel;
-use Bpocallaghan\Titan\Models\Traits\ActiveTrait;
-use Bpocallaghan\Titan\Models\Traits\ImageThumb;
+use  Zymawy\Ironside\Models\IronsideCMSModel;
+use  Zymawy\Ironside\Models\Traits\ActiveTrait;
+use  Zymawy\Ironside\Models\Traits\ImageThumb;
 
-class Banner extends TitanCMSModel
+class Banner extends IronsideCMSModel
 {
     use SoftDeletes, ActiveTrait, ImageThumb;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Website;
+namespace Zymawy\Ironside\Http\Controllers\Website;
 
 use App\Http\Requests;
-use Bpocallaghan\Titan\Models\News;
+use Zymawy\Ironside\Models\News;
 
 class HomeController extends WebsiteController
 {

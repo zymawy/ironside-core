@@ -1,10 +1,10 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models\Traits;
+namespace Zymawy\Ironside\Models\Traits;
 
-use Bpocallaghan\Titan\Models\Image;
+use Zymawy\Ironside\Models\Image;
 use DB;
-use Bpocallaghan\Titan\Models\ImageTag;
+use Zymawy\Ironside\Models\ImageTag;
 
 trait TaggedImages
 {

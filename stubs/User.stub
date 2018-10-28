@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Bpocallaghan\Titan\Models\TitanUser;
+use Zymawy\Ironside\Models\TitanUser;
 
 class User extends TitanUser
 {

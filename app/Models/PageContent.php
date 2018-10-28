@@ -1,18 +1,18 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models;
+namespace Zymawy\Ironside\Models;
 
-use Bpocallaghan\Titan\Models\TitanCMSModel;
-use Bpocallaghan\Titan\Models\Traits\Photoable;
-use Bpocallaghan\Titan\Models\Traits\Documentable;
-use Bpocallaghan\Titan\Models\Traits\ImageThumb;
+use Zymawy\Ironside\Models\IronsideCMSModel;
+use Zymawy\Ironside\Models\Traits\Photoable;
+use Zymawy\Ironside\Models\Traits\Documentable;
+use Zymawy\Ironside\Models\Traits\ImageThumb;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class PageContent
  * @mixin \Eloquent
  */
-class PageContent extends TitanCMSModel
+class PageContent extends IronsideCMSModel
 {
     use SoftDeletes, Documentable, Photoable, ImageThumb;
 

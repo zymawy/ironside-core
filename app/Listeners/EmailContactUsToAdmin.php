@@ -1,9 +1,9 @@
 <?php
 
-namespace Bpocallaghan\Titan\Listeners;
+namespace Zymawy\Ironside\Listeners;
 
-use Bpocallaghan\Titan\Events\ContactUsFeedback;
-use Bpocallaghan\Titan\Notifications\ContactUsSubmitted;
+use Zymawy\Ironside\Events\ContactUsFeedback;
+use Zymawy\Ironside\Notifications\ContactUsSubmitted;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 

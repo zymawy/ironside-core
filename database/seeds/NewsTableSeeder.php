@@ -1,8 +1,8 @@
 <?php
-namespace Bpocallaghan\Titan\Seeds;
-use Bpocallaghan\Titan\Models\NewsCategory;
+namespace Zymawy\Ironside\Seeds;
+use Zymawy\Ironside\Models\NewsCategory;
 use Illuminate\Database\Seeder;
-use Bpocallaghan\Titan\Models\News;
+use Zymawy\Ironside\Models\News;
 
 class NewsTableSeeder extends Seeder
 {

@@ -1,18 +1,18 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models;
+namespace Zymawy\Ironside\Models;
 
-use Bpocallaghan\Titan\Models\Traits\PageHelper;
+use Zymawy\Ironside\Models\Traits\PageHelper;
 use Bpocallaghan\Sluggable\HasSlug;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Bpocallaghan\Titan\Models\TitanCMSModel;
+use Zymawy\Ironside\Models\IronsideCMSModel;
 
 /**
  * Class Page
  * @mixin \Eloquent
  */
-class Page extends TitanCMSModel
+class Page extends IronsideCMSModel
 {
     use SoftDeletes, PageHelper/*, HasSlug*/;
 

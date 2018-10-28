@@ -1,6 +1,6 @@
 <?php
 
-namespace Bpocallaghan\Titan\Commands;
+namespace Zymawy\Ironside\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Console\GeneratorCommand;
@@ -39,7 +39,7 @@ class PublishCommand extends Command
 
     private $appNamespace = "namespace App";
 
-    private $baseNamespace = "namespace Bpocallaghan\Titan";
+    private $baseNamespace = "namespace Zymawy\Ironside";
 
     /**
      * Create a new controller creator command instance.
@@ -217,7 +217,7 @@ class PublishCommand extends Command
 
         // copy RouteServiceProvider
         $source = $this->appPath . "Providers{$this->ds}RouteServiceProvider.php";
-        $this->copyFilesFromSource($source, app_path('Providers'), "namespace Bpocallaghan\Titan", "namespace App");
+        $this->copyFilesFromSource($source, app_path('Providers'), "namespace Zymawy\Ironside", "namespace App");
     }
 
     /**
@@ -228,7 +228,7 @@ class PublishCommand extends Command
      * @param string $replace
      * @param bool   $allFolders
      */
-    private function copyFilesFromSource($source, $destination, $search = 'Bpocallaghan\Titan', $replace = "App", $allFolders = true)
+    private function copyFilesFromSource($source, $destination, $search = 'Zymawy\Ironside', $replace = "App", $allFolders = true)
     {
         // destination
         $destination = $this->formatFilePath($destination . $this->ds);

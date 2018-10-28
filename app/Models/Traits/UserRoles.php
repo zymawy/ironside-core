@@ -1,8 +1,8 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models\Traits;
+namespace Zymawy\Ironside\Models\Traits;
 
-use Bpocallaghan\Titan\Models\Role;
+use Zymawy\Ironside\Models\Role;
 
 trait UserRoles
 {

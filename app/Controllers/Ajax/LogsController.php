@@ -1,11 +1,11 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Ajax;
+namespace Zymawy\Ironside\Http\Controllers\Ajax;
 
 use App\Http\Requests;
-use Bpocallaghan\Titan\Models\Page;
+use Zymawy\Ironside\Models\Page;
 use Illuminate\Http\Request;
-use Bpocallaghan\Titan\Models\LogSocialShare;
+use Zymawy\Ironside\Models\LogSocialShare;
 
 class LogsController extends AjaxController
 {

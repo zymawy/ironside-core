@@ -1,7 +1,7 @@
 <?php
-namespace Bpocallaghan\Titan\Seeds;
+namespace Zymawy\Ironside\Seeds;
 use Illuminate\Database\Seeder;
-use Bpocallaghan\Titan\Models\Banner;
+use Zymawy\Ironside\Models\Banner;
 
 class BannerTableSeeder extends Seeder
 {

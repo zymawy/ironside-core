@@ -1,6 +1,6 @@
 <?php
 
-namespace Bpocallaghan\Titan\Notifications;
+namespace Zymawy\Ironside\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Auth;
+namespace Zymawy\Ironside\Http\Controllers\Auth;
 
 use App\Http\Requests;
-use Bpocallaghan\Titan\Models\LogLogin;
+use Zymawy\Ironside\Models\LogLogin;
 use Illuminate\Http\Request;
-use Bpocallaghan\Titan\Http\Controllers\Website\WebsiteController;
+use Zymawy\Ironside\Http\Controllers\Website\WebsiteController;
 
 class AuthController extends WebsiteController
 {

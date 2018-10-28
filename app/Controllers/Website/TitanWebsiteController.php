@@ -1,9 +1,9 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Website;
+namespace Zymawy\Ironside\Http\Controllers\Website;
 
 use App\Http\Requests;
-use Bpocallaghan\Titan\Models\NavigationWebsite;
+use Zymawy\Ironside\Models\NavigationWebsite;
 use Titan\Controllers\Traits\BreadcrumbWebsite;
 
 class TitanWebsiteController extends TitanController

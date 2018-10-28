@@ -1,9 +1,9 @@
 <?php
 
-namespace Bpocallaghan\Titan\Listeners;
+namespace Zymawy\Ironside\Listeners;
 
-use Bpocallaghan\Titan\Mail\ClientContactUs;
-use Bpocallaghan\Titan\Events\ContactUsFeedback;
+use Zymawy\Ironside\Mail\ClientContactUs;
+use Zymawy\Ironside\Events\ContactUsFeedback;
 
 class EmailContactUsToClient
 {

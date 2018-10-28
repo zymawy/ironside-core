@@ -1,6 +1,6 @@
 <?php
 
-namespace Bpocallaghan\Titan\Providers;
+namespace Zymawy\Ironside\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -14,15 +14,15 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $listen = [
         // auth
-        'Bpocallaghan\Titan\Events\UserRegistered' => [],
+        'Zymawy\Ironside\Events\UserRegistered' => [],
 
         // log actions
-        'Bpocallaghan\Titan\Events\ActivityWasTriggered' => [
-            'Bpocallaghan\Titan\Listeners\SaveActivity',
+        'Zymawy\Ironside\Events\ActivityWasTriggered' => [
+            'Zymawy\Ironside\Listeners\SaveActivity',
         ],
-        'Bpocallaghan\Titan\Events\ContactUsFeedback' => [
-            'Bpocallaghan\Titan\Listeners\EmailContactUsToClient',
-            'Bpocallaghan\Titan\Listeners\EmailContactUsToAdmin',
+        'Zymawy\Ironside\Events\ContactUsFeedback' => [
+            'Zymawy\Ironside\Listeners\EmailContactUsToClient',
+            'Zymawy\Ironside\Listeners\EmailContactUsToAdmin',
         ],
     ];
 

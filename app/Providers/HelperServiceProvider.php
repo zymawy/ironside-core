@@ -1,6 +1,6 @@
 <?php
 
-namespace Bpocallaghan\Titan\Providers;
+namespace Zymawy\Ironside\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

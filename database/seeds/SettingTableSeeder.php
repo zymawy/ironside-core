@@ -1,7 +1,7 @@
 <?php
-namespace Bpocallaghan\Titan\Seeds;
+namespace Zymawy\Ironside\Seeds;
 use Illuminate\Database\Seeder;
-use Bpocallaghan\Titan\Models\Settings;
+use Zymawy\Ironside\Models\Settings;
 
 class SettingTableSeeder extends Seeder
 {

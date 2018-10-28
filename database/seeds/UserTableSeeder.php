@@ -1,9 +1,9 @@
 <?php
-namespace Bpocallaghan\Titan\Seeds;
+namespace Zymawy\Ironside\Seeds;
 use App\User;
-use Bpocallaghan\Titan\Commands\InstallCommand;
+use Zymawy\Ironside\Commands\InstallCommand;
 use Carbon\Carbon;
-use Bpocallaghan\Titan\Models\Role;
+use Zymawy\Ironside\Models\Role;
 use Illuminate\Database\Seeder;
 
 class UserTableSeeder extends Seeder
@@ -14,11 +14,11 @@ class UserTableSeeder extends Seeder
         \DB::delete('TRUNCATE role_user');
 
         //-------------------------------------------------
-        // Default Admin
+        // Default Dashboard
         //-------------------------------------------------
         $user = User::create([
             'firstname'    => 'Laravel',
-            'lastname'     => 'Admin',
+            'lastname'     => 'Dashboard',
             'cellphone'    => '123456789',
             'email'        => 'admin@laravel.local',
             'gender'       => 'ninja',

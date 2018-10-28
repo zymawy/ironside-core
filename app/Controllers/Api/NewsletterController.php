@@ -1,10 +1,10 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Api;
+namespace Zymawy\Ironside\Http\Controllers\Api;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use Bpocallaghan\Titan\Models\NewsletterSubscriber;
+use Zymawy\Ironside\Models\NewsletterSubscriber;
 
 class NewsletterController extends ApiController
 {

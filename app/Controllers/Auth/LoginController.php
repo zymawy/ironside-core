@@ -1,11 +1,11 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Auth;
+namespace Zymawy\Ironside\Http\Controllers\Auth;
 
 use App\User;
 use Auth;
 use Carbon\Carbon;
-use Bpocallaghan\Titan\Models\LogLogin;
+use Zymawy\Ironside\Models\LogLogin;
 use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 

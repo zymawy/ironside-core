@@ -1,11 +1,11 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Website\Account;
+namespace Zymawy\Ironside\Http\Controllers\Website\Account;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use Bpocallaghan\FAQ\Models\FAQ;
-use Bpocallaghan\Titan\Http\Controllers\Website\WebsiteController;
+use Zymawy\Ironside\Http\Controllers\Website\WebsiteController;
 
 class AccountController extends WebsiteController
 {

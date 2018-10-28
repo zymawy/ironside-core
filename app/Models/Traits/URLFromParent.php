@@ -1,8 +1,8 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models\Traits;
+namespace Zymawy\Ironside\Models\Traits;
 
-use Bpocallaghan\Titan\Models\LogAdminActivity;
+use Zymawy\Ironside\Models\LogAdminActivity;
 use ReflectionClass;
 
 trait URLFromParent

@@ -1,10 +1,10 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Website\Account;
+namespace Zymawy\Ironside\Http\Controllers\Website\Account;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use Bpocallaghan\Titan\Http\Controllers\Website\WebsiteController;
+use Zymawy\Ironside\Http\Controllers\Website\WebsiteController;
 use Illuminate\Validation\Rule;
 
 class ProfileController extends WebsiteController

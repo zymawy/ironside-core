@@ -1,14 +1,14 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Website;
+namespace Zymawy\Ironside\Http\Controllers\Website;
 
-use Bpocallaghan\Titan\Models\Changelog;
-use Bpocallaghan\Titan\Models\Testimonial;
+use Zymawy\Ironside\Models\Changelog;
+use Zymawy\Ironside\Models\Testimonial;
 use Redirect;
 use App\Http\Requests;
-use Bpocallaghan\Titan\Models\Page;
+use Zymawy\Ironside\Models\Page;
 use Illuminate\Http\Request;
-use Bpocallaghan\Titan\Http\Controllers\Admin\AdminController;
+use Zymawy\Ironside\Http\Controllers\Admin\AdminController;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class PagesController extends WebsiteController

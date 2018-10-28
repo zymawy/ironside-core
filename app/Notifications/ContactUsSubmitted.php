@@ -1,8 +1,8 @@
 <?php
 
-namespace Bpocallaghan\Titan\Notifications;
+namespace Zymawy\Ironside\Notifications;
 
-use Bpocallaghan\Titan\Models\FeedbackContactUs;
+use Zymawy\Ironside\Models\FeedbackContactUs;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;

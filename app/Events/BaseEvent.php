@@ -1,6 +1,6 @@
 <?php
 
-namespace Bpocallaghan\Titan\Events;
+namespace Zymawy\Ironside\Events;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Queue\SerializesModels;

@@ -1,13 +1,13 @@
 <?php
 
-namespace Bpocallaghan\Titan\Events;
+namespace Zymawy\Ironside\Events;
 
-use Bpocallaghan\Titan\Models\UserInvite;
+use Zymawy\Ironside\Models\UserInvite;
 use App\User;
 use Carbon\Carbon;
-use Bpocallaghan\Titan\Models\Role;
+use Zymawy\Ironside\Models\Role;
 use Illuminate\Queue\SerializesModels;
-use Bpocallaghan\Titan\Notifications\UserRegistered as NotifyUserRegistered;
+use Zymawy\Ironside\Notifications\UserRegistered as NotifyUserRegistered;
 
 class UserRegistered
 {

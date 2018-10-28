@@ -1,7 +1,7 @@
 <?php
-namespace Bpocallaghan\Titan\Seeds;
+namespace Zymawy\Ironside\Seeds;
 use Illuminate\Database\Seeder;
-use Bpocallaghan\Titan\Models\Role;
+use Zymawy\Ironside\Models\Role;
 
 class RoleTableSeeder extends Seeder
 {
@@ -28,7 +28,7 @@ class RoleTableSeeder extends Seeder
         // base admin role (to be able to log into /admin)
         Role::create([
             'icon'    => 'user-secret',
-            'name'    => 'Base Admin',
+            'name'    => 'Base Dashboard',
             'slug'    => '/admin',
             'keyword' => 'base_admin',
         ]);
@@ -36,7 +36,7 @@ class RoleTableSeeder extends Seeder
         // super
         Role::create([
             'icon'    => 'user-secret',
-            'name'    => 'Admin',
+            'name'    => 'Dashboard',
             'slug'    => '/admin',
             'keyword' => 'admin',
         ]);

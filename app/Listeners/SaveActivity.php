@@ -1,9 +1,9 @@
 <?php
 
-namespace Bpocallaghan\Titan\Listeners;
+namespace Zymawy\Ironside\Listeners;
 
-use Bpocallaghan\Titan\Models\LogActivity;
-use Bpocallaghan\Titan\Events\ActivityWasTriggered;
+use Zymawy\Ironside\Models\LogActivity;
+use Zymawy\Ironside\Events\ActivityWasTriggered;
 
 class SaveActivity
 {

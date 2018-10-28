@@ -1,16 +1,16 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models;
+namespace Zymawy\Ironside\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Bpocallaghan\Titan\Models\TitanCMSModel;
+use Zymawy\Ironside\Models\IronsideCMSModel;
 
 /**
  * Class Setting
  * @mixin \Eloquent
  */
-class Settings extends TitanCMSModel
+class Settings extends IronsideCMSModel
 {
     use SoftDeletes;
 

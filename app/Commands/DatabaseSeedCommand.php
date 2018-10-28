@@ -1,8 +1,8 @@
 <?php
 
-namespace Bpocallaghan\Titan\Commands;
+namespace Zymawy\Ironside\Commands;
 
-use Bpocallaghan\Titan\Seeds\DatabaseSeeder;
+use Zymawy\Ironside\Seeds\DatabaseSeeder;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 

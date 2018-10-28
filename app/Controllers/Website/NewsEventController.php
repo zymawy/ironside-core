@@ -1,8 +1,8 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Website;
+namespace Zymawy\Ironside\Http\Controllers\Website;
 
-use Bpocallaghan\Titan\Models\News;
+use Zymawy\Ironside\Models\News;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;

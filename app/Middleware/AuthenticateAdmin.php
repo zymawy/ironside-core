@@ -1,6 +1,6 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Middleware;
+namespace Zymawy\Ironside\Http\Middleware;
 
 use Auth;
 use Closure;

@@ -1,9 +1,9 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Api;
+namespace Zymawy\Ironside\Http\Controllers\Api;
 
-use Bpocallaghan\Titan\Models\LogActivity;
-use Bpocallaghan\Titan\Models\Notification;
+use Zymawy\Ironside\Models\LogActivity;
+use Zymawy\Ironside\Models\Notification;
 use App\User;
 use Illuminate\Http\Request;
 

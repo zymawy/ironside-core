@@ -1,12 +1,12 @@
 <?php
 
-namespace Bpocallaghan\Titan\Http\Controllers\Auth;
+namespace Zymawy\Ironside\Http\Controllers\Auth;
 
 use Password;
 use Carbon\Carbon;
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use Bpocallaghan\Titan\Http\Controllers\WebsiteController;
+use Zymawy\Ironside\Http\Controllers\WebsiteController;
 
 class ResetPasswordController extends AuthController
 {

@@ -1,6 +1,6 @@
 <?php
-namespace Bpocallaghan\Titan\Seeds;
-use Bpocallaghan\Titan\Models\NavigationAdmin;
+namespace Zymawy\Ironside\Seeds;
+use Zymawy\Ironside\Models\NavigationAdmin;
 use Illuminate\Database\Seeder;
 
 class NavigationAdminTableSeeder extends Seeder

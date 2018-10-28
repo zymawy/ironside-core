@@ -1,8 +1,8 @@
 <?php
 
-namespace Bpocallaghan\Titan\Models\Traits;
+namespace Zymawy\Ironside\Models\Traits;
 
-use Bpocallaghan\Titan\Models\Page;
+use Zymawy\Ironside\Models\Page;
 
 trait PageHelper
 {

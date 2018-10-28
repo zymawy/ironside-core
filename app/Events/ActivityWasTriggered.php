@@ -1,6 +1,6 @@
 <?php
 
-namespace Bpocallaghan\Titan\Events;
+namespace Zymawy\Ironside\Events;
 
 class ActivityWasTriggered extends BaseEvent
 {
