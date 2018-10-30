@@ -20,7 +20,7 @@ class ContactUsController extends IronsideDashboardController
      */
     public function index()
     {
-        return $this->view('titan::reports.contactus');
+        return $this->view('ironside::reports.contactus');
     }
 
     /**

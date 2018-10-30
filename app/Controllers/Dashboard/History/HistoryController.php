@@ -13,13 +13,13 @@ class HistoryController extends IronsideDashboardController
     {
         $actions = LogActivity::getLatest();
 
-        return $this->view('titan::history.website', compact('actions'));
+        return $this->view('ironside::history.website', compact('actions'));
     }
 
     public function admin()
     {
-        $activities = LogAdminActivity::getLatest();
+        $activities = LogDashboardActivity::getLatest();
 
-        return $this->view('titan::history.admin', compact('activities'));
+        return $this->view('ironside::history.dashboard', compact('activities'));
     }
 }

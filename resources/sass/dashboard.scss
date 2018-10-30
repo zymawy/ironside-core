@@ -1,0 +1,41 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300;400;600");
+
+// Variables
+@import "variables";
+@import '_gradients';
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+@import "dashboard/css/vendor/select2.css";
+@import "dashboard/css/vendor/lightbox.css";
+@import "dashboard/css/vendor/dropzone.css";
+@import "dashboard/css/vendor/summernote.css";
+@import "dashboard/css/vendor/daterangepicker.css";
+@import "dashboard/css/vendor/pace-theme-flash.css";
+@import "dashboard/css/vendor/bootstrap-datetimepicker.css";
+@import "dashboard/css/vendor/datatables.bootstrap.css";
+@import "dashboard/css/vendor/responsive.bootstrap.css";
+@import "dashboard/css/ironside/titan.css";
+@import "dashboard/css/ironside/charts.css";
+@import "dashboard/css/ironside/superbox.css";
+@import "dashboard/css/ironside/nestable.css";
+@import "dashboard/css/ironside/datatables.css";
+@import "dashboard/css/ironside/checkboxes.css";
+@import "dashboard/css/ironside/notify.css";
+// Dashborad Theme
+@import "dashboard/css/lib/calendar2/semantic.ui.min.css";
+@import "dashboard/css/lib/calendar2/pignose.calendar.min.css";
+//@import "dashboard/css/lib/owl.carousel.min.css";
+@import "~owl.carousel/src/scss/owl.carousel";
+@import "~owl.carousel/src/scss/owl.theme.default";
+//@import "dashboard/css/lib/owl.theme.default.min.css";
+//@import "dashboard/";
+@import "dashboard/css/helper.css";
+@import "override";
+
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0,0.04);
+}

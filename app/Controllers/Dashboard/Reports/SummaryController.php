@@ -19,7 +19,7 @@ class SummaryController extends IronsideDashboardController
     {
         $items = $this->getData();
 
-        return $this->view('titan::reports.summary', compact('items'));
+        return $this->view('ironside::reports.summary', compact('items'));
     }
 
     private function getData()

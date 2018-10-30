@@ -104,7 +104,7 @@ Route::group(['prefix' => 'auth', 'namespace' => 'Auth'], function () {
 | Dashboard (when authorized and admin)
 |------------------------------------------
 */
-Route::group(['middleware' => ['auth', 'auth.admin'], 'prefix' => 'dashboard', 'namespace' => 'Dashboard'],
+Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard', 'namespace' => 'Dashboard'],
     function () {
         Route::get('/', 'DashboardController@index')->name('admin');
 

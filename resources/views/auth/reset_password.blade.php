@@ -1,4 +1,4 @@
-@extends('titan::layouts.website')
+@extends('ironside::layouts.website')
 
 @section('content')
     <div class="row mt-4 body">

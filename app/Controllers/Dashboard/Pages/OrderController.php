@@ -37,7 +37,7 @@ class OrderController extends IronsideDashboardController
 
         $itemsHtml = $this->getNavigationHtml($this->defaultParent);
 
-        return $this->view('titan::pages.order', compact('itemsHtml'));
+        return $this->view('ironside::pages.order', compact('itemsHtml'));
     }
 
     /**

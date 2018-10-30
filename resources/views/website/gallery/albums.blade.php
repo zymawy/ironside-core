@@ -1,19 +1,19 @@
-@extends('titan::layouts.website')
+@extends('ironside::layouts.website')
 
 @section('content')
     <section class="content p-3">
-        @include('titan::website.partials.page_header')
+        @include('ironside::website.partials.page_header')
 
         <div class="row">
             <div class="body col-sm-7 col-lg-8">
-                @include('titan::website.partials.breadcrumb')
+                @include('ironside::website.partials.breadcrumb')
 
                 <div class="pagination-box">
-                    @include('titan::website.gallery.pagination')
+                    @include('ironside::website.gallery.pagination')
                 </div>
             </div>
 
-            @include('titan::website.partials.page_side')
+            @include('ironside::website.partials.page_side')
         </div>
     </section>
 @endsection

@@ -19,9 +19,6 @@ class IronsideDashboardController extends IronsideController
     {
         $this->setSelectedNavigation();
 
-        // check role if user have role for navigation
-        $this->middleware('role:' . $this->selectedNavigation->id);
-
         $this->middleware(function ($request, $next) {
             $this->navigation = NavigationDashboard::getAllByParentGrouped();
 

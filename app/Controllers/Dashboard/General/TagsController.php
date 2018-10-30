@@ -19,7 +19,7 @@ class TagsController extends AdminController
 	{
 		save_resource_url();
 
-		return $this->view('titan::tags.index')->with('items', Tag::all());
+		return $this->view('ironside::tags.index')->with('items', Tag::all());
 	}
 
 	/**
@@ -29,7 +29,7 @@ class TagsController extends AdminController
 	 */
 	public function create()
 	{
-		return $this->view('titan::tags.add_edit');
+		return $this->view('ironside::tags.add_edit');
 	}
 
 	/**
@@ -55,7 +55,7 @@ class TagsController extends AdminController
 	 */
 	public function show(Tag $tag)
 	{
-		return $this->view('titan::tags.show')->with('item', $tag);
+		return $this->view('ironside::tags.show')->with('item', $tag);
 	}
 
 	/**
@@ -66,7 +66,7 @@ class TagsController extends AdminController
      */
     public function edit(Tag $tag)
 	{
-		return $this->view('titan::tags.add_edit')->with('item', $tag);
+		return $this->view('ironside::tags.add_edit')->with('item', $tag);
 	}
 
 	/**

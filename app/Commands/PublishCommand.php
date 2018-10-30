@@ -16,7 +16,7 @@ class PublishCommand extends Command
      *
      * @var string
      */
-    protected $name = 'titan:publish';
+    protected $name = 'ironside:publish';
 
     /**
      * The console command description.

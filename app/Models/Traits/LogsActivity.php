@@ -3,7 +3,7 @@
 namespace Zymawy\Ironside\Models\Traits;
 
 use ReflectionClass;
-use Ironside\Titan\Models\LogDashboardActivity;
+use Zymawy\Ironside\Models\LogDashboardActivity;
 
 trait LogsActivity
 {

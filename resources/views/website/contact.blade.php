@@ -1,14 +1,14 @@
-@extends('titan::layouts.website')
+@extends('ironside::layouts.website')
 
 @section('content')
     <section class="content bg-default padding padding-top padding-bottom">
 
-        @include('titan::website.partials.page_header')
+        @include('ironside::website.partials.page_header')
 
         <div class="row">
             <div class="body col-sm-7 col-lg-8">
 
-                @include('titan::website.partials.breadcrumb')
+                @include('ironside::website.partials.breadcrumb')
 
                 <h2>Send us a Message</h2>
                 <form id="form-contact-us" accept-charset="UTF-8" action="{{ request()->url().'/submit' }}" method="POST">
@@ -53,9 +53,9 @@
                         </div>
                     </div>
 
-                    @include('titan::website.partials.form.captcha')
+                    @include('ironside::website.partials.form.captcha')
 
-                    @include('titan::website.partials.form.feedback')
+                    @include('ironside::website.partials.form.feedback')
 
                     <div class="row">
                         <div class="col-md-12 mb-5">

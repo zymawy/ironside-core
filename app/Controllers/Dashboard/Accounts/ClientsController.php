@@ -41,7 +41,7 @@ class ClientsController extends AdminController
 
         save_resource_url();
 
-        return $this->view("titan::accounts.clients.index")->with('paginator', $paginator);
+        return $this->view("ironside::accounts.clients.index")->with('paginator', $paginator);
     }
 
     /**
@@ -63,7 +63,7 @@ class ClientsController extends AdminController
      */
     public function show(User $user)
     {
-        return $this->view("titan::accounts.clients.show", compact('user'));
+        return $this->view("ironside::accounts.clients.show", compact('user'));
     }
 
     /**
@@ -75,7 +75,7 @@ class ClientsController extends AdminController
         $item = $user;
         $roles = Role::getAllLists();
 
-        return $this->view('titan::accounts.clients.create_edit')
+        return $this->view('ironside::accounts.clients.create_edit')
             ->with('item', $user)
             ->with('roles', $roles);
     }
@@ -167,7 +167,7 @@ class ClientsController extends AdminController
         $itemsObj = $this->fetchEntries();
         $items = $itemsObj['items'];
         $total = $itemsObj['total'];
-        $baseUrl = config('app.url') . "/admin/accounts/clients";
+        $baseUrl = config('app.url') . "/dashboard/accounts/clients";
 
         // paginator
         $paginator = new LengthAwarePaginator($items->forPage($page, $perPage), count($items),
@@ -183,8 +183,10 @@ class ClientsController extends AdminController
     {
         // query to get the products
         //$items = User::orderBy('firstname')->get();
-        $items = User::whereRole(Role::$USER)->orderBy('firstname')->get();
 
+//        $items = User::whereRole('user')->orderBy('firstname')->get();
+        $items = User::with('roles')->orderBy('firstname')->get();
+        dd($items);
         $total = $items->count();
         // if filtered
         if (session('filtered')) {

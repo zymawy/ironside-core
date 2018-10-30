@@ -40,7 +40,7 @@ class IronsideServiceProvider extends ServiceProvider
         // load migrations
         $this->loadMigrationsFrom($migrationsPath);
 
-        $this->loadViewsFrom($viewsPath, "titan");
+        $this->loadViewsFrom($viewsPath, "ironside");
 
         $this->registerCommand(InstallCommand::class, 'install');
         $this->registerCommand(PublishCommand::class, 'publish');
@@ -64,7 +64,7 @@ class IronsideServiceProvider extends ServiceProvider
      */
     private function registerCommand($class, $command)
     {
-        $path = 'bpocallaghan.commands.';
+        $path = 'zymawy.commands.';
         $this->app->singleton($path . $command, function ($app) use ($class) {
             return $app[$class];
         });

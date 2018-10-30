@@ -1,12 +1,12 @@
-@extends('titan::layouts.website')
+@extends('ironside::layouts.website')
 
 @section('content')
     <section class="content p-3">
-        @include('titan::website.partials.page_header'/*, ['pageTitle' => $news->title]*/)
+        @include('ironside::website.partials.page_header'/*, ['pageTitle' => $news->title]*/)
 
         <div class="row">
             <div class="body col-sm-7 col-lg-8">
-                @include('titan::website.partials.breadcrumb')
+                @include('ironside::website.partials.breadcrumb')
 
                 <h2>{!! $news->title !!}</h2>
                 <p><i class="fa fa-calendar mr-2"></i>{{ $news->posted_at }}</p>
@@ -48,7 +48,7 @@
                 @endif
             </div>
 
-            @include('titan::website.partials.page_side')
+            @include('ironside::website.partials.page_side')
         </div>
     </section>
 @endsection

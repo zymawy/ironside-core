@@ -18,5 +18,5 @@
         </div>
     </div>
 
-    @include('titan::website.partials.side_news')
+    @include('ironside::website.partials.side_news')
 </div>

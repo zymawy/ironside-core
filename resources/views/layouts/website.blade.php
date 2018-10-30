@@ -18,7 +18,7 @@
         <meta property="og:description" name="og:description" content="{{ isset($description) ? $description : config('app.description') }}">
         <meta property="og:image" name="og:image" content="{{ config('app.url') }}{{ isset($image) ? $image : '/images/logo.png' }}">
 
-        @include('titan::partials.favicons')
+        @include('ironside::partials.favicons')
 
         <title>{{ isset($title) ? $title : config('app.name') }}</title>
 
@@ -35,24 +35,24 @@
         <h1 class="d-none">{{ isset($title) ? $title : config('app.name') }}</h1>
 
         @if(config('app.env') != 'local')
-            @include('titan::partials.facebook')
+            @include('ironside::partials.facebook')
         @endif
 
-        @include('titan::website.partials.header')
+        @include('ironside::website.partials.header')
 
-        @include('titan::website.partials.navigation')
+        @include('ironside::website.partials.navigation')
 
         @if(isset($showPageBanner) && $showPageBanner == true || !isset($showPageBanner))
-            @include('titan::website.partials.banner')
+            @include('ironside::website.partials.banner')
         @endif
 
         <div class="container mb-5">
             @yield('content')
         </div>
 
-        @include('titan::website.partials.footer')
+        @include('ironside::website.partials.footer')
 
-        @include('titan::website.partials.popups')
+        @include('ironside::website.partials.popups')
 
         {{-- back to top --}}
         <a href="#top" class="back-to-top jumper btn btn-secondary">
@@ -64,7 +64,7 @@
         @yield('scripts')
 
         @if(config('app.env') != 'local')
-            @include('titan::partials.analytics')
+            @include('ironside::partials.analytics')
         @endif
     </body>
 </html>

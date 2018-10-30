@@ -1,12 +1,12 @@
-@extends('titan::layouts.website')
+@extends('ironside::layouts.website')
 
 @section('content')
     <section class="content p-3">
-        @include('titan::website.partials.page_header')
+        @include('ironside::website.partials.page_header')
 
         <div class="row">
             <div class="body col-sm-7 col-lg-8">
-                @include('titan::website.partials.breadcrumb')
+                @include('ironside::website.partials.breadcrumb')
                 <h2>{!! user()->fullname !!}</h2>
                 <div class="row">
                     <div class="col-sm-6">
@@ -25,7 +25,7 @@
                 </div>
             </div>
 
-            @include('titan::website.partials.page_side')
+            @include('ironside::website.partials.page_side')
         </div>
     </section>
 @endsection

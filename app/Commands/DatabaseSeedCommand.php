@@ -13,7 +13,7 @@ class DatabaseSeedCommand extends Command
      *
      * @var string
      */
-    protected $name = 'titan:db:seed';
+    protected $name = 'ironside:db:seed';
 
     /**
      * The console command description.

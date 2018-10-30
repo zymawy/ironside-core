@@ -1,4 +1,4 @@
-@extends('titan::layouts.website')
+@extends('ironside::layouts.website')
 
 @section('content')
     <div class="row mt-5">
@@ -178,7 +178,7 @@
         </div>
     </div>
 
-    @include('titan::website.partials.footer_newsletter')
+    @include('ironside::website.partials.footer_newsletter')
 
     <!-- Call to Action Section -->
     <div class="card bg-light mt-3">

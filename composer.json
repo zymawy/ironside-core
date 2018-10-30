@@ -31,7 +31,8 @@
       "bpocallaghan/sluggable": "^1.2",
       "spatie/laravel-analytics": "^3.6",
       "bpocallaghan/impersonate": "^1.0",
-      "yajra/laravel-datatables-oracle": "^8.9"
+      "yajra/laravel-datatables-oracle": "^8.9",
+      "santigarcor/laratrust": "5.0.*"
     },
   "require-dev": {
     "bpocallaghan/generators": "^5.0",

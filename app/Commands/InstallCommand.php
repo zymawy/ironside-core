@@ -16,14 +16,14 @@ class InstallCommand extends Command
      *
      * @var string
      */
-    protected $name = 'titan:install';
+    protected $name = 'ironside:install';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Setup Titan in a freshly installed Laravel project.';
+    protected $description = 'Setup Ironside in a freshly installed Laravel project.';
 
     /**
      * @var Filesystem
@@ -87,10 +87,10 @@ class InstallCommand extends Command
         $this->info('app\User.php was updated');
 
         // php artisan titan:db:seed
-        $this->call('titan:db:seed');
+        $this->call('ironside:db:seed');
 
         // php artisan titan:publish --files=public
-        $this->call('titan:publish', ['--files' => 'public']);
+        $this->call('ironside:publish', ['--files' => 'public']);
 
         $stubsPath = $this->basePath . "stubs{$this->ds}";
 

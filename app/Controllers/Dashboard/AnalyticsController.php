@@ -8,26 +8,26 @@ class AnalyticsController extends AdminController
 {
     public function summary()
     {
-        return $this->view('titan::analytics.summary');
+        return $this->view('ironside::analytics.summary');
     }
 
     public function devices()
     {
-        return $this->view('titan::analytics.devices');
+        return $this->view('ironside::analytics.devices');
     }
 
     public function visitsReferrals()
     {
-        return $this->view('titan::analytics.visits_referrals');
+        return $this->view('ironside::analytics.visits_referrals');
     }
 
     public function interests()
     {
-        return $this->view('titan::analytics.interests');
+        return $this->view('ironside::analytics.interests');
     }
 
     public function demographics()
     {
-        return $this->view('titan::analytics.demographics');
+        return $this->view('ironside::analytics.demographics');
     }
 }

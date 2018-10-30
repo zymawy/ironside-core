@@ -20,4 +20,4 @@
     @endforeach
 </div>
 
-@include('titan::website.partials.paginator_footer')
+@include('ironside::website.partials.paginator_footer')
