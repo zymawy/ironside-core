@@ -32,7 +32,9 @@
       "spatie/laravel-analytics": "^3.6",
       "bpocallaghan/impersonate": "^1.0",
       "yajra/laravel-datatables-oracle": "^8.9",
-      "santigarcor/laratrust": "5.0.*"
+      "santigarcor/laratrust": "5.0.*",
+      "aitor24/localizer": "^1.4",
+      "creativeorange/gravatar": "~1.0"
     },
   "require-dev": {
     "bpocallaghan/generators": "^5.0",

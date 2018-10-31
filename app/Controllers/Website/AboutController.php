@@ -10,6 +10,6 @@ class AboutController extends WebsiteController
 {
 	public function index()
 	{
-        return $this->view('titan::about');
+        return $this->view('ironside::about');
 	}
 }

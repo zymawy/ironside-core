@@ -184,9 +184,9 @@ class ClientsController extends AdminController
         // query to get the products
         //$items = User::orderBy('firstname')->get();
 
-//        $items = User::whereRole('user')->orderBy('firstname')->get();
-        $items = User::with('roles')->orderBy('firstname')->get();
-        dd($items);
+        $items = User::whereRoleIs('user')->orderBy('firstname')->get();
+//        $items = User::with('roles')->orderBy('firstname')->get();
+//        dd($items);
         $total = $items->count();
         // if filtered
         if (session('filtered')) {

@@ -11,7 +11,7 @@ use LaravelAnalytics;
  * http://www.colorhexa.com
  *
  * Class Analytics
- * @package Titan\Controllers\Traits
+ * @package ironside\Controllers\Traits
  */
 trait AnalyticsHelper
 {

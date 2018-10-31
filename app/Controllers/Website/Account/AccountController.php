@@ -16,6 +16,6 @@ class AccountController extends WebsiteController
         //})->orderBy('list_order')->get();
         // , compact('faq')
 
-		return $this->view('titan::account.account');
+		return $this->view('ironside::account.account');
 	}
 }

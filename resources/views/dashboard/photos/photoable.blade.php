@@ -26,7 +26,7 @@
                                     </a>
                                 </td>
                                 <td style="min-width: 55px;">
-                                    <form id="form-delete-row{{ $photo->id }}" method="POST" action="/admin/photos/{{ $photo->id }}" class="dt-titan">
+                                    <form id="form-delete-row{{ $photo->id }}" method="POST" action="/dashboard/photos/{{ $photo->id }}" class="dt-titan">
                                         <input name="_method" type="hidden" value="DELETE">
                                         <input name="_token" type="hidden" value="{{ csrf_token() }}">
                                         <input name="_id" type="hidden" value="{{ $photo->id }}">

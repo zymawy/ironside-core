@@ -17,7 +17,7 @@ class ForgotPasswordController extends AuthController
     {
         $this->showPageBanner = false;
 
-        return $this->view('titan::forgot_password');
+        return $this->view('ironside::forgot_password');
     }
 
     /**

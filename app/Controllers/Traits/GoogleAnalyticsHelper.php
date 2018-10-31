@@ -12,7 +12,7 @@ use Spatie\Analytics\Period;
  * http://www.colorhexa.com
  *
  * Class Analytics
- * @package Titan\Controllers\Traits
+ * @package ironside\Controllers\Traits
  */
 trait GoogleAnalyticsHelper
 {

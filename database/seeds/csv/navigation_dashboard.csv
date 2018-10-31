@@ -1,0 +1,44 @@
+id,title,description,slug,url,icon,help_index_title,help_index_content,help_create_title,help_create_content,help_edit_title,help_edit_content,list_order,is_hidden,parent_id,url_parent_id,roles
+1,Dashboard,Dashboard,/,/dashboard,dashboard,,,,,,,1,0,0,0,2
+2,Analytics,Google Analytics,analytics,/dashboard/analytics,line-chart,,,,,,,13,0,0,0,"3,6"
+3,Summary,,,/dashboard/analytics,star-half-o,,,,,,,2,0,2,2,"3,6"
+4,Devices,,devices,/dashboard/analytics/devices,tablet,,,,,,,1,0,2,2,"3,6"
+5,Demographics,,demographics,/dashboard/analytics/demographics,female,,,,,,,4,0,2,2,"3,6"
+6,Visits and Referrals,,visits-and-referrals,/dashboard/analytics/visits-and-referrals,cloud,,,,,,,5,0,2,2,"3,6"
+7,Interests,,interests,/dashboard/analytics/interests,heart,,,,,,,3,0,2,2,"3,6"
+8,Latest Activity,Latest Activity,latest-activity,/dashboard/latest-activity,history,,,,,,,2,0,0,0,4
+9,Website,,website,/dashboard/latest-activity/website,home,,,,,,,1,0,8,8,4
+10,Admin,Admin,admin,/dashboard/latest-activity/dashboard,lock,,,,,,,2,0,8,8,4
+11,General,General Website,general,/dashboard/general,cubes,,,,,,,3,0,0,0,4
+12,Tags,Tags,tags,/dashboard/general/tags,tags,,,,,,,1,0,11,11,4
+13,Banners,Banners,banners,/dashboard/general/banners,image,,,,,,,2,0,11,11,4
+14,Pages,Pages,pages,/dashboard/pages,navicon,Help,All the menu items for the website.,Help,You can set the HTML Title and HTML Description.<br/>You can select the parent (under which navigation is this item).<br/>You can specify if the menu is hidden.,,,4,0,0,0,4
+15,Navigation Order,Navigation Order,order,/dashboard/pages/order,list-ol,,,,,,,1,1,24,24,4
+16,Accounts,Accounts,accounts,/dashboard/accounts,users,,,,,,,5,0,0,0,4
+17,Clients,Clients,clients,/dashboard/accounts/clients,users,,,,,,,1,0,16,16,4
+18,Administrators,,administrators,/dashboard/accounts/administrators,users,,,,,,,2,0,16,16,4
+19,Admin Invites,,invites,/dashboard/accounts/administrators/invites,,,,,,,,1,1,18,18,4
+20,Profile,,profile,/dashboard/profile,user,,,,,,,16,1,0,0,4
+21,Settings,,settings,/dashboard/settings,cogs,,,,,,,15,0,0,0,4
+22,Navigation,,navigation,/dashboard/settings/navigation,align-center,Help,Helpfull text here - explaining what u can do here...,Information,Please complete the form to create the navigation,,,4,0,21,21,4
+23,Navigation Order,Navigation Order,order,/dashboard/settings/navigation/order,list-ol,,,,,,,1,1,22,22,4
+24,Roles,Roles,roles,/dashboard/settings/roles,universal-access,,,,,,,1,0,21,21,4
+25,Settings,Settings,settings,/dashboard/settings/settings,cog,,,,,,,2,0,21,21,4
+26,Reports,,reports,/dashboard/reports,bar-chart,,,,,,,14,0,0,0,4
+27,Summary,,summary,/dashboard/reports/summary,align-left,,,,,,,1,0,26,26,4
+28,Contact Us,,contact-us,/dashboard/reports/contact-us,comments-o,,,,,,,2,0,26,26,4
+29,Blog,Blog,blog,/dashboard/blog,newspaper-o,,,,,,,7,0,0,0,4
+30,Articles,Articles,articles,/dashboard/blog/articles,newspaper-o,,,,,,,1,0,29,29,4
+31,Categories,Categories,categories,/dashboard/blog/categories,cubes,,,,,,,2,0,29,29,4
+32,News and Events,News and Events,news-and-events,/dashboard/news-and-events,newspaper-o,,,,,,,8,0,0,0,4
+33,News and Events,News and Events,news,/dashboard/news-and-events/news,newspaper-o,,,,,,,2,0,32,32,4
+34,Categories,Categories,categories,/dashboard/news-and-events/categories,cubes,,,,,,,1,0,32,32,4
+35,Gallery,Images,photos,/dashboard/photos,image,,,,,,,6,0,0,0,4
+36,Photos,Photos,,/dashboard/photos,image,,,,,,,2,0,35,35,4
+37,Albums,Albums,albums,/dashboard/photos/albums,cubes,,,,,,,1,0,35,35,4
+38,Newsletter,Newsletter,newsletter,/dashboard/newsletter,newspaper-o,,,,,,,11,0,0,0,4
+39,Subscribers,Newsletter Subscribers,subscribers,/dashboard/newsletter/subscribers,users,,,,,,,1,0,38,38,4
+40,Documents,Documents,documents,/dashboard/documents,files-o,,,,,,,12,0,0,0,4
+41,Categories,Categories,categories,/dashboard/documents/categories,cubes,,,,,,,1,0,40,40,4
+42,Documents,Documents,,/dashboard/documents,file-o,,,,,,,2,0,40,40,4
+43,FronEnd,Documents,,/,file-o,,,,,,,2,1,0,0,4

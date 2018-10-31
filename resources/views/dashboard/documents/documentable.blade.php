@@ -21,7 +21,7 @@
                                     <span id="image-row-title-span-{{ $document->id }}" class="image-row-title-span">{{ $document->name }}</span>
                                 </a>
 
-                                <form id="form-delete-row{{ $document->id }}" method="POST" action="/admin/documents/{{ $document->id }}" class="dt-titan" style="display: inline-block;">
+                                <form id="form-delete-row{{ $document->id }}" method="POST" action="/dashboard/documents/{{ $document->id }}" class="dt-titan" style="display: inline-block;">
                                     <input name="_method" type="hidden" value="DELETE">
                                     <input name="_token" type="hidden" value="{{ csrf_token() }}">
                                     <input name="_id" type="hidden" value="{{ $document->id }}">

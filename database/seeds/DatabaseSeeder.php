@@ -13,14 +13,13 @@ class DatabaseSeeder extends Seeder
     {
         // pages, news, blog, albums
         //\App\Models\Photo::truncate();
-
-        $this->call(RoleTableSeeder::class);
+        ;
         $this->call(UserTableSeeder::class);
 
         $this->call(BannerTableSeeder::class);
 
         $this->call(PageTableSeeder::class);
-        $this->call(NavigationAdminTableSeeder::class);
+        $this->call(NavigationDashboardTableSeeder::class);
 
         //$this->call(SubscriptionPlanFeaturesSeeder::class);
         //$this->call(SubscriptionPlanTableSeeder::class);

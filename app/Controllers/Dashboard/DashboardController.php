@@ -9,6 +9,7 @@ class DashboardController extends AdminController
 {
 	public function index()
 	{
+
 	    return $this->view('ironside::dashboard');
 	}
 }

@@ -14,7 +14,7 @@ class ContactUsController extends WebsiteController
 
     public function index()
     {
-        return $this->view('titan::contact');
+        return $this->view('ironside::contact');
     }
 
     public function feedback(Request $request)

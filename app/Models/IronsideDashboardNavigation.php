@@ -4,10 +4,11 @@ namespace Zymawy\Ironside\Models;
 
 use Zymawy\Ironside\Models\Role;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Zymawy\Ironside\Models\Traits\RecursiveParent;
 
 class IronsideDashboardNavigation extends IronsideCMSModel
 {
-    use SoftDeletes;
+    use SoftDeletes,RecursiveParent;
 
     /**
      * The database table used by the model.
@@ -26,7 +27,7 @@ class IronsideDashboardNavigation extends IronsideCMSModel
     protected $guarded = ['id'];
 
     // prefix path
-    protected $prefixPath = '/admin';
+    protected $prefixPath = '/dashboard';
 
     /**
      * Validation rules for this model

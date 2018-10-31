@@ -38,12 +38,12 @@
 </head>
 
 <body class="fix-header fix-sidebar">
-<h1 class="hidden">{{ isset($HTMLTitle) ? $HTMLTitle : config('app.name') }}</h1>
+<h1 class="hidden">{{ isset($title) ? $title : config('app.name') }}</h1>
 <!-- Preloader - style you can find in spinners.css -->
 <div class="preloader">
-<svg class="circular" viewBox="25 25 50 50">
-    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-</svg>
+{{--<svg class="circular" viewBox="25 25 50 50">--}}
+    {{--<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>--}}
+{{--</svg>--}}
 </div>
 <div>
 
@@ -65,19 +65,18 @@
         <div id="main-wrapper">
             <!-- Page wrapper  -->
             <div class="page-wrapper">
-                @include('ironside::dashboard.partials.navigation')
-            <!-- Container fluid  -->
-                <div class="container-fluid" id="app">
-                        <!-- Start Page Content -->
-                             @yield('content')
-                        <!-- End PAge Content -->
-                </div>
+                <!-- Container fluid  -->
+                        <div class="container-fluid" id="app">
+                                <!-- Start Page Content -->
+                                     @yield('content')
+                                <!-- End PAge Content -->
+                        </div>
+                <!-- End Container fluid  -->
             </div>
-            <!-- End Container fluid  -->
+            <!-- End Page wrapper  -->
         </div>
-        <!-- End Page wrapper  -->
+        <!-- Main wrapper  -->
     </div>
-    <!-- Main wrapper  -->
 @include('ironside::layouts.dashboard.includes.footer')
 <!-- All Jquery -->
     <script src="/js/app.js"></script>
@@ -87,11 +86,12 @@
 {{--<script src="/js/admin/jquery.js"></script>--}}
 {{--<script src="/js/admin/bootstrap.js"></script>--}}
 {{--<!-- slimscrollbar scrollbar JavaScript -->--}}
-{{--<script src="/js/admin/slimscroll.js"></script>--}}
+{{--<script src="/js/jquery.slimscroll.js"></script>--}}
 {{--<!--Menu sidebar -->--}}
-{{--<script src="/js/admin/sidebarmenu.js"></script>--}}
+{{--<script src="/js/sidebarmenu.js"></script>--}}
 {{--<!--stickey kit -->--}}
-{{--<script src="/js/admin/sticky-kit.js"></script>--}}
+{{--<script src="/js/sticky-kit.min.js"></script>--}}
+{{--<script src="/js/scripts.js"></script>--}}
 {{--<!--Custom JavaScript -->--}}
 
 {{--<!-- Amchart -->--}}
@@ -104,7 +104,7 @@
 <!-- scripit init-->
     @include('notify::notify')
     @include('ironside::dashboard.partials.modals')
-
+    <script src="/js/dashboard/theme.js"></script>
     <script type="text/javascript" charset="utf-8" src="/js/dashboard/dashboard.js?v=1"></script>
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function () {
