@@ -4,7 +4,7 @@ namespace Zymawy\Ironside\Http\Controllers\Dashboard\Settings;
 
 use App\Http\Requests;
 use Zymawy\Ironside\Models\Notification;
-use Zymawy\Ironside\Models\Role;
+//use App\Role;
 use Illuminate\Http\Request;
 use Zymawy\Ironside\Models\NavigationDashboard;
 use Yajra\Datatables\Datatables;
@@ -31,11 +31,11 @@ class NavigationController extends AdminController
      */
     public function create()
     {
-        $roles = Role::getAllLists();
-        $parents = NavigationAdmin::getAllLists();
+//        $roles = App\Role::getAllLists();
+        $parents = NavigationDashboard::getAllLists();
 
         return $this->view('ironside::settings.navigation.add_edit')
-            ->with('roles', $roles)
+//            ->with('roles', $roles)
             ->with('parents', $parents);
     }
 
@@ -47,7 +47,7 @@ class NavigationController extends AdminController
      */
     public function store(Request $request)
     {
-        $this->validate($request, NavigationAdmin::$rules, NavigationAdmin::$messages);
+        $this->validate($request, NavigationDashboard::$rules, NavigationDashboard::$messages);
 
         $inputs = $request->only([
             'icon',
@@ -66,7 +66,7 @@ class NavigationController extends AdminController
         $inputs['is_hidden'] = boolval($request->has('is_hidden'));
         $inputs['url_parent_id'] = ($inputs['url_parent_id'] == 0 ? $inputs['parent_id'] : $inputs['url_parent_id']);
 
-        $row = $this->createEntry(NavigationAdmin::class, $inputs);
+        $row = $this->createEntry(NavigationDashboard::class, $inputs);
 
         if ($row) {
             $row->updateUrl()->save();
@@ -84,7 +84,7 @@ class NavigationController extends AdminController
      */
     public function show($id)
     {
-        $navigation = NavigationAdmin::findOrFail($id);
+        $navigation = NavigationDashboard::findOrFail($id);
 
         return $this->view('ironside::settings.navigation.show')->with('item', $navigation);
     }
@@ -97,13 +97,13 @@ class NavigationController extends AdminController
      */
     public function edit($id)
     {
-        $roles = Role::getAllLists();
-        $navigation = NavigationAdmin::findOrFail($id);
+//        $roles = Role::getAllLists();
+        $navigation = NavigationDashboard::findOrFail($id);
 
         return $this->view('ironside::settings.navigation.add_edit')
             ->with('item', $navigation)
-            ->with('roles', $roles)
-            ->with('parents', NavigationAdmin::getAllLists());
+//            ->with('roles', $roles)
+            ->with('parents', NavigationDashboard::getAllLists());
     }
 
     /**
@@ -115,7 +115,7 @@ class NavigationController extends AdminController
      */
     public function update($id, Request $request)
     {
-        $this->validate($request, NavigationAdmin::$rules, NavigationAdmin::$messages);
+        $this->validate($request, NavigationDashboard::$rules, NavigationDashboard::$messages);
 
         $inputs = $request->only([
             'icon',
@@ -133,7 +133,7 @@ class NavigationController extends AdminController
         ]);
         $inputs['is_hidden'] = boolval($request->has('is_hidden'));
 
-        $navigation = NavigationAdmin::findOrFail($id);
+        $navigation = NavigationDashboard::findOrFail($id);
         $navigation = $this->updateEntry($navigation, $inputs);
         $navigation->updateUrl()->save();
         $navigation->roles()->sync(input('roles'));
@@ -150,7 +150,7 @@ class NavigationController extends AdminController
      */
     public function destroy($id, Request $request)
     {
-        $navigation = NavigationAdmin::findOrFail($id);
+        $navigation = NavigationDashboard::findOrFail($id);
         $this->deleteEntry($navigation, $request);
 
         return redirect_to_resource();
@@ -181,6 +181,6 @@ class NavigationController extends AdminController
      */
     protected function getTableRows()
     {
-        return NavigationAdmin::with('parent', 'roles')->get();
+        return NavigationDashboard::with('parent')->get();
     }
 }

@@ -73,4 +73,21 @@ class RouteServiceProvider extends ServiceProvider
              ->namespace($this->namespace)
              ->group($path . ('api.php'));
     }
+
+    /**
+     * Define the "datatable" routes for the application.
+     *
+     * These routes are typically stateless.
+     *
+     * @return void
+     */
+    protected function mapDatatableRoutes()
+    {
+        Route::prefix('datatable')
+            ->middleware('web')
+            ->namespace($this->namespace . '\Datatable')
+            ->as('datatable.')
+            ->group(base_path('routes/datatable.php'));
+    }
+
 }

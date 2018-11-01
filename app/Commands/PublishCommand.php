@@ -352,14 +352,19 @@ class PublishCommand extends Command
         });
 
         // if files found
-        if (count($filesFound) >= 1) {
-            collect($filesFound)->each(function ($file) {
-                $this->info(" - {$file}");
-            });
+        if(!app()->environment('local'))
+        {
+            if (count($filesFound) >= 1) {
+                collect($filesFound)->each(function ($file) {
+                    $this->info(" - {$file}");
+                });
 
-            //$this->info("Destination: " . $destination);
-            $answer = $this->confirm("Above is a list of the files that already exist. Override all files?");
+                //$this->info("Destination: " . $destination);
+                $answer = $this->confirm("Above is a list of the files that already exist. Override all files?");
+            }
         }
+
+
 
         return $answer;
     }

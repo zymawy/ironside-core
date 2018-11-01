@@ -76,29 +76,7 @@ form hr {
     border: 1px solid #ddd;
 }
 
-/*
-|------------------------------------------
-| HELP - CALLOUT
-|------------------------------------------
-*/
 
-.box-body.no-padding .callout.callout-help {
-    margin: 10px;
-}
-
-.callout.callout-help {
-    padding: 10px !important;
-    border-radius: 0px !important;
-    background-color: initial !important;
-}
-
-.callout-help .title {
-    color: #3c8dbc;
-}
-
-.callout-help p {
-    color: #333;
-}
 
 /*
 |------------------------------------------

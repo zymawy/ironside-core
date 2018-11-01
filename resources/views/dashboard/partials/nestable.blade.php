@@ -29,7 +29,8 @@
                 $.post(path, {'list': nestableString}, function (data)
                 {
                     if (data && data.result == 'success') {
-                        notify('{{ trans("dashboard/general.successfully") }}', '{{ trans("dashboard/general.successfully-updated") }}', null, null, 5000);
+
+                        notify('{{ trans("ironside::dashboard/general.successfully") }}', '{{ trans("ironside::dashboard/general.successfully-updated") }}', null, null, 5000);
                     }
                     else {
                         notifyError();

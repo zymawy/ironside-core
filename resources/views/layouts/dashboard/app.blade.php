@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{App::isLocale('ar')? 'rtl':'ltr'}}">
 
 <head>
     <meta charset="utf-8">
@@ -15,19 +15,16 @@
     @include ('ironside::partials.favicons')
 
     <title>{{ isset($title) ? $title : config('app.name') }}</title>
-    {{--    <link rel="stylesheet" href="{{ asset('/css/dashboard/app.css') }}">--}}
-{{--    <link rel="stylesheet" href="{{ asset('/css/dashboard/dashboard.css') }}">--}}
-        <link rel="stylesheet" href="{{ asset('/css/dashboard/theme.css') }}">
-{{--    <link rel="stylesheet" href="{{ mix('/css/dashboard/theme.css') }}">--}}
-    {{--<link rel="stylesheet" href="/css/admin/calendar2.css">--}}
-    {{--<link rel="stylesheet" href="/css/admin/carousel.css">--}}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('/css/dashboard/theme.css') }}">
+    <link rel="stylesheet" href="/css/dashboard/override.css">
     @yield('css')
     @if(App::isLocale('ar'))
-        <link rel="stylesheet" href="{{ asset('/css/dashboard/rtl.css') }}">
-    @else
-        <link rel="stylesheet" href="{{ asset('/css/dashboard/ltr.css') }}">
-@endif
-{{--<link rel="stylesheet" href="/css/override.css">--}}
+            <link rel="stylesheet" href="{{ asset('/css/dashboard/rtl.css') }}">
+        @else
+            <link rel="stylesheet" href="{{ asset('/css/dashboard/ltr.css') }}">
+    @endif
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
     <!--[if lt IE 9]>
@@ -37,73 +34,41 @@
 
 </head>
 
-<body class="fix-header fix-sidebar">
+<body class="fix-header fix-sidebar" dir="{{App::isLocale('ar')? 'rtl':'ltr'}}">
 <h1 class="hidden">{{ isset($title) ? $title : config('app.name') }}</h1>
 <!-- Preloader - style you can find in spinners.css -->
-<div class="preloader">
-{{--<svg class="circular" viewBox="25 25 50 50">--}}
-    {{--<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>--}}
-{{--</svg>--}}
-</div>
-<div>
-
-@if(App::isLocale('ar'))
-
-    @include('ironside::layouts.dashboard.includes.header-rtl')
-{{--    @include('dashboard.partials.header')--}}
-
-@else
-
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+    </div>
     @include('ironside::layouts.dashboard.includes.header')
 
-@endif
-
-@include ('ironside::dashboard.partials.navigation')
+    @include('ironside::dashboard.partials.navigation')
 
 <!-- Main wrapper  -->
     <div>
-        <div id="main-wrapper">
-            <!-- Page wrapper  -->
-            <div class="page-wrapper">
-                <!-- Container fluid  -->
-                        <div class="container-fluid" id="app">
-                                <!-- Start Page Content -->
-                                     @yield('content')
-                                <!-- End PAge Content -->
-                        </div>
-                <!-- End Container fluid  -->
+            <div id="main-wrapper">
+                    <!-- Page wrapper  -->
+                    <div class="page-wrapper">
+                    @include('ironside::layouts.dashboard.includes.breadcrumb')
+                    <!-- Container fluid  -->
+                                <div class="container-fluid" id="app">
+                                        <!-- Start Page Content -->
+                                             @yield('content')
+                                        <!-- End PAge Content -->
+                                </div>
+                        <!-- End Container fluid  -->
+                    </div>
+                    <!-- End Page wrapper  -->
             </div>
-            <!-- End Page wrapper  -->
-        </div>
-        <!-- Main wrapper  -->
+            <!-- Main wrapper  -->
     </div>
-@include('ironside::layouts.dashboard.includes.footer')
-<!-- All Jquery -->
+    @include('ironside::layouts.dashboard.includes.footer')
     <script src="/js/app.js"></script>
-{{--<script src="/js/dashboard/theme.js"></script>--}}
-
-<!-- Bootstrap tether Core JavaScript -->
-{{--<script src="/js/admin/jquery.js"></script>--}}
-{{--<script src="/js/admin/bootstrap.js"></script>--}}
-{{--<!-- slimscrollbar scrollbar JavaScript -->--}}
-{{--<script src="/js/jquery.slimscroll.js"></script>--}}
-{{--<!--Menu sidebar -->--}}
-{{--<script src="/js/sidebarmenu.js"></script>--}}
-{{--<!--stickey kit -->--}}
-{{--<script src="/js/sticky-kit.min.js"></script>--}}
-{{--<script src="/js/scripts.js"></script>--}}
-{{--<!--Custom JavaScript -->--}}
-
-{{--<!-- Amchart -->--}}
-{{--<script src="/js/admin/morris-chart.js"></script>--}}
-
-{{--<script src="/js/admin/calendar-2.js"></script>--}}
-
-{{--<script src="/js/admin/owl-carousel.js"></script>--}}
-
-<!-- scripit init-->
     @include('notify::notify')
     @include('ironside::dashboard.partials.modals')
+    <script src="/js/dashboard/datatable.js"></script>
     <script src="/js/dashboard/theme.js"></script>
     <script type="text/javascript" charset="utf-8" src="/js/dashboard/dashboard.js?v=1"></script>
     <script type="text/javascript" charset="utf-8">
@@ -111,7 +76,7 @@
             initDashboard();
         });
     </script>
-{{--@yield('scripts')--}}
+
 @yield('js')
 @if(config('app.env') != 'local')
     @include('ironside::partials.analytics')

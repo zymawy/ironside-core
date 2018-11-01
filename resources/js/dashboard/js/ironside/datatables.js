@@ -49,9 +49,9 @@ function initDataTables(selector, options)
     options.order = getOrderBy(selector);
     // options.aLengthMenu = [[15, 25, 50, -1], [15, 25, 50, "All"]];
     // options.iDisplayLength = 15;
-    options.sDom = "<'dt-toolbar'<'col-xs-12 col-sm-6'f><'col-sm-6 col-xs-12 hidden-xs'l>r>" +
-        "t" +
-        "<'dt-toolbar-footer'<'col-sm-6 col-xs-12 hidden-xs'i><'col-xs-12 col-sm-6'p>>";
+    // options.sDom = "<'dt-toolbar'<'col-lg-12 col-sm-6'f><'col-sm-6 col-lg-12 hidden-xs'l>r>" +
+    //     "t" +
+    //     "<'dt-toolbar-footer'<'col-sm-6 col-lg-12 hidden-xs'i><'col-lg-12 col-sm-6'p>>";
     options.drawCallback = function(settings) {
         $('[data-toggle="tooltip"]').tooltip();
     }

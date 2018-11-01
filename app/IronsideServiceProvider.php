@@ -8,7 +8,7 @@ use Illuminate\Support\ServiceProvider;
 use Zymawy\Ironside\Commands\InstallCommand;
 use Zymawy\Ironside\Commands\PublishCommand;
 use Zymawy\Ironside\Commands\DatabaseSeedCommand;
-
+use Illuminate\Support\Facades\Lang;
 class IronsideServiceProvider extends ServiceProvider
 {
     /**
@@ -36,11 +36,15 @@ class IronsideServiceProvider extends ServiceProvider
         $basePath = $appPath . ".." . DIRECTORY_SEPARATOR;
         $migrationsPath = $basePath . "database" . DIRECTORY_SEPARATOR . "migrations";
         $viewsPath = $basePath . "resources" . DIRECTORY_SEPARATOR . "views";
+        $langPath = $basePath . "resources" . DIRECTORY_SEPARATOR . "lang";
 
         // load migrations
         $this->loadMigrationsFrom($migrationsPath);
 
+        // load Views
         $this->loadViewsFrom($viewsPath, "ironside");
+
+        Lang::addNamespace('ironside', $langPath);
 
         $this->registerCommand(InstallCommand::class, 'install');
         $this->registerCommand(PublishCommand::class, 'publish');

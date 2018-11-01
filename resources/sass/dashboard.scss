@@ -1,7 +1,4 @@
 
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300;400;600");
-@import url('https://fonts.googleapis.com/css?family=Scheherazade:400,700&subset=arabic');
 // Variables
 @import "variables";
 @import '_gradients';
@@ -14,15 +11,14 @@
 @import "dashboard/vendor/daterangepicker.css";
 @import "dashboard/vendor/pace-theme-flash.css";
 @import "dashboard/vendor/bootstrap-datetimepicker.css";
-@import "dashboard/vendor/datatables.bootstrap.css";
+//@import "dashboard/vendor/datatables.bootstrap.css";
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.min.css";
+@import "~datatables.net-rowgroup-bs4/css/rowGroup.bootstrap4.min.css";
+@import "~datatables.net-keytable-bs4/css/keyTable.bootstrap4.min.css";
+@import "~datatables.net-autofill-bs4/css/autoFill.bootstrap4.min.css";
+@import "~datatables.net-scroller-bs4/css/scroller.bootstrap4.min.css";
+@import "~datatables.net-select-bs4/css/select.bootstrap4.min.css";
 @import "dashboard/vendor/responsive.bootstrap.css";
-//@import "dashboard/css/ironside/titan.css";
-//@import "dashboard/css/ironside/charts.css";
-//@import "dashboard/css/ironside/superbox.css";
-//@import "dashboard/css/ironside/nestable.css";
-//@import "dashboard/css/ironside/datatables.css";
-//@import "dashboard/css/ironside/checkboxes.css";
-//@import "dashboard/css/ironside/notify.css";
 @import "dashboard/ironside.css";
 // Dashborad Theme
 @import "dashboard/lib/calendar2/semantic.ui.min.css";
@@ -33,12 +29,3 @@
 //@import "dashboard/css/lib/owl.theme.default.min.css";
 //@import "dashboard/";
 @import "dashboard/helper.css";
-@import "override";
-
-html ,body {
-  font-family: 'Scheherazade', serif;
-}
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0,0.04);
-}

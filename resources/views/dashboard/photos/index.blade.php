@@ -1,17 +1,17 @@
-@extends('ironside::layouts.dashboard')
+@extends('ironside::layouts.dashboard.app')
 
 @section('content')
     <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-primary box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title">
+        <div class="col-lg-12">
+            <div class="card card-primary card-solid">
+                <div class="card-header bg-ironside">
+                    <h3 class="card-title">
                         <span><i class="fa fa-table"></i></span>
                         <span>List All Photos</span>
                     </h3>
                 </div>
 
-                <div class="box-body">
+                <div class="card-body">
 
                     @include('ironside::dashboard.partials.info')
 

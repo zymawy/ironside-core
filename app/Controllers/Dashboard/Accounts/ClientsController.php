@@ -5,7 +5,7 @@ namespace Zymawy\Ironside\Http\Controllers\Dashboard\Accounts;
 use Illuminate\Validation\Rule;
 use Password;
 use App\User;
-use Zymawy\Ironside\Models\Role;
+use App\Role;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;

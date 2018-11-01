@@ -3,7 +3,10 @@
     "/css/dashboard/theme.css": "/css/dashboard/theme.css",
     "/css/dashboard/rtl.css": "/css/dashboard/rtl.css",
     "/css/dashboard/ltr.css": "/css/dashboard/ltr.css",
+    "/css/dashboard/override.css": "/css/dashboard/override.css",
     "/css/dashboard/dashboard.css": "/css/dashboard/dashboard.css",
     "/js/dashboard/dashboard.js": "/js/dashboard/dashboard.js",
-    "/js/dashboard/theme.js": "/js/dashboard/theme.js"
+    "/js/dashboard/theme.js": "/js/dashboard/theme.js",
+    "/css/dashboard/datatable.css": "/css/dashboard/datatable.css",
+    "/js/dashboard/datatable.js": "/js/dashboard/datatable.js"
 }

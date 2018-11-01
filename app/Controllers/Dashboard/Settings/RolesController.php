@@ -4,7 +4,7 @@ namespace Zymawy\Ironside\Http\Controllers\Dashboard\Settings;
 
 use Redirect;
 use App\Http\Requests;
-use Zymawy\Ironside\Models\Role;
+use App\Role;
 use Illuminate\Http\Request;
 use Zymawy\Ironside\Http\Controllers\Dashboard\AdminController;
 

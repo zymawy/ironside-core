@@ -4,7 +4,7 @@ namespace Zymawy\Ironside\Http\Controllers\Dashboard\Accounts;
 
 use Zymawy\Ironside\Http\Controllers\Dashboard\AdminController;
 use Zymawy\Ironside\Mail\AdminInvitRegistration;
-use Zymawy\Ironside\Models\Role;
+use App\Role;
 use Zymawy\Ironside\Models\UserInvite;
 use App\User;
 use Zymawy\Ironside\Models\UsersInvite;

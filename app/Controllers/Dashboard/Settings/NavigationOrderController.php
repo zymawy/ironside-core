@@ -44,10 +44,10 @@ class NavigationOrderController extends IronsideDashboardController
         $html = '<ol class="dd-list">';
 
         if (!(isset($parent) && $parent)) {
-            $items = NavigationAdmin::whereParentIdORM(0, true);
+            $items = NavigationDashboard::whereParentIdORM(0, true);
         }
         else {
-            $items = NavigationAdmin::whereParentIdORM($parent->id, true);
+            $items = NavigationDashboard::whereParentIdORM($parent->id, true);
         }
 
         foreach ($items as $key => $nav) {
@@ -91,7 +91,7 @@ class NavigationOrderController extends IronsideDashboardController
      */
     private function updateNavigationListOrder($id, $listOrder, $parentId = 0)
     {
-        $row = NavigationAdmin::find($id);
+        $row = NavigationDashboard::find($id);
         $row->list_order = $listOrder;
         $row->parent_id = $parentId;
         $row->url_parent_id = $parentId; // update the url parent id as well

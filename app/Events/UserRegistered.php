@@ -5,7 +5,7 @@ namespace Zymawy\Ironside\Events;
 use Zymawy\Ironside\Models\UserInvite;
 use App\User;
 use Carbon\Carbon;
-use Zymawy\Ironside\Models\Role;
+use App\Role;
 use Illuminate\Queue\SerializesModels;
 use Zymawy\Ironside\Notifications\UserRegistered as NotifyUserRegistered;
 

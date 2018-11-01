@@ -3,7 +3,7 @@
 namespace Zymawy\Ironside\Models\Traits;
 
 use Zymawy\Ironside\Models\BankCard;
-use Zymawy\Ironside\Models\Role;
+use App\Role;
 
 trait UserHelper
 {

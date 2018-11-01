@@ -3,17 +3,17 @@
 namespace Zymawy\Ironside\Models;
 
 use Zymawy\Ironside\Models\IronsideDashboardNavigation;
-
+use App\Role;
 class NavigationDashboard extends IronsideDashboardNavigation
 {
     /**
      * Get the roles
      * @return \Eloquent
      */
-    public function roles()
-    {
-        return $this->belongsToMany(Role::class, 'navigation_admin_role')->withTimestamps();
-    }
+//    public function roles()
+//    {
+//        return $this->belongsToMany(\App\Role::class)->withTimestamps();
+//    }
 
     public function getRolesStringAttribute()
     {

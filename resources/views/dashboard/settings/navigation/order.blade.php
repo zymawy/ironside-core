@@ -1,31 +1,33 @@
-@extends('ironside::layouts.dashboard')
+@extends('ironside::layouts.dashboard.app')
 
 @section('content')
     <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-primary box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header bg-ironside">
+                    <h3 class="card-title text-white">
                         <span><i class="fa fa-align-center"></i></span>
                         <span>Update {{ ucfirst($resource) }} List Order</span>
                     </h3>
                 </div>
 
-                <div class="box-body">
+                <div class="card-body">
 
                     @include('ironside::dashboard.partials.info')
 
-                    <div class="well well-sm well-toolbar" id="nestable-menu">
-                        <a href="javascript:window.history.back();" class="btn btn-labeled btn-default">
-                            <span class="btn-label"><i class="fa fa-fw fa-chevron-left"></i></span>Back
+{{--                    @include('ironside::dashboard.partials.toolbar', ['order' => true])--}}
+
+                    <div class="well well-sm well-toolbar m-t-10 m-b-10" id="nestable-menu">
+                        <a href="javascript:window.history.back();" class="btn b-ir-theme m-b-10 m-l-5">
+                            <span class="badge"><i class="fa fa-fw fa-chevron-left"></i></span>Back
                         </a>
 
-                        <button type="button" class="btn btn-labeled btn-default text-primary" data-action="expand-all">
-                            <span class="btn-label"><i class="fa fa-fw fa-plus-circle"></i></span>Expand All
+                        <button type="button" class="btn b-ir-primary m-b-10 m-l-5" data-action="expand-all">
+                            <span class="badge"><i class="fa fa-fw fa-plus-circle"></i></span>Expand All
                         </button>
 
-                        <button type="button" class="btn btn-labeled btn-default text-primary" data-action="collapse-all">
-                            <span class="btn-label"><i class="fa fa-fw fa-minus-circle text-red"></i></span>Collapse All
+                        <button type="button" class="btn  b-ir-success m-b-10 m-l-5" data-action="collapse-all">
+                            <span class="badge"><i class="fa fa-fw fa-minus-circle text-red"></i></span>Collapse All
                         </button>
                     </div>
 
@@ -44,7 +46,7 @@
     @include('ironside::dashboard.partials.nestable')
 @endsection
 
-@section('scripts')
+@section('js')
     @parent
     <script type="text/javascript" charset="utf-8">
         $(function ()

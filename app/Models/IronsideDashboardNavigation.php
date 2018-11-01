@@ -2,7 +2,7 @@
 
 namespace Zymawy\Ironside\Models;
 
-use Zymawy\Ironside\Models\Role;
+use App\Role;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Zymawy\Ironside\Models\Traits\RecursiveParent;
 

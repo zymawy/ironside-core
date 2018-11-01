@@ -3,7 +3,7 @@
 namespace Zymawy\Ironside\Http\Controllers\Dashboard\General;
 
 use Password;
-use Zymawy\Ironside\Models\Role;
+use App\Role;
 use App\User;
 use Illuminate\Validation\Rule;
 use Redirect;

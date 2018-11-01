@@ -79,15 +79,16 @@ class IronsideDashboardController extends IronsideController
     {
         $navigation = $this->urlParentNavs;
         $url = config('app.url');
-        $html = '<ol class="breadcrumb">';
+        $isFloat = \App::isLocale('ar')? 'float-left': 'float-right';
+        $html = '<ol class="breadcrumb ' . $isFloat .'">';
 
         // for dashboard, only add home
         if (count($navigation) == 1 && $navigation[0]->title == 'Dashboard') {
-            $html .= '<li><a href="' . $url . '"><i class="fa fa-home"></i> Dashboard</a></li>';
+            $html .= '<li class="b-ir-primary"><a href="' . $url . '" class="text-primary"><i class="fa fa-home"></i> Dashboard</a></li>';
         }
         else {
             foreach ($navigation as $key => $nav) {
-                $html .= '<li>';
+                $html .= '<li class="breadcrumb-item">';
                 $icon = (strlen($nav->icon) > 2 ? '<i class="fa fa-' . $nav->icon . '"></i> ' : '');
                 $html .= '<a href="' . url($nav->url) . '">' . $icon . '' . $nav->title . '</a>';
                 $html .= '</li>';
@@ -95,7 +96,7 @@ class IronsideDashboardController extends IronsideController
 
             // TODO: show edit / create, etc icon ?
             if ($word = $this->checkIfReservedWordInUrl()) {
-                $html .= '<li>';
+                $html .= '<li class="breadcrumb-item active">';
                 $html .= ucfirst($word);
                 $html .= '</li>';
             };
@@ -123,9 +124,9 @@ class IronsideDashboardController extends IronsideController
 
             // TODO: show edit / create, etc icon ?
             if ($word = $this->checkIfReservedWordInUrl()) {
-                $html .= '<small>';
+                $html .= '<small> ';
                 $html .= ucfirst($word);
-                $html .= '</small>';
+                $html .= ' </small>';
             };
         }
 

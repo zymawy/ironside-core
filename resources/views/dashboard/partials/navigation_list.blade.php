@@ -1,7 +1,7 @@
 @foreach ($collection as $nav)
     <li class="{{ array_search_value($nav->id, $selectedNavigationParents) ? 'active' : ''}}">
         <a
-        class={!!  $nav->children->count()? "has-arrow " : "" !!}
+                {!!  $nav->children->count()? "class=has-arrow " : "" !!}
                 href="{{ isset($navigation[$nav->id])? '#' : $nav->url }}"
                 aria-expanded="false">
 
