@@ -1,7 +1,7 @@
 <?php
 namespace Zymawy\Ironside\Seeds;
 use Illuminate\Database\Seeder;
-
+use Artisan;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
         // pages, news, blog, albums
         //\App\Models\Photo::truncate();
         ;
+        Artisan::call('laratrust:seeder');
         $this->call(UserTableSeeder::class);
 
         $this->call(BannerTableSeeder::class);

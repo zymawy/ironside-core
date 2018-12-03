@@ -5,6 +5,7 @@ namespace Zymawy\Ironside\Commands;
 use Zymawy\Ironside\Seeds\DatabaseSeeder;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
+use Artisan;
 
 class DatabaseSeedCommand extends Command
 {
@@ -57,7 +58,7 @@ class DatabaseSeedCommand extends Command
     {
         $seed = new DatabaseSeeder();
         $seed->run();
-
+        
         $this->line("Seeding: RoleTableSeeder");
         $this->line("Seeding: UserTableSeeder");
         $this->line("Seeding: BannerTableSeeder");

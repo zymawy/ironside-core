@@ -8,6 +8,7 @@ use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Finder\SplFileInfo;
+use Artisan;
 
 class InstallCommand extends Command
 {
@@ -76,25 +77,38 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        // php artisan migrate
-        $this->call('migrate');
+        $bar = $this->output->createProgressBar(10);
 
+        $bar->start();
+
+        // php artisan migrate
+        $this->call('migrate:fresh');
+        Artisan::call('vendor:publish', [
+            '--tag' => 'laratrust'
+        ]);
+
+        $bar->advance();
+        $this->line('');
+
+        $this->call('db:seed');
         // replace app/User.php (rename namespace)
         // User.php needs to be updated before db:seed (user.php helpers)
         $stubsPath = $this->basePath . "stubs{$this->ds}";
         $stub = $this->filesystem->get("{$stubsPath}User.stub");
         $this->filesystem->put(app_path() . "{$this->ds}User.php", $stub);
         $this->info('app\User.php was updated');
-
+        $bar->advance();
+        $this->line('');
         $stubsPath = $this->basePath . "stubs{$this->ds}";
         $stub = $this->filesystem->get("{$stubsPath}Role.stub");
         $this->filesystem->put(app_path() . "{$this->ds}Role.php", $stub);
         $this->info('app\Role.php was updated');
+        $bar->advance();
 
         // php artisan titan:db:seed
         $this->call('ironside:db:seed');
 
-        // php artisan titan:publish --files=public
+        // php artisan ironside:publish --files=public
         $this->call('ironside:publish', ['--files' => 'public']);
 
         $stubsPath = $this->basePath . "stubs{$this->ds}";
@@ -103,18 +117,19 @@ class InstallCommand extends Command
         $stub = $this->filesystem->get("{$stubsPath}web.stub");
         $this->filesystem->put(base_path() . "{$this->ds}routes{$this->ds}web.php", $stub);
         $this->info('routes\web.php was updated');
-        
-
+        $bar->advance();
+        $this->line('');
         // update app/Http/Kernel.php - add middlewares
         $stub = $this->filesystem->get("{$stubsPath}Kernel.stub");
         $this->filesystem->put(app_path() . "{$this->ds}Http{$this->ds}Kernel.php", $stub);
         $this->info('app\Http\Kernel.php was updated');
-
+        $bar->advance();
         // update app/Exceptions/Handler.php
         $stub = $this->filesystem->get("{$stubsPath}Handler.stub");
         $this->filesystem->put(app_path() . "{$this->ds}Exceptions{$this->ds}Handler.php", $stub);
-        $this->info('app\Exceptions\Handler.php was updated');
-
+        //$this->info('app\Exceptions\Handler.php was updated');
+        $bar->advance();
+        $this->line('');
         // update config/app.php
         $path = base_path() . "{$this->ds}config{$this->ds}app.php";
         $stub = $this->filesystem->get($path);
@@ -129,8 +144,9 @@ class InstallCommand extends Command
     'google_analytics'     => env('GOOGLE_ANALYTICS', ''),
     'google_map_key'       => env('GOOGLE_MAP_KEY', ''),", $stub);
         $this->filesystem->put($path, $stub);
-        $this->info('config\app.php was updated');
-
+        //$this->info('config\app.php was updated');
+        $bar->advance();
+        $this->line('');
         $this->line('The following will update your .env file.');
 
         // add the extra environment variables to .env
@@ -158,12 +174,15 @@ APP_NAME=Laravel", $stub);
         $this->updateDotEnv("What is your APP_URL?", "APP_URL");
 
         $this->info('.env was updated. (Extra environment variables were addted at the top)');
-
+        $bar->advance();
         $this->line("User Credentials");
         $this->info("Email: admin@laravel.local");
-        $this->info("Password: admin");
-
+        $this->info("Password: admin ");
+        $bar->advance();
+        $this->line("");
         $this->alert('Installation complete.');
+
+        $bar->finish();
     }
 
     /**
