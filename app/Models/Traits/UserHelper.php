@@ -14,7 +14,8 @@ trait UserHelper
      */
     public function getFullnameAttribute()
     {
-        return $this->attributes['firstname'] . ' ' . $this->attributes['lastname'];
+        //$this->attributes['firstname'] . ' ' . $this->attributes['lastname']
+        return  "";
     }
 
     /**

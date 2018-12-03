@@ -8,10 +8,10 @@ if (!function_exists('form_error_class')) {
 }
 
 if (!function_exists('form_error_message')) {
-    function form_error_message($attribute, $errors)
+    function form_error_message($attribute, $errors,$class = 'text-red')
     {
         return $errors->first($attribute,
-            '<i><small for="' . $attribute . '" class="text-red">:message</small></i>');
+            '<i><small for="' . $attribute . '" class="'. $class .'">:message</small></i>');
     }
 }
 

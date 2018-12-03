@@ -1,7 +1,5 @@
 <?php
-
 namespace Zymawy\Ironside\Http\Controllers\Website;
-
 use Zymawy\Ironside\Models\Changelog;
 use Zymawy\Ironside\Models\Testimonial;
 use Redirect;
@@ -10,6 +8,7 @@ use Zymawy\Ironside\Models\Page;
 use Illuminate\Http\Request;
 use Zymawy\Ironside\Http\Controllers\Admin\AdminController;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use App\Http\Controllers\Website\WebsiteController;
 
 class PagesController extends WebsiteController
 {
@@ -24,20 +23,16 @@ class PagesController extends WebsiteController
     public function index($slug1, $slug2 = null, $slug3 = null)
     {
         $url = $this->getCurrentUrl();
-
         $page = Page::with('components.component')->where('url', $url)->first();
         if (!$page) {
             throw new NotFoundHttpException();
         }
-
         // find out if its a 'main page' and get the children
         $children = $this->findChildrenPages($page);
-
         return $this->view('ironside::pages.page')
             ->with('activePage', $page)
             ->with('childrenPages', $children);
     }
-
     /**
      * Get the children pages
      * @param Page $page
@@ -46,7 +41,6 @@ class PagesController extends WebsiteController
     private function findChildrenPages(Page $page)
     {
         $pages = Page::where('parent_id', $page->id)->orderBy('header_order')->get();
-
         return $pages;
     }
 }

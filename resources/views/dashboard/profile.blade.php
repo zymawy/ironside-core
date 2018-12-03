@@ -1,17 +1,17 @@
-@extends('ironside::layouts.dashboard')
+@extends('ironside::layouts.dashboard.app')
 
 @section('content')
     <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-primary box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header bg-ironside">
+                    <h3 class="card-title text-white">
                         <img src="{{ profile_image() }}" class="img-circle" alt="User Image" style="width: 25px;">
                         <span>Update Profile</span>
                     </h3>
                 </div>
 
-                <div class="box-body no-padding">
+                <div class="card-body no-padding">
 
                     @include('ironside::dashboard.partials.info')
 
@@ -24,9 +24,11 @@
                                 <div class="col col-6">
                                     <div class="form-group {{ form_error_class('firstname', $errors) }}">
                                         <label for="firstname">Firstname</label>
-                                        <div class="input-group">
+                                        <div class="input-group  input-group-rounded">
                                             <input type="text" name="firstname" class="form-control" placeholder="Firstname" value="{{ ($errors->any()? old('firstname') : user()->firstname) }}">
-                                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                            <span class="input-group-btn">
+                                                <i class="fa fa-user"></i>
+                                            </span>
                                         </div>
                                         {!! form_error_message('firstname', $errors) !!}
                                     </div>

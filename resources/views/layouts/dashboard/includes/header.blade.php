@@ -90,73 +90,22 @@
                 </li>
                 <!-- Comment -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-muted text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-bell"></i>
+                    <a class="nav-link dropdown-toggle text-muted text-muted" data-type="activities" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-bell"></i>
 								<div class="ir-notify"> <span class="heartbit"></span> <span class="point"></span> </div>
 							</a>
                     <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn">
                         <ul>
                             <li>
-                                <div class="drop-title">
-                                    @lang('ironside::dashboard.haeder.notifications')
-                                </div>
-                            </li>
-                            <li>
                                 <div class="message-center">
-                                    <!-- Message -->
-                                    <a href="#">
-                                        <div class="btn btn-danger btn-circle m-r-10"><i class="fa fa-link"></i></div>
-                                        <div class="mail-contnet">
-                                            <h5>This is title</h5> <span class="mail-desc">Just see the my new admin!</span>                                            <span class="time">9:30 AM</span>
-                                        </div>
-                                    </a>
-                                    <!-- Message -->
-                                    <a href="#">
-                                        <div class="btn btn-success btn-circle m-r-10"><i class="ti-calendar"></i></div>
-                                        <div class="mail-contnet">
-                                            <h5>
-                                                @lang('ironside::dashboard.header.notifications-title')
-                                            </h5>
-                                            <span class="mail-desc">
-                                                @lang('ironside::dashboard.header.notifications-body')
-                                            </span>
-                                            <span class="time">9:10 AM</span>
-                                        </div>
-                                    </a>
-                                    <!-- Message -->
-                                    <a href="#">
-                                        <div class="btn btn-info btn-circle m-r-10"><i class="ti-settings"></i></div>
-                                        <div class="mail-contnet">
-                                            <h5>
-                                                @lang('ironside::dashboard.header.notifications-title-1')
-                                            </h5>
-                                            <span class="mail-desc">
-                                                @lang('ironside::dashboard.header.notifications-body-1')
-                                            </span>
-                                            <span class="time">9:08 AM</span>
-                                        </div>
-                                    </a>
-                                    <!-- Message -->
-                                    <a href="#">
-                                        <div class="btn btn-primary btn-circle m-r-10"><i class="ti-user"></i></div>
-                                        <div class="mail-contnet">
-                                            <h5>
-                                                @lang('ironside::dashboard.header.notifications-title')
-                                            </h5>
-                                            <span class="mail-desc">
-                                                @lang('ironside::dashboard.header.notifications-body')
-                                            </span>
-                                            <span class="time">9:10 AM</span>
-                                        </div>
+                            <li>
+                                <ul id="js-activities-list" class="menu">
+
+                                </ul>
+                            </li>
+                                        <li class="footer"><a href="/admin/history/website">See All Activities</a>
+                                        </li>
                                     </a>
                                 </div>
-                            </li>
-                            <li>
-                                <a class="nav-link text-center" href="javascript:void(0);">
-                                    <strong>
-                                        @lang('ironside::dashboard.header.notifications-checkAll')
-                                    </strong>
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
                             </li>
                         </ul>
                     </div>
@@ -164,85 +113,34 @@
                 <!-- End Comment -->
                 <!-- Messages -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-muted  " href="#" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-envelope"></i>
-								<div class="ir-notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                    <a class="nav-link dropdown-toggle text-muted" id="js-notifications" href="#" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-envelope"></i>
+								<div class="ir-notify"> <span class="heartbit"  data-user="{{ user()->id }}" id="js-notifications-badge" style="display: none;"></span> <span class="point"></span> </div>
 							</a>
                     <div class="dropdown-menu dropdown-menu-right mailbox animated zoomIn" aria-labelledby="2">
-                        <ul>
-                            <li>
-                                <div class="drop-title">
-                                    @lang('ironside::dashboard.header.notifications-have')
-                                </div>
-                            </li>
-                            <li>
-                                <div class="message-center">
-                                    <!-- Message -->
-                                    <a href="#">
-                                        <div class="user-img"> <img src="images/users/5.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span>                                            </div>
-                                        <div class="mail-contnet">
-                                            <h5>
-                                                @lang('ironside::dashboard.header.notifications-title')
-                                            </h5>
-                                            <span class="mail-desc">
-                                                @lang('ironside::dashboard.header.notifications-body')
-                                            </span>
-                                            <span class="time">9:10 AM</span>
-                                        </div>
-                                    </a>
-                                    <!-- Message -->
-                                    <a href="#">
-                                        <div class="user-img"> <img src="images/users/2.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span>                                            </div>
-                                        <div class="mail-contnet">
-                                            <h5>
-                                                @lang('ironside::dashboard.header.notifications-title')
-                                            </h5>
-                                            <span class="mail-desc">
-                                                @lang('ironside::dashboard.header.notifications-body')
-                                            </span>
-                                            <span class="time">9:10 AM</span>
-                                        </div>
-                                    </a>
-                                    <!-- Message -->
-                                    <a href="#">
-                                        <div class="user-img"> <img src="images/users/3.jpg" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span>                                            </div>
-                                        <div class="mail-contnet">
-                                            <h5>
-                                                @lang('ironside::dashboard.header.notifications-title')
-                                            </h5>
-                                            <span class="mail-desc">
-                                                @lang('ironside::dashboard.header.notifications-body')
-                                            </span>
-                                            <span class="time">9:10 AM</span>
-                                        </div>
-                                    </a>
-                                    <!-- Message -->
-                                    <a href="#">
-                                        <div class="user-img"> <img src="images/users/4.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span>                                            </div>
-                                        <div class="mail-contnet">
-                                            <h5>
-                                                @lang('ironside::dashboard.header.notifications-title')
-                                            </h5>
-                                            <span class="mail-desc">
-                                                @lang('ironside::dashboard.header.notifications-body')
-                                            </span>
-                                            <span class="time">9:10 AM</span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <a class="nav-link text-center" href="javascript:void(0);">
-                                    <strong>
-                                        @lang('ironside::dashboard.header.email-see')
-                                    </strong>
-                                    <i class="fa fa-angle-right"></i>
-                                 </a>
-                            </li>
-                        </ul>
+
                     </div>
                 </li>
+                {{--<li>--}}
+                    {{--<div class="message-center">--}}
+                        {{--<a id="js-notifications" href="#" class="dropdown-toggle" data-toggle="modal" data-target="#modal-notifications">--}}
+                            {{--<i class="fa fa-envelope-o"></i>--}}
+                            {{--<span data-user="{{ user()->id }}" id="js-notifications-badge" class="label label-success" style="display: none;"></span>--}}
+                        {{--</a>--}}
+                    {{--</div>--}}
+                {{--</li>--}}
                 <!-- End Messages -->
+                @if (impersonate()->isActive())
+                        <li>
+                            <a href="{{ route('impersonate.logout') }}"
+                               onclick="event.preventDefault(); document.getElementById('impersonate-logout-form').submit();">
+                                Return to original user
+                            </a>
 
+                            <form id="impersonate-logout-form" action="{{ route('impersonate.logout') }}" method="post" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
+                @endif
                 <!-- Profile -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -251,7 +149,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                         <ul class="dropdown-user">
-                            <li><a href="{{ url('/admin/profile') }}"><i class="ti-user"></i> Profile</a></li>
+                            <li><a href="{{ url('/dashboard/profile') }}"><i class="ti-user"></i> Profile</a></li>
                             <li><a href="#"><i class="ti-wallet"></i> Balance</a></li>
                             <li><a href="#"><i class="ti-email"></i> Inbox</a></li>
                             <li><a href="#"><i class="ti-settings"></i> Setting</a></li>

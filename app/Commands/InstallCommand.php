@@ -86,6 +86,11 @@ class InstallCommand extends Command
         $this->filesystem->put(app_path() . "{$this->ds}User.php", $stub);
         $this->info('app\User.php was updated');
 
+        $stubsPath = $this->basePath . "stubs{$this->ds}";
+        $stub = $this->filesystem->get("{$stubsPath}Role.stub");
+        $this->filesystem->put(app_path() . "{$this->ds}Role.php", $stub);
+        $this->info('app\Role.php was updated');
+
         // php artisan titan:db:seed
         $this->call('ironside:db:seed');
 
@@ -98,6 +103,7 @@ class InstallCommand extends Command
         $stub = $this->filesystem->get("{$stubsPath}web.stub");
         $this->filesystem->put(base_path() . "{$this->ds}routes{$this->ds}web.php", $stub);
         $this->info('routes\web.php was updated');
+        
 
         // update app/Http/Kernel.php - add middlewares
         $stub = $this->filesystem->get("{$stubsPath}Kernel.stub");

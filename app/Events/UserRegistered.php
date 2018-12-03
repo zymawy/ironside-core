@@ -20,22 +20,22 @@ class UserRegistered
      */
     public function __construct(User $user, $token = null)
     {
-        $roles = [Role::$WEBSITE];
+        $role = 'user';
 
         // if token - add admin role and mark as claimed
         $userInvite = UserInvite::whereToken($token)->whereNull('claimed_at')->first();
         if ($userInvite) {
-            $roles[] = Role::$BASE_ADMIN;
+            $role = 'administrator';
             // set invite claimed
             $user->update(['gender' => 'male']);
             $userInvite->update(['claimed_at' => Carbon::now()]);
         }
 
         // attach the roles to the user
-        $user->syncRoles($roles);
+        $user->attachRole($role);
 
         // notify / send email to user to confirm account
-        $user->notify(new NotifyUserRegistered());
+        // $user->notify(new NotifyUserRegistered());
 
         log_activity('User Registered', $user->fullname . ' registered as a new user.', $user);
     }

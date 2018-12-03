@@ -20,6 +20,7 @@ class RegisterController extends AuthController
     public function showRegistrationForm($token = null)
     {
         $this->showPageBanner = false;
+    
 
         // check if token is valid
         $userInvite = UserInvite::whereToken($token)->whereNull('claimed_at')->first();

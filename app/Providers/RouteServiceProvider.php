@@ -41,6 +41,9 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapApiRoutes($path);
 
         $this->mapWebRoutes($path);
+        
+        $this->mapDashboardRoutes($path);
+        
 
         //
     }
@@ -59,6 +62,21 @@ class RouteServiceProvider extends ServiceProvider
              ->group($path . ('web.php'));
     }
 
+
+    /**
+     * Define the "web" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapDashboardRoutes($path)
+    {
+        Route::middleware('web')
+             ->namespace($this->namespace)
+             ->as('dashboard.')
+             ->group($path . ('dashboard.php'));
+    }
     /**
      * Define the "api" routes for the application.
      *

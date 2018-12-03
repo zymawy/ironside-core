@@ -2,9 +2,9 @@
 
 namespace App;
 
-use Zymawy\Ironside\Models\TitanUser;
+use Zymawy\Ironside\Models\IronsideUser;
 
-class User extends TitanUser
+class User extends IronsideUser
 {
 
 }
