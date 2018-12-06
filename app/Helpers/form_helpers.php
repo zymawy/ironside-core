@@ -35,29 +35,31 @@ if (!function_exists('action_row')) {
         $url = rtrim($url, '/') . '/'; // remove last / and add it again (if it was not there)
 
         $show = '<div class="btn-group">
-                    <a href="' . $url . $id . '" class="btn b-ir-default btn-xs btn-flat m-b-10 m-l-5" data-toggle="tooltip" title="Show ' . $title . '">
+                    <a href="' . $url . $id . '" class="btn btn-info btn-xs btn-flat m-b-10 m-l-5" data-toggle="tooltip" title="عرض ' . $title . '">
                         <i class="fa fa-eye"></i>
                     </a>
                 </div>';
 
         $edit = '<div class="btn-group">
-                    <a href="' . $url . $id . '/edit' . '" class="btn b-ir-primary btn-xs btn-flat m-b-10 m-l-5" data-toggle="tooltip" title="Edit ' . $title . '">
+                    <a href="' . $url . $id . '/edit' . '" class="btn b-ir-primary btn-xs btn-flat m-b-10 m-l-5" data-toggle="tooltip" title="تعديل ' . $title . '">
                         <i class="fa fa-edit"></i>
                     </a>
                 </div>';
 
         $delete = '<div class="btn-group">
-                        <form id="form-delete-row' . $id . '" method="POST" action="' . $url . $id . '">
+                        <form method="POST" action="' . $url . $id . '">
                         <input name="_method" type="hidden" value="DELETE">
                         <input name="_token" type="hidden" value="' . csrf_token() . '">
                         <input name="_id" type="hidden" value="' . $id . '">
-                        <a data-form="form-delete-row' . $id . '" class="btn b-ir-danger btn-xs btn-delete-row btn-flat m-b-10 m-l-5" data-toggle="tooltip" title="Delete ' . $title . '">
+                        <button type="submit" class="btn b-ir-danger btn-xs btn-flat m-b-10 m-l-5" data-toggle="tooltip" title="حذف ' . $title . '">
                             <i class="fa fa-trash"></i>
-                        </a>
+                        </button>
                         </form>
                     </div>';
 
         $html = '';
+        //data-form="form-delete-row' . $id . '"
+        // id="form-delete-row' . $id . '" btn-delete-row
         foreach ($actions as $k => $action) {
             if ($action == 'show') {
                 $html .= $show;

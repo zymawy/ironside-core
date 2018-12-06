@@ -11,7 +11,7 @@ class NavigationDashboardTableSeeder extends Seeder
         //DB::delete('TRUNCATE navigation_admin_role');
 
         //$csvPath = database_path() . DIRECTORY_SEPARATOR . 'seeds' . DIRECTORY_SEPARATOR . 'csv' . DIRECTORY_SEPARATOR . 'navigation_admin.csv';
-        $csvPath = __DIR__ . DIRECTORY_SEPARATOR . 'csv' . DIRECTORY_SEPARATOR . 'navigation_dashboard.csv';
+        $csvPath = __DIR__ . DIRECTORY_SEPARATOR . 'csv' . DIRECTORY_SEPARATOR . 'navigation_dashboard1.csv';
         $items = csv_to_array($csvPath);
 
         foreach ($items as $key => $item) {

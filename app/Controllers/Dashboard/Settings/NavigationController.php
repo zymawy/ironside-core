@@ -19,6 +19,7 @@ class NavigationController extends AdminController
      */
     public function index()
     {
+
         save_resource_url();
 
         return $this->showIndex('ironside::settings.navigation.index');
@@ -31,11 +32,11 @@ class NavigationController extends AdminController
      */
     public function create()
     {
-//        $roles = App\Role::getAllLists();
+       $roles = \App\Role::getAllLists();
         $parents = NavigationDashboard::getAllLists();
 
         return $this->view('ironside::settings.navigation.add_edit')
-//            ->with('roles', $roles)
+            ->with('roles', $roles)
             ->with('parents', $parents);
     }
 
@@ -70,7 +71,7 @@ class NavigationController extends AdminController
 
         if ($row) {
             $row->updateUrl()->save();
-            $row->roles()->attach(input('roles'));
+            //$row->roles()->attach(input('roles'));
         }
 
         return redirect_to_resource();

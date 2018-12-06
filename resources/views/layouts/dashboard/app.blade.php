@@ -50,24 +50,24 @@
     <div>
             <div id="main-wrapper">
                     <!-- Page wrapper  -->
-                    <div class="page-wrapper">
-                    @include('ironside::layouts.dashboard.includes.breadcrumb')
-                    <!-- Container fluid  -->
-                                <div class="container-fluid" id="app">
+                <div class="page-wrapper">
+                        @include('ironside::layouts.dashboard.includes.breadcrumb')
+                        <!-- Container fluid  -->
+                    <div class="container-fluid" id="app">
                                         <!-- Start Page Content -->
                                              @yield('content')
                                         <!-- End PAge Content -->
-                                </div>
-                        <!-- End Container fluid  -->
                     </div>
+                        <!-- End Container fluid  -->
+                </div>
                     <!-- End Page wrapper  -->
             </div>
             <!-- Main wrapper  -->
     </div>
-    @include('ironside::layouts.dashboard.includes.footer')
-    <script src="/js/app.js"></script>
     @include('notify::notify')
     @include('ironside::dashboard.partials.modals')
+    @include('ironside::layouts.dashboard.includes.footer')
+    <script src="/js/app.js"></script>
     <script src="/js/dashboard/datatable.js"></script>
     <script src="/js/dashboard/theme.js"></script>
     <script type="text/javascript" charset="utf-8" src="/js/dashboard/dashboard.js?v=1"></script>

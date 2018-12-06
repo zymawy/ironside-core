@@ -1,17 +1,17 @@
-@extends('ironside::layouts.dashboard')
+@extends('ironside::layouts.dashboard.app')
 
 @section('content')
     <div class="row">
         <div class="col-xs-12">
-            <div class="box box-primary box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title">
+            <div class="card">
+                <div class="card-header bg-ironside">
+                    <h3 class="card-title text-white">
                         <span><i class="fa fa-edit"></i></span>
                         <span>{{ isset($item)? 'Edit the ' . $item->title . ' entry': 'Add a new ' . ucfirst($resource) }}</span>
                     </h3>
                 </div>
 
-                <div class="box-body no-padding">
+                <div class="card-body no-padding">
                     @include('ironside::dashboard.partials.info')
 
                     <form id="form-edit" method="post" action="{{ $selectedNavigation->url . (isset($item)? '/' . $item->id : '') }}">
@@ -23,9 +23,9 @@
                                 <section class="col col-3">
                                     <section class="form-group {{ form_error_class('icon', $errors) }}">
                                         <label for="id-icon">Icon</label>
-                                        <div class="input-group">
+                                        <div class="input-group prepend">
                                             <input type="text" class="form-control" id="id-icon" name="icon" placeholder="Please insert the Icon" value="{{ ($errors && $errors->any()? old('icon') : (isset($item)? $item->icon : '')) }}">
-                                            <span class="input-group-addon"><i class="fa fa-desktop"></i></span>
+                                            {{-- <span class="input-group-addon"><i class="fa fa-desktop"></i></span> --}}
                                         </div>
                                         {!! form_error_message('icon', $errors) !!}
                                     </section>
@@ -44,7 +44,7 @@
                                         <label for="id-slug">Slug</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" id="id-slug" name="slug" placeholder="Please insert the Slug" value="{{ ($errors && $errors->any()? old('slug') : (isset($item)? $item->slug : '')) }}">
-                                            <span class="input-group-addon"><i class="fa fa-link"></i></span>
+                                            {{-- <span class="input-group-addon"><i class="fa fa-link"></i></span> --}}
                                         </div>
                                         {!! form_error_message('slug', $errors) !!}
                                     </section>
@@ -73,7 +73,7 @@
                                 <div class="col col-2">
                                     <section>
                                         <label for="id-is_hidden">Is {{ $resource }} hidden</label>
-                                        <label class="checkbox" style="margin-top: 5px">
+                                        <label class="" style="margin-top: 5px">
                                             <input type="checkbox" name="is_hidden" {!! ($errors && $errors->any()? (old('is_hidden') == 'on'? 'checked':'') : (isset($item)? $item->is_hidden == 1? 'checked' : '' : '')) !!}>
                                             <i></i>Is Hidden
                                         </label>

@@ -19,8 +19,8 @@ id,title,description,slug,url,icon,help_index_title,help_index_content,help_crea
 19,Admin Invites,,invites,/dashboard/accounts/administrators/invites,,,,,,,,1,1,18,18,4
 20,Profile,,profile,/dashboard/profile,user,,,,,,,16,1,0,0,4
 21,Settings,,settings,/dashboard/settings,cogs,,,,,,,15,0,0,0,4
-22,Navigation,,navigation,/dashboard/settings/navigation,align-center,Help,Helpfull text here - explaining what u can do here...,Information,Please complete the form to create the navigation,,,4,1,21,21,4
-23,Navigation Order,Navigation Order,order,/dashboard/settings/navigation/order,list-ol,,,,,,,1,1,22,22,4
+22,Navigation,,navigation,/dashboard/settings/navigation,align-center,Help,Helpfull text here - explaining what u can do here...,Information,Please complete the form to create the navigation,,,4,0,21,21,4
+23,Navigation Order,Navigation Order,order,/dashboard/settings/navigation/order,list-ol,,,,,,,1,0,22,22,4
 24,Roles,Roles,roles,/dashboard/settings/roles,universal-access,,,,,,,1,0,21,21,4
 25,Settings,Settings,settings,/dashboard/settings/settings,cog,,,,,,,2,0,21,21,4
 26,Reports,,reports,/dashboard/reports,bar-chart,,,,,,,14,1,0,0,4

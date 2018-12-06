@@ -32,7 +32,7 @@ trait Sluggable
      */
     function setSlugAttribute($slug)
     {
-        $this->attributes['slug'] = str_slug($slug);
+        $this->attributes['slug'] = ar_slug($slug);
     }
 
     /**
