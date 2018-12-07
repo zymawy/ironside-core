@@ -111,6 +111,7 @@ class InstallCommand extends Command
         $this->info('Navigation Dashboard csv Copied To Storage Public Folder');
         $bar->advance();
         $this->line('');
+
         // php artisan ironside:db:seed
         $this->call('ironside:db:seed');
 
@@ -153,6 +154,7 @@ class InstallCommand extends Command
         //$this->info('config\app.php was updated');
         $bar->advance();
         $this->line('');
+
         $this->line('The following will update your .env file.');
 
         // add the extra environment variables to .env
