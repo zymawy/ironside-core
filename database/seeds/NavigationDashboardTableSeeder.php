@@ -2,7 +2,7 @@
 namespace Zymawy\Ironside\Seeds;
 use Zymawy\Ironside\Models\NavigationDashboard;
 use Illuminate\Database\Seeder;
-
+use Storage;
 class NavigationDashboardTableSeeder extends Seeder
 {
     public function run()
@@ -11,7 +11,14 @@ class NavigationDashboardTableSeeder extends Seeder
         //DB::delete('TRUNCATE navigation_admin_role');
 
         //$csvPath = database_path() . DIRECTORY_SEPARATOR . 'seeds' . DIRECTORY_SEPARATOR . 'csv' . DIRECTORY_SEPARATOR . 'navigation_admin.csv';
-        $csvPath = __DIR__ . DIRECTORY_SEPARATOR . 'csv' . DIRECTORY_SEPARATOR . 'navigation_dashboard.csv';
+        if(Storage::disk('public')->exists('navigation_dashboard.csv'))
+        {
+          $csvPath = storage_path('app/public/navigation_dashboard.csv');
+
+        } else {
+          $csvPath = __DIR__ . DIRECTORY_SEPARATOR . 'csv' . DIRECTORY_SEPARATOR . 'navigation_dashboard.csv';
+        }
+
         $items = csv_to_array($csvPath);
 
         foreach ($items as $key => $item) {

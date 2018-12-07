@@ -77,7 +77,7 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        $bar = $this->output->createProgressBar(10);
+        $bar = $this->output->createProgressBar(11);
 
         $bar->start();
 
@@ -105,7 +105,13 @@ class InstallCommand extends Command
         $this->info('app\Role.php was updated');
         $bar->advance();
 
-        // php artisan titan:db:seed
+        $stubsPath = $this->basePath . "stubs{$this->ds}";
+        $stub = $this->filesystem->get("{$stubsPath}navigation_dashboard.csv");
+        $this->filesystem->put(storage_path('app/public') . "{$this->ds}navigation_dashboard.csv", $stub);
+        $this->info('Navigation Dashboard csv Copied To Storage Public Folder');
+        $bar->advance();
+        $this->line('');
+        // php artisan ironside:db:seed
         $this->call('ironside:db:seed');
 
         // php artisan ironside:publish --files=public
@@ -134,7 +140,7 @@ class InstallCommand extends Command
         $path = base_path() . "{$this->ds}config{$this->ds}app.php";
         $stub = $this->filesystem->get($path);
         $stub = str_replace('return [', "return [
-        
+
     'description' => env('APP_DESCRIPTION', 'App Description'),
     'author'      => env('APP_AUTHOR', 'App Author'),
     'keywords'    => env('APP_KEYWORDS', 'laravel'),
