@@ -26,7 +26,7 @@
 
                             <li class="col-lg-3  m-b-30">
                                 <h4 class="m-b-20">
-                                     @lang('ironside::dashboard.header.contuctus')
+                                     @lang('ironside::dashboard/header.contuctus')
                                  </h4>
                                 <!-- Contact -->
                                 <form>
@@ -38,41 +38,26 @@
                                         <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Message"></textarea>
                                     </div>
                                     <button type="submit" class="btn btn-info">
-                                        @lang('ironside::dashboard.header.submit')
+                                        @lang('ironside::dashboard/general.submit')
                                     </button>
                                 </form>
                             </li>
                             <li class="col-lg-3 col-xlg-3 m-b-30">
-                                <h4 class="m-b-20">@lang('ironside::dashboard.header.liststyle')</h4>
+                                <h4 class="m-b-20">@lang('ironside::dashboard/general.liststyle')</h4>
+                                جاري
+                            </li>
+                            <li class="col-lg-3 col-xlg-3 m-b-30">
+                                <h4 class="m-b-20">@lang('ironside::dashboard/general.liststyle')</h4>
                                 <!-- List style -->
                                 <ul class="list-style-none">
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
+                                جاري
                                 </ul>
                             </li>
                             <li class="col-lg-3 col-xlg-3 m-b-30">
-                                <h4 class="m-b-20">@lang('ironside::dashboard.header.liststyle')</h4>
+                                <h4 class="m-b-20">@lang('ironside::dashboard.general.liststyle')</h4>
                                 <!-- List style -->
                                 <ul class="list-style-none">
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
-                                </ul>
-                            </li>
-                            <li class="col-lg-3 col-xlg-3 m-b-30">
-                                <h4 class="m-b-20">@lang('ironside::dashboard.header.liststyle')</h4>
-                                <!-- List style -->
-                                <ul class="list-style-none">
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
-                                    <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i>@lang('dashboard.header.thisLink')</a></li>
+                                    جاري
                                 </ul>
                             </li>
                         </ul>

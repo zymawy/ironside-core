@@ -7,7 +7,9 @@
                 <div class="card-header with-border">
                     <h3 class="card-title">
                         <span><i class="fa fa-table"></i></span>
-                        <span>List All Document Categories</span>
+                        <span>
+                            {{ trans('ironside::dashboard/indexes.list_all_document_cat')  }}
+                        </span>
                     </h3>
                 </div>
 
@@ -20,11 +22,11 @@
                     <table id="tbl-list" data-server="false" class="dt-table table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Total Documents</th>
-                            <th>Documents</th>
-                            <th>Created</th>
-                            <th>Action</th>
+                            <th>{{ trans('ironside::dashboard/forms.title')  }}</th>
+                            <th>{{ trans('ironside::dashboard/forms.total_document')  }}</th>
+                            <th>{{ trans('ironside::dashboard/forms.document')  }}</th>
+                            <th>{{ trans('ironside::dashboard/forms.created')  }}</th>
+                            <th>{{ trans('ironside::dashboard/forms.action')  }}</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -41,7 +43,8 @@
                                 <td>
                                     <div class="btn-toolbar">
                                         <div class="btn-group">
-                                            <a href="/admin/documents/category/{{ $item->id }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Add Documents to {{ $item->name }}">
+                                            <a href="/dashboard/documents/category/{{ $item->id }}" class="btn btn-info btn-xs" data-toggle="tooltip"
+                                               title="{{trans('ironside::dashboard/indexes.add_document_to') . $item->name }}">
                                                 <i class="fa fa-files-o"></i>
                                             </a>
                                         </div>

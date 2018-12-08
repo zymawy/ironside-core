@@ -6,11 +6,11 @@
 </h3>
 
 <div class="pull-right box-tools">
-    <a href="{{ request()->url() }}/datatable/reset" class="btn btn-flat btn-success btn-sm" data-toggle="tooltip" title="{{ trans('dashboard/analytics.reset-date-filter') }}">
+    <a href="{{ request()->url() }}/datatable/reset" class="btn btn-flat btn-success btn-sm" data-toggle="tooltip" title="{{ trans('ironside::dashboard/analytics.reset-date-filter') }}">
         <i class="fa fa-refresh"></i>
     </a>
 
-    <button type="button" class="btn btn-flat btn-success btn-sm daterange" data-toggle="tooltip" title="{{ trans('dashboard/analytics.date-range') }}">
+    <button type="button" class="btn btn-flat btn-success btn-sm daterange" data-toggle="tooltip" title="{{ trans('ironside::dashboard/analytics.date-range') }}">
         <i class="fa fa-calendar"></i>
     </button>
 

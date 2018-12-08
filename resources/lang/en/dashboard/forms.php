@@ -6,12 +6,14 @@
  * Time: 11:15 AM
  */
 return [
+  'id' => 'ID',
   'edit_the' => 'Edit the ',
   'entry' => ' entry',
   'create_banner_text_title' => ' Create a new Banner',
   'create_user_text_title' => ' Create a new User',
   'create_user_text_article' => ' Create a new Article',
   'create_user_text_article_cat' => ' Create a new Article Category',
+  'create_user_text_document_cat' => ' Create a new Document Category',
   'firstname' => 'First Name',
   'firstname_placeholder' => 'Please insert the First Name',
   'lastname' => 'Last Name',
@@ -23,9 +25,9 @@ return [
   'email_placeholder' => ' Email Address',
   'email_readonly' => ' Email Address (readonly)',
   'name' => 'Name',
+  'name_placeholder' => 'Please insert the Name',
   'born_at' => 'Date of Birth',
   'born_at_placeholder' => 'Select your birth date',
-  'name_placeholder' => 'Please insert the Name',
   'roles' => 'Roles',
 
     //
@@ -55,4 +57,20 @@ return [
     'content' => 'Content',
     'cover_photo' => 'Cover Photo',
     'slug' => 'Slug',
+
+    // Documents
+    'document_muted' => 'Please click on the panel below to upload documents to',
+    'document_name_placeholder' => 'Enter the name of the Document',
+    'document_upload' => 'Upload a Document',
+    'how_it_work_title' => 'How it works?',
+    'how_it_work_desc' => " Click on the button below to browse for documents<br/>Refresh the page when upload is complete<br/>Click on the document name to change it<br/>Click on the radio button to set the cover document<br/>",
+    'document_click_here' => 'Click here to browse for documents.',
+    'check' => 'Check',
+    'error' => 'Error',
+    'document_upload_name' => 'Update Document Name',
+    'name_of_the_document' => 'Name of the Document',
+
+    // Activity
+    'type' => 'Type',
+    'description' => 'Description'
 ];

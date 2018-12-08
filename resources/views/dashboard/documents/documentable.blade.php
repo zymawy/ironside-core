@@ -1,19 +1,20 @@
 <div class="row">
-    <div class="col-sm-12">
-        <div class="box box-primary box-solid">
-            <div class="box-header with-border">
-                <h3 class="box-title">
+    <div class="col-lg-12">
+        <div class="card card-primary box-solid">
+            <div class="card-header with-border">
+                <h3 class="card-title">
                     <span><i class="fa fa-image"></i></span>
-                    <span>{!! $documentable->name !!} Documents</span>
+                    <span>{!! $documentable->name !!} {{ trans('ironside::dashboard/indexes.document') }}</span>
                 </h3>
             </div>
 
-            <div class="box-body documents-container">
+            <div class="card-body documents-container">
                 <div class="row">
                     @forelse($documents as $document)
                         <div class="col-md-2">
                             <div class="well">
-                                <a class="btn btn-info btn-xs" href="{{ $document->url }}" target="_blank" title="View Document" data-toggle="tooltip">
+                                <a class="btn btn-info btn-xs" href="{{ $document->url }}" target="_blank"
+                                   title="{{ trans('ironside::dashboard/general.view_document') }}" data-toggle="tooltip">
                                     <i class="fa fa-eye"></i>
                                 </a>
 
@@ -35,9 +36,9 @@
                         </div>
                     @empty
                         <div class="col-md-12">
-                            <p class="text-muted">Please click on the panel below to upload
-                                documents
-                                to {!! $documentable->name !!}.
+                            <p class="text-muted">
+                                {{ trans('ironside::dashboard/forms.document_muted') }}
+                                {!! $documentable->name !!}.
                             </p>
                         </div>
                     @endforelse
@@ -48,23 +49,24 @@
 </div>
 
 <div class="row">
-    <div class="col-xs-12">
-        <div class="box box-primary box-solid">
-            <div class="box-header with-border">
-                <h3 class="box-title">
+    <div class="col-lg-12">
+        <div class="card card-primary box-solid">
+            <div class="card-header with-border">
+                <h3 class="card-title">
                     <span><i class="fa fa-cloud"></i></span>
-                    <span>Upload a Document</span>
+                    <span>
+                        {{ trans('ironside::dashboard/forms.document_upload') }}
+                    </span>
                 </h3>
             </div>
 
-            <div class="box-body">
+            <div class="card-body">
                 <div class="callout callout-info callout-help">
-                    <h4 class="title">How it works?</h4>
+                    <h4 class="title">
+                        {{ trans('ironside::dashboard/forms.how_it_work_title') }}
+                    </h4>
                     <p>
-                        Click on the button below to browse for documents<br/>
-                        Refresh the page when upload is complete<br/>
-                        Click on the document name to change it<br/>
-                        Click on the radio button to set the cover document<br/>
+                        {{ trans('ironside::dashboard/forms.how_it_work_desc') }}
                     </p>
                 </div>
 
@@ -75,7 +77,9 @@
                     <input type="hidden" name="documentable_type_name" value="{{ (new \ReflectionClass($documentable))->getShortName() }}">
 
                     <div class="dz-default dz-message">
-                        <span>Click here to browse for documents.</span>
+                        <span>
+                            {{ trans('ironside::dashboard/forms.document_click_here') }}
+                        </span>
                     </div>
                 </form>
 
@@ -96,7 +100,9 @@
                             </div>
                             <div class="dz-success-mark">
                                 <svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                                    <title>Check</title>
+                                    <title>
+                                        {{ trans('ironside::dashboard/forms.check') }}
+                                    </title>
                                     <defs></defs>
                                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
                                         <path d="M23.5,31.8431458 L17.5852419,25.9283877 C16.0248253,24.3679711 13.4910294,24.366835 11.9289322,25.9289322 C10.3700136,27.4878508 10.3665912,30.0234455 11.9283877,31.5852419 L20.4147581,40.0716123 C20.5133999,40.1702541 20.6159315,40.2626649 20.7218615,40.3488435 C22.2835669,41.8725651 24.794234,41.8626202 26.3461564,40.3106978 L43.3106978,23.3461564 C44.8771021,21.7797521 44.8758057,19.2483887 43.3137085,17.6862915 C41.7547899,16.1273729 39.2176035,16.1255422 37.6538436,17.6893022 L23.5,31.8431458 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z" id="Oval-2" stroke-opacity="0.198794158" stroke="#747474" fill-opacity="0.816519475" fill="#FFFFFF" sketch:type="MSShapeGroup"></path>
@@ -105,7 +111,7 @@
                             </div>
                             <div class="dz-error-mark">
                                 <svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
-                                    n <title>Error</title>n
+                                    n <title> {{ trans('ironside::dashboard/forms.error') }} </title>n
                                     <defs></defs>
                                     n
                                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
@@ -122,7 +128,7 @@
                 </div>
             </div>
 
-            <div class="box-footer">
+            <div class="card-footer">
                 @include('ironside::dashboard.partials.form_footer', ['submit' => false])
             </div>
         </div>
@@ -136,7 +142,9 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                     &times;
                 </button>
-                <h4 class="modal-title">Update Document Name</h4>
+                <h4 class="modal-title">
+                    {{ trans('ironside::dashboard/forms.document_upload_name') }}
+                </h4>
             </div>
             <div class="modal-body">
                 <form>
@@ -144,8 +152,11 @@
 
                     <fieldset style="padding: 0">
                         <section class="form-group">
-                            <label for="modal-document-name">Name of the Document</label>
-                            <input type="text" class="form-control" id="modal-document-name" placeholder="Enter the name of the Document">
+                            <label for="modal-document-name">
+                                {{ trans('ironside::dashboard/forms.name_of_the_document') }}
+                            </label>
+                            <input type="text" class="form-control" id="modal-document-name"
+                                   placeholder="{{ trans('ironside::dashboard/forms.document_name_placeholder') }}">
                         </section>
                     </fieldset>
                 </form>
@@ -153,10 +164,10 @@
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">
-                    Cancel
+                    {{ trans('ironside::dashboard/general.cancel') }}
                 </button>
                 <button id="btn-form-save" type="button" class="btn btn-primary">
-                    Submit
+                    {{ trans('ironside::dashboard/general.submit') }}
                 </button>
             </div>
         </div>
@@ -187,7 +198,7 @@
                     file.hiddenInputs = Dropzone.createElement('<input class="image-row-id" type="hidden" id="image-row-' + data['id'] + '" value="' + data['id'] + '"/>');
                     file.previewElement.appendChild(file.hiddenInputs);
 
-                    notify('Successfully', 'The document has been uploaded and saved in the database.', null, null, 5000);
+                    notify({{ trans('ironside::dashboard/general.successfully') }},{{ trans('ironside::dashboard/general.successfully-updated-document') }}, null, null, 5000);
                 } else {
                     notifyError(response.error['title'], response.error['content']);
                     //notifyError('Oops!', 'Something went wrong (hover over image for more information', null, null, 5000);
@@ -227,7 +238,7 @@
 
                 $.ajax({
                     type: 'POST',
-                    url: "/admin/documents/" + $('#modal-document-id').val() + '/edit/name',
+                    url: "/dashboard/documents/" + $('#modal-document-id').val() + '/edit/name',
                     data: {
                         'name': $('#modal-document-name').val()
                     },
@@ -236,7 +247,7 @@
                         if (data.error) {
                             notifyError(data.error.title, data.error.content);
                         } else {
-                            notify('Successfully', 'The document name was updated.', null, null, 5000);
+                            notify({{ trans('ironside::dashboard/general.successfully') }}, {{ trans('ironside::dashboard/general.successfully-updated-document-name') }}, null, null, 5000);
                         }
 
                         // update the title tag's input

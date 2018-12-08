@@ -7,7 +7,9 @@
                 <div class="card-header with-border">
                     <h3 class="card-title">
                         <span><i class="fa fa-table"></i></span>
-                        <span>List All Documents</span>
+                        <span>
+                            {{ trans('ironside::dashboard/indexes.list_all_document')  }}
+                        </span>
                     </h3>
                 </div>
 
@@ -18,11 +20,11 @@
                     <table id="tbl-list" data-server="false" data-page-length="25" class="dt-table table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Belongs To</th>
-                            <th>Document</th>
-                            <th>Created</th>
-                            <th>Action</th>
+                            <th>{{ trans('ironside::dashboard/forms.name') }}</th>
+                            <th>{{ trans('ironside::dashboard/indexes.belongs_to') }}</th>
+                            <th>{{ trans('ironside::dashboard/indexes.document') }}</th>
+                            <th>{{ trans('ironside::dashboard/indexes.created') }}</th>
+                            <th>{{ trans('ironside::dashboard/indexes.action') }}</th>
                         </tr>
                         </thead>
                         <tbody>

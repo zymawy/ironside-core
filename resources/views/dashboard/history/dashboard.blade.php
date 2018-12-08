@@ -7,7 +7,9 @@
                 <div class="card-header with-border">
                     <h3 class="card-title">
                         <span><i class="fa fa-table"></i></span>
-                        <span>List Dashboard Actions</span>
+                        <span>
+                            {{ trans('ironside::dashboard/indexes.list_all_dashboard_action')  }}
+                        </span>
                     </h3>
 
                     <div class="pull-right card-tools">
@@ -21,12 +23,24 @@
                     <table id="tbl-list-activities" data-order-by="0|desc" data-server="false" class="table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>User</th>
-                            <th>Action</th>
-                            <th>After</th>
-                            <th>Before</th>
-                            <th>Created</th>
+                            <th>
+                                {{ trans('ironside::dashboard/forms.id') }}
+                            </th>
+                            <th>
+                                {{ trans('ironside::dashboard/forms.user') }}
+                            </th>
+                            <th>
+                                {{ trans('ironside::dashboard/forms.action') }}
+                            </th>
+                            <th>
+                                {{ trans('ironside::dashboard/forms.after') }}
+                            </th>
+                            <th>
+                                {{ trans('ironside::dashboard/forms.before') }}
+                            </th>
+                            <th>
+                                {{ trans('ironside::dashboard/forms.created') }}
+                            </th>
                         </tr>
                         </thead>
                         <tbody>

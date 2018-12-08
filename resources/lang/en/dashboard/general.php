@@ -48,5 +48,20 @@ return [
     'read' => 'Read',
     'successfully' => 'Successfully',
     'successfully-updated' => 'The Order has been updated',
+    'successfully-updated-document' =>  'The document has been uploaded and saved in the database.',
+    'successfully-updated-document-name' =>  'The document name was updated.',
     'currently-no-notices' => 'There are currently no notices',
+
+    //Document
+
+    'view_document' => 'View Document',
+    'text_to_display_placeholder' => 'Text to display',
+    'select_document_placeholder' => 'Please select a Document',
+
+    // pagination
+
+    'showing' => 'Showing',
+    'to' => 'to',
+    'of' => 'of',
+    'entries' => 'entries',
 ];

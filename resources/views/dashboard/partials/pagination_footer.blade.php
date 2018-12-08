@@ -8,13 +8,13 @@
     <div class="row paginator-footer">
         <div class="col-md-12">
             <p class="text-center">
-                Showing
+                {{ trans('ironside::dashboard/general.showing') }}
                 <strong>{{ (($paginator->currentPage() - 1) * $paginator->perPage()) + 1 }}</strong>
-                to
+                {{ trans('ironside::dashboard/general.to') }}
                 <strong>{{ $paginator->perPage() * $paginator->currentPage() > $paginator->total()? $paginator->total() : $paginator->perPage() * $paginator->currentPage() }}</strong>
-                of
+                {{ trans('ironside::dashboard/general.of') }}
                 <strong><span class="text-primary">{{ $paginator->total() }}</span></strong>
-                entries
+                {{ trans('ironside::dashboard/general.entries') }}
                 @if(isset($paginator->originalEntries) && $paginator->originalEntries != $paginator->total())
                     <span class="text-muted">
                         (filtered from
