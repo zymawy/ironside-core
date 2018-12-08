@@ -1,4 +1,4 @@
-ironside::@extends('ironside::layouts.dashboard.app')
+@extends('ironside::layouts.dashboard.app')
 
 @section('content')
     <div class="row">
@@ -7,7 +7,7 @@ ironside::@extends('ironside::layouts.dashboard.app')
                 <div class="card-header with-border">
                     <h3 class="card-title">
                         <span><i class="fa fa-eye"></i></span>
-                        <span>Articles - {{ $item->title }}</span>
+                        <span>{{ trans('ironside::dashboard/indexes.articles')  }} - {{ $item->title }}</span>
                     </h3>
                 </div>
 
@@ -20,35 +20,37 @@ ironside::@extends('ironside::layouts.dashboard.app')
                             <div class="row">
                                 <div class="col col-6">
                                     <section class="form-group">
-                                        <label>Title</label>
+                                        <label>{{ trans('ironside::dashboard.forms.title') }}</label>
                                         <input type="text" class="form-control" value="{{ $item->title }}" readonly>
                                     </section>
                                 </div>
 
                                 <div class="col col-6">
                                     <section class="form-group">
-                                        <label>Slug</label>
+                                        <label>
+                                            {{ trans('ironside::dashboard.forms.slug') }}
+                                        </label>
                                         <input type="text" class="form-control" value="{{ $item->slug }}" readonly>
                                     </section>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label>Summary</label>
+                                <label>{{ trans('ironside::dashboard.forms.category_summary') }}</label>
                                 <input type="text" class="form-control" value="{{ $item->summary }}" readonly>
                             </div>
 
                             <div class="row">
                                 <div class="col col-4">
                                     <div class="form-group">
-                                        <label>Category</label>
+                                        <label>{{ trans('ironside::dashboard.forms.category') }}</label>
                                         <input type="text" class="form-control" value="{{ $item->category->name }}" readonly>
                                     </div>
                                 </div>
 
                                 <div class="col col-4">
                                     <div class="form-group">
-                                        <label>Active From</label>
+                                        <label>{{ trans('ironside::dashboard.forms.action_from') }}</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" value="{{ $item->active_from }}" readonly>
                                             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -58,7 +60,7 @@ ironside::@extends('ironside::layouts.dashboard.app')
 
                                 <div class="col col-4">
                                     <div class="form-group">
-                                        <label>Active To</label>
+                                        <label>{{ trans('ironside::dashboard.forms.action_to') }}</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" value="{{ $item->active_to }}" readonly>
                                             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -68,7 +70,9 @@ ironside::@extends('ironside::layouts.dashboard.app')
                             </div>
 
                             <div class="form-group">
-                                <label>Description</label>
+                                <label>
+                                    {{ trans('ironside::dashboard.general.table.description') }}
+                                </label>
                                 <div class="well well-sm">
                                     {!! $item->content !!}
                                 </div>

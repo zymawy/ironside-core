@@ -7,7 +7,9 @@
 				<div class="card-header with-border">
 					<h3 class="card-title">
 						<span><i class="fa fa-table"></i></span>
-						<span>List All Articles</span>
+						<span>
+							{{ trans('ironside::dashboard/indexes.list_all_articles')  }}
+						</span>
 					</h3>
 				</div>
 
@@ -20,13 +22,13 @@
 					<table id="tbl-list" data-server="false" class="dt-table table table-striped table-bordered" cellspacing="0" width="100%">
 						<thead>
 						<tr>
-                            <th>Title</th>
-                            <th class="desktop">Summary</th>
-                            <th>Category</th>
-                            <th>Active From</th>
-                            <th>Active To</th>
-                            <th>Cover Photo</th>
-                            <th style="min-width: 100px;">Action</th>
+                            <th>{{ trans('ironside::dashboard/forms.title')  }}</th>
+                            <th class="desktop">{{ trans('ironside::dashboard/forms.summary')  }}</th>
+                            <th>{{ trans('ironside::dashboard/forms.category')  }}</th>
+                            <th>{{ trans('ironside::dashboard/forms.action_from')  }}</th>
+                            <th>{{ trans('ironside::dashboard/forms.action_to')  }}</th>
+                            <th>{{ trans('ironside::dashboard/forms.cover_photo')  }}</th>
+                            <th style="min-width: 100px;">{{ trans('ironside::dashboard/indexes.action')  }}</th>
 						</tr>
 						</thead>
 						<tbody>
@@ -44,7 +46,7 @@
                                         </a>
                                     @endif
                                 </td>
-                                <td>{!! action_row($selectedNavigation->url, $item->id, $item->title, [['image' => '/admin/photos/articles/'.$item->id], 'show', 'edit', 'delete']) !!}</td>
+                                <td>{!! action_row($selectedNavigation->url, $item->id, $item->title, [['image' => '/dashboard/photos/articles/'.$item->id], 'show', 'edit', 'delete']) !!}</td>
 							</tr>
 						@endforeach
 						</tbody>

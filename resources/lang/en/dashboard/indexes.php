@@ -9,11 +9,15 @@
 return [
     // Banners
     'list_all_banners' => 'List All Banners',
+    'list_all_articles' => 'List All Articles',
+    'list_all_articles_cat' => 'List All Article Categories',
     'banner' => 'Banner',
+    'articles' => 'Articles',
     'summary' => 'Summary',
     'button' => 'Button',
     'image' => 'Image',
     'website' => 'Website',
 
-    'action' => 'Action'
+    'action' => 'Action',
+    'created' => 'Created',
 ];

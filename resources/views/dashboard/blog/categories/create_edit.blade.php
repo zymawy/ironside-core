@@ -7,7 +7,7 @@
                 <div class="card-header with-border">
                     <h3 class="card-title">
                         <span><i class="fa fa-edit"></i></span>
-                        <span>{{ isset($item)? 'Edit the ' . $item->title . ' entry': 'Create a new Article Category' }}</span>
+                        <span>{{ isset($item)? trans('ironside::dashboard.forms.edit_the')  . $item->title . trans('ironside::dashboard.forms.entry'): trans('ironside::dashboard.forms.create_banner_text_title') }}</span>
                     </h3>
                 </div>
                 <div class="card-body no-padding">
@@ -22,8 +22,11 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group {{ form_error_class('name', $errors) }}">
-                                        <label for="name">Category</label>
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Please insert the Category" value="{{ ($errors && $errors->any()? old('name') : (isset($item)? $item->name : '')) }}">
+                                        <label for="name">
+                                            {{ trans('ironside::dashboard.forms.category')  }}
+                                        </label>
+                                        <input type="text" class="form-control" id="name" name="name"
+                                               placeholder="{{ trans('ironside::dashboard.forms.category_placeholder_text')  }}" value="{{ ($errors && $errors->any()? old('name') : (isset($item)? $item->name : '')) }}">
                                         {!! form_error_message('name', $errors) !!}
                                     </div>
                                 </div>
