@@ -1,21 +1,21 @@
-@extends('dashboard.dashboard')
+@extends('ironside::dashboard.dashboard')
 
 @section('content')
-    @include('dashboard.analytics.partials.analytics_header', ['activeUsers' => true])
+    @include('ironside::dashboard.analytics.partials.analytics_header', ['activeUsers' => true])
 
     <div class="row">
         <div class="col-sm-12">
-            @include('dashboard.analytics.partials.visitors_views')
+            @include('ironside::dashboard.analytics.partials.visitors_views')
         </div>
     </div>
 
     {{-- locations + devices_category --}}
     <div class="row">
         <div class="col-md-7">
-            @include('dashboard.analytics.partials.locations')
+            @include('ironside::dashboard.analytics.partials.locations')
         </div>
         <div class="col-md-5">
-            @include('dashboard.analytics.partials.devices_category')
+            @include('ironside::dashboard.analytics.partials.devices_category')
         </div>
     </div>
 @endsection

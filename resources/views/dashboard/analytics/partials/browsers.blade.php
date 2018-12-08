@@ -2,7 +2,7 @@
     <div class="card-header shadow rounded gradient-z-12">
         <h3 class="card-title text-white">
             <span><i class="fa fa-chrome"></i></span>
-            <span>{{ trans('dashboard/analytics.top-browsers') }}</span>
+            <span>{{ trans('ironside::dashboard/analytics.top-browsers') }}</span>
         </h3>
 
         @include('ironside::dashboard.partials.boxes.toolbar')

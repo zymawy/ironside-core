@@ -2,7 +2,7 @@
     <div class="card-header shadow rounded gradient-z-12">
         <h3 class="card-title text-white">
             <span><i class="fa fa-globe"></i></span>
-            <span class="text-white">{{ trans('dashboard/analytics.visitors') }}</span>
+            <span class="text-white">{{ trans('ironside::dashboard/analytics.visitors') }}</span>
         </h3>
 
         @include('ironside::dashboard.partials.boxes.toolbar')

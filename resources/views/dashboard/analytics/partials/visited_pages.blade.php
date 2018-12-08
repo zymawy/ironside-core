@@ -2,7 +2,7 @@
     <div class="card-header with-border">
         <h3 class="box-title">
             <span><i class="fa fa-codepen"></i></span>
-            <span>{{ trans('dashboard/analytics.most-visited-pages') }}</span>
+            <span>{{ trans('ironside::dashboard/analytics.most-visited-pages') }}</span>
         </h3>
 
         @include('ironside::dashboard.partials.boxes.toolbar')
@@ -16,8 +16,8 @@
         <table id="tbl-visited-pages" data-order-by="1|desc" class="table nowrap table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
             <tr>
-                <th>{{ trans('dashboard/analytics.visited-pages') }}</th>
-                <th>{{ trans('dashboard/analytics.sessions') }}</th>
+                <th>{{ trans('ironside::dashboard/analytics.visited-pages') }}</th>
+                <th>{{ trans('ironside::dashboard/analytics.sessions') }}</th>
             </tr>
             </thead>
             <tbody></tbody>

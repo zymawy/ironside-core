@@ -1,18 +1,21 @@
+@section('css')
+@parent
 <style>
-    .small-box h3, .small-box p {
-        z-index: 9999999999;
-    }
-    .small-charts {
-        width: 120px !important;
-        height: 85px;
-    }
-    .small-box .icon-chart {
-        position: absolute;
-        top: 8px;
-        right: 0px;
-        z-index: 0;
-    }
+  .small-box h3, .small-box p {
+      z-index: 9999999999;
+  }
+  .small-charts {
+      width: 120px !important;
+      height: 85px;
+  }
+  .small-box .icon-chart {
+      position: absolute;
+      top: 8px;
+      right: 0px;
+      z-index: 0;
+  }
 </style>
+@endsection
 
 <div class="row">
     <div class="col-md-3">
@@ -27,7 +30,7 @@
                 <div class="media-body media-text-right text-white">
                     <h2 class="text-white" id="visitors"></h2>
                     <p class="m-b-0 text-white">
-                        {{ trans('dashboard/analytics.visitors-this-month') }}
+                        {{ trans('ironside::dashboard/analytics.visitors-this-month') }}
                     </p>
                 </div>
             </div>
@@ -46,7 +49,7 @@
                 <div class="media-body media-text-right text-white">
                     <h2 class="text-white" id="unique-visitors">&nbsp;</h2>
                     <p class="m-b-0 text-white">
-                        {{ trans('dashboard/analytics.unique-visitors-this-month') }}
+                        {{ trans('ironside::dashboard/analytics.unique-visitors-this-month') }}
                     </p>
                 </div>
 
@@ -66,7 +69,7 @@
                 <div class="media-body media-text-right text-white">
                     <h2 class="text-white" id="bounce-rate">&nbsp;</h2>
                     <p class="m-b-0 text-white">
-                        {{ trans('dashboard/analytics.bounce-rate-this-month') }}
+                        {{ trans('ironside::dashboard/analytics.bounce-rate-this-month') }}
                     </p>
                 </div>
             </div>
@@ -85,7 +88,7 @@
                 <div class="media-body media-text-right text-white">
                     <h2 class="text-white" id="page-load">&nbsp;</h2>
                     <p class="m-b-0 text-white">
-                        {{ trans('dashboard/analytics.avg-page-load') }}
+                        {{ trans('ironside::dashboard/analytics.avg-page-load') }}
                     </p>
                 </div>
             </div>
@@ -105,7 +108,7 @@
                     <div class="media-body media-text-right text-white">
                         <h2 class="text-white" id="page-active-visitors">&nbsp;</h2>
                         <p class="m-b-0 text-white">
-                            {{ trans('dashboard/analytics.current-active-visitors') }}
+                            {{ trans('ironside::dashboard/analytics.current-active-visitors') }}
                         </p>
                     </div>
                 </div>

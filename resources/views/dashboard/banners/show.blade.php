@@ -7,7 +7,7 @@
                 <div class="card-header with-border">
                     <h3 class="card-title">
                         <span><i class="fa fa-eye"></i></span>
-                        <span>Banners - {{ $item->name }}</span>
+                        <span>{{ trans('ironside::dashboard/indexes.banner')  }} - {{ $item->name }}</span>
                     </h3>
                 </div>
 
@@ -20,14 +20,14 @@
                             <div class="row">
                                 <section class="col col-6">
                                     <section class="form-group">
-                                        <label>Name</label>
+                                        <label>{{ trans('ironside::dashboard.forms.name') }}</label>
                                         <input type="text" class="form-control" value="{{ $item->name }}" readonly>
                                     </section>
                                 </section>
 
                                 <section class="col col-6">
                                     <section class="form-group">
-                                        <label>Summary</label>
+                                        <label>{{ trans('ironside::dashboard.forms.summary') }}</label>
                                         <input type="text" class="form-control" value="{{ $item->summary }}" readonly>
                                     </section>
                                 </section>
@@ -36,14 +36,14 @@
                             <div class="row">
                                 <div class="col col-6">
                                     <section class="form-group">
-                                        <label>Action Name</label>
+                                        <label>{{ trans('ironside::dashboard.forms.action_name') }}</label>
                                         <input type="text" class="form-control" value="{{ $item->action_name }}" readonly>
                                     </section>
                                 </div>
 
                                 <div class="col col-6">
                                     <section class="form-group">
-                                        <label>Action Url</label>
+                                        <label>{{ trans('ironside::dashboard.forms.action_url') }}</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" value="{{ $item->action_url }}" readonly>
                                             <span class="input-group-addon"><i class="fa fa-link"></i></span>
@@ -55,7 +55,7 @@
                             <div class="row">
                                 <div class="col col-6">
                                     <section class="form-group">
-                                        <label>Active From</label>
+                                        <label>{{ trans('ironside::dashboard.forms.action_from') }}</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" value="{{ $item->active_from }}" readonly>
                                             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -65,7 +65,7 @@
 
                                 <div class="col col-6">
                                     <section class="form-group">
-                                        <label>Active To</label>
+                                        <label>{{ trans('ironside::dashboard.forms.action_to') }}</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" value="{{ $item->active_to }}" readonly>
                                             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -82,7 +82,7 @@
                             @endif
                         </fieldset>
 
-                        @include('ironside::`dashboard.partials.form_footer', ['submit' => false])
+                        @include('ironside::dashboard.partials.form_footer', ['submit' => false])
                     </form>
                 </div>
             </div>

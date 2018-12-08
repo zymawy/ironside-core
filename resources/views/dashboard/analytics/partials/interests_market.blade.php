@@ -2,7 +2,7 @@
     <div class="card-header shadow rounded gradient-z-12">
         <h3 class="card-title text-white">
             <span><i class="fa fa-file-text"></i></span>
-            <span>{{ trans('dashboard/analytics.top-interests-market') }}</span>
+            <span>{{ trans('ironside::dashboard/analytics.top-interests-market') }}</span>
         </h3>
 
         @include('dashboard.partials.boxes.toolbar')
@@ -16,8 +16,8 @@
         <table id="tbl-interests-market" data-order-by="1|desc" class="table nowrap table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
             <tr>
-                <th>{{ trans('dashboard/analytics.category') }}</th>
-                <th>{{ trans('dashboard/analytics.sessions') }}</th>
+                <th>{{ trans('ironside::dashboard/analytics.category') }}</th>
+                <th>{{ trans('ironside::dashboard/analytics.sessions') }}</th>
             </tr>
             </thead>
             <tbody></tbody>

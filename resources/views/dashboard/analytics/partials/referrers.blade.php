@@ -2,7 +2,7 @@
     <div class="card-header shadow rounded gradient-z-12">
         <h3 class="card-title text-white">
             <span><i class="fa fa-file-text"></i></span>
-            <span>{{ trans('dashboard/analytics.top-refarrals') }}</span>
+            <span>{{ trans('ironside::dashboard/analytics.top-refarrals') }}</span>
         </h3>
 
         @include('ironside::dashboard.partials.boxes.toolbar')
@@ -16,8 +16,8 @@
         <table id="tbl-referrers" data-order-by="1|desc" class="table nowrap table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
             <tr>
-                <th>{{ trans('dashboard/analytics.url') }}</th>
-                <th>{{ trans('dashboard/analytics.page-views') }}</th>
+                <th>{{ trans('ironside::dashboard/analytics.url') }}</th>
+                <th>{{ trans('ironside::dashboard/analytics.page-views') }}</th>
             </tr>
             </thead>
             <tbody></tbody>

@@ -7,7 +7,9 @@
                 <div class="card-header with-border">
                     <h3 class="card-title">
                         <span><i class="fa fa-table"></i></span>
-                        <span>List All Banners</span>
+                        <span>
+                            {{ trans('ironside::dashboard/indexes.list_all_banners')  }}
+                        </span>
                     </h3>
                 </div>
 
@@ -20,14 +22,14 @@
                     <table id="tbl-list" data-server="false" class="dt-table table table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                         <tr>
-                            <th>Banner</th>
-                            <th>Summary</th>
-                            <th>Button</th>
-                            <th>Active From</th>
-                            <th>Active To</th>
-                            <th>Image</th>
-                            <th>Website</th>
-                            <th>Action</th>
+                            <th>{{ trans('ironside::dashboard/indexes.banner')  }}</th>
+                            <th>{{ trans('ironside::dashboard/indexes.summary')  }}</th>
+                            <th>{{ trans('ironside::dashboard/indexes.button')  }}</th>
+                            <th>{{ trans('ironside::dashboard/forms.action_from')  }}</th>
+                            <th>{{ trans('ironside::dashboard/forms.action_to')  }}</th>
+                            <th>{{ trans('ironside::dashboard/indexes.image')  }}</th>
+                            <th>{{ trans('ironside::dashboard/indexes.website')  }}</th>
+                            <th>{{ trans('ironside::dashboard/indexes.action')  }}</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -41,7 +43,7 @@
                                 <td>{{ format_date($item->active_from) }}</td>
                                 <td>{{ isset($item->active_to)? format_date($item->active_to):'-' }}</td>
                                 <td>{!! image_row_link($item->image_thumb, $item->image) !!}</td>
-                                <td>{{ $item->is_website ? 'Yes':'No' }}</td>
+                                <td>{{ $item->is_website ? trans('ironside::dashboard/general.yes'):trans('ironside::dashboard/general.no') }}</td>
                                 <td>{!! action_row($selectedNavigation->url, $item->id, $item->title, ['show', 'edit', 'delete']) !!}</td>
                             </tr>
                         @endforeach

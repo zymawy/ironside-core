@@ -2,7 +2,7 @@
     <div class="card-header shadow rounded gradient-z-12">
         <h3 class="card-title">
             <span><i class="fa fa-female"></i></span>
-            <span>{{ trans('dashboard/analytics.gender') }}</span>
+            <span>{{ trans('ironside::dashboard/analytics.gender') }}</span>
         </h3>
 
         @include('ironside::dashboard.partials.boxes.toolbar')
