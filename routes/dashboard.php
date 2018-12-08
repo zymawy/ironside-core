@@ -5,7 +5,7 @@
     | Dashboard (when authorized and admin)
     |------------------------------------------
     */
-
+    Route::group(['middleware' => 'localizer'], function () {
     Route::prefix('dashboard')->namespace('Dashboard')->middleware('auth')->group(function () {
 
 
@@ -155,3 +155,4 @@
                 Route::resource('navigation', 'NavigationController');
             });
         });
+      });

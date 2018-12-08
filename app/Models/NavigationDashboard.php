@@ -4,16 +4,48 @@ namespace Zymawy\Ironside\Models;
 
 use Zymawy\Ironside\Models\IronsideDashboardNavigation;
 use App\Role;
+use Spatie\Translatable\HasTranslations;
 class NavigationDashboard extends IronsideDashboardNavigation
 {
     /**
      * Get the roles
      * @return \Eloquent
      */
+
+    use HasTranslations;
+
+    public $translatable = [
+      'title',
+      'description',
+      'help_index_title',
+      'help_index_content',
+      'help_create_title',
+      'help_create_content',
+      'help_edit_title',
+      'help_edit_content'
+    ];
+
+    // protected $casts = [
+    //   'title' => 'array',
+    //   'description' => 'array',
+    //   'slug' => 'array',
+    //   'url' => 'array',
+    //   'help_index_title' => 'array',
+    //   'help_index_content' => 'array',
+    //   'help_create_title' => 'array',
+    //   'help_create_content' => 'array',
+    //   'help_edit_title' => 'array',
+    //   'help_edit_content' => 'array',
+    // ];
+
 //    public function roles()
 //    {
 //        return $this->belongsToMany(\App\Role::class)->withTimestamps();
 //    }
+    // public function getSlugAttribute($value)
+    // {
+    //   return json_decode($value);
+    // }
 
     public function getRolesStringAttribute()
     {

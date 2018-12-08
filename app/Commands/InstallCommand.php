@@ -8,7 +8,7 @@ use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Finder\SplFileInfo;
-use Artisan;
+use Artisan,Storage;
 
 class InstallCommand extends Command
 {
@@ -105,12 +105,21 @@ class InstallCommand extends Command
         $this->info('app\Role.php was updated');
         $bar->advance();
 
-        $stubsPath = $this->basePath . "stubs{$this->ds}";
-        $stub = $this->filesystem->get("{$stubsPath}navigation_dashboard.csv");
-        $this->filesystem->put(storage_path('app/public') . "{$this->ds}navigation_dashboard.csv", $stub);
-        $this->info('Navigation Dashboard csv Copied To Storage Public Folder');
-        $bar->advance();
-        $this->line('');
+        if(!Storage::disk('public')->exists('navigation_dashboard.csv'))
+        {
+          $stubsPath = $this->basePath . "stubs{$this->ds}";
+          $stub = $this->filesystem->get("{$stubsPath}navigation_dashboard.csv");
+          $this->filesystem->put(storage_path('app/public') . "{$this->ds}navigation_dashboard.csv", $stub);
+          $this->info('Navigation Dashboard csv Copied To Storage Public Folder');
+          $bar->advance();
+          $this->line('');
+
+        } else {
+
+          $bar->advance();
+          $this->line('');
+        }
+
 
         // php artisan ironside:db:seed
         $this->call('ironside:db:seed');

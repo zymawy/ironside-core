@@ -16,17 +16,17 @@ class CreateNavigationDashboardTable extends Migration
         //navigation_admin
         Schema::create('navigation_dashboard', function (Blueprint $table) {
             $table->increments('id')->unique()->index();
-            $table->string('title');
-            $table->text('description')->nullable();
+            $table->json('title');
+            $table->json('description')->nullable();
             $table->string('slug')->nullable();
             $table->string('url')->nullable();
             $table->string('icon')->nullable();
-            $table->text('help_index_title')->nullable();
-            $table->text('help_index_content')->nullable();
-            $table->text('help_create_title')->nullable();
-            $table->text('help_create_content')->nullable();
-            $table->text('help_edit_title')->nullable();
-            $table->text('help_edit_content')->nullable();
+            $table->json('help_index_title')->nullable();
+            $table->json('help_index_content')->nullable();
+            $table->json('help_create_title')->nullable();
+            $table->json('help_create_content')->nullable();
+            $table->json('help_edit_title')->nullable();
+            $table->json('help_edit_content')->nullable();
             $table->integer('list_order')->default(999);
             $table->tinyInteger('is_hidden')->default(0);
             $table->integer('parent_id')->default(0);

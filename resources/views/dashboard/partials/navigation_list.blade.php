@@ -14,7 +14,7 @@
                     <i class="fa fa-angle-right"></i>
                 @endif
             <span>{!! $nav->title !!}</span>
-{{--            <pre>{!! dump($nav->is_hidden) !!}</pre>--}}
+           {{-- <pre>{!! dump($nav->title) !!}</pre> --}}
         </a>
 
         @if (isset($navigation[$nav->id]))

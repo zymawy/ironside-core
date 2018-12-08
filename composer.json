@@ -34,7 +34,8 @@
       "yajra/laravel-datatables-oracle": "^8.9",
       "santigarcor/laratrust": "5.0.*",
       "aitor24/localizer": "^1.4",
-      "creativeorange/gravatar": "~1.0"
+      "creativeorange/gravatar": "~1.0",
+        "spatie/laravel-translatable": "^3.1"
     },
   "require-dev": {
     "bpocallaghan/generators": "^5.0",

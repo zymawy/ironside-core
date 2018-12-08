@@ -10,7 +10,8 @@ class NavigationDashboardTableSeeder extends Seeder
         NavigationDashboard::truncate();
         //DB::delete('TRUNCATE navigation_admin_role');
 
-        //$csvPath = database_path() . DIRECTORY_SEPARATOR . 'seeds' . DIRECTORY_SEPARATOR . 'csv' . DIRECTORY_SEPARATOR . 'navigation_admin.csv';
+        $csvPath = database_path() . DIRECTORY_SEPARATOR . 'seeds' . DIRECTORY_SEPARATOR . 'csv' . DIRECTORY_SEPARATOR . 'navigation_admin.csv';
+        // Check If The FIle Exists So, We Don't Wanna Override It.
         if(Storage::disk('public')->exists('navigation_dashboard.csv'))
         {
           $csvPath = storage_path('app/public/navigation_dashboard.csv');
@@ -22,19 +23,44 @@ class NavigationDashboardTableSeeder extends Seeder
         $items = csv_to_array($csvPath);
 
         foreach ($items as $key => $item) {
+
             $row = NavigationDashboard::create([
                 'id'                  => $item['id'],
-                'title'               => $item['title'],
-                'description'         => $item['description'],
+                'title'               => [
+                  'ar' => $item['ar_title'],
+                  'en' => $item['en_title'],
+                ],
+                'description'         => [
+                  'ar' => $item['ar_description'],
+                  'en' => $item['en_description'],
+                ],
                 'slug'                => $item['slug'],
                 'url'                 => $item['url'],
                 'icon'                => $item['icon'],
-                'help_index_title'    => $item['help_index_title'],
-                'help_index_content'  => $item['help_index_content'],
-                'help_create_title'   => $item['help_create_title'],
-                'help_create_content' => $item['help_create_content'],
-                'help_edit_title'     => $item['help_edit_title'],
-                'help_edit_content'   => $item['help_edit_content'],
+                'help_index_title'    => [
+                  'ar' => $item['ar_help_index_title'],
+                  'en' => $item['en_help_index_title'],
+                ],
+                'help_index_content'  => [
+                  'ar' => $item['ar_help_index_content'],
+                  'en' => $item['en_help_index_content'],
+                ],
+                'help_create_title'   => [
+                  'ar' => $item['ar_help_create_title'],
+                  'en' => $item['en_help_create_title'],
+                ],
+                'help_create_content' => [
+                  'ar' => $item['ar_help_create_content'],
+                  'en' => $item['en_help_create_content']
+                ],
+                'help_edit_title'     => [
+                  'ar' => $item['ar_help_edit_title'],
+                  'en' => $item['en_help_edit_title'],
+                ],
+                'help_edit_content'   => [
+                  'ar' => $item['ar_help_edit_content'],
+                  'en' => $item['en_help_edit_content']
+                ],
                 'list_order'          => $item['list_order'],
                 'is_hidden'           => $item['is_hidden'],
                 'parent_id'           => $item['parent_id'],
