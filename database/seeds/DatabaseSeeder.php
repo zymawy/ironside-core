@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
         // pages, news, blog, albums
         //\App\Models\Photo::truncate();
         ;
-        Artisan::call('laratrust:seeder');
+
         $this->call(UserTableSeeder::class);
 
         $this->call(BannerTableSeeder::class);

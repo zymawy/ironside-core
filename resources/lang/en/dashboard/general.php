@@ -67,6 +67,7 @@ return [
 
 
     'activities' => 'Activities',
+    'setlang' => 'Select Languages',
     'see_all_activities' => 'See All Activities',
     'activities_count_message' => 'You have new activities',
 ];

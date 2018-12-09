@@ -77,7 +77,7 @@ class InstallCommand extends Command
      */
     public function handle()
     {
-        $bar = $this->output->createProgressBar(11);
+        $bar = $this->output->createProgressBar(12);
 
         $bar->start();
 
@@ -99,11 +99,19 @@ class InstallCommand extends Command
         $this->info('app\User.php was updated');
         $bar->advance();
         $this->line('');
+
         $stubsPath = $this->basePath . "stubs{$this->ds}";
         $stub = $this->filesystem->get("{$stubsPath}Role.stub");
         $this->filesystem->put(app_path() . "{$this->ds}Role.php", $stub);
         $this->info('app\Role.php was updated');
         $bar->advance();
+
+        $stubsPath = $this->basePath . "stubs{$this->ds}";
+        $stub = $this->filesystem->get("{$stubsPath}Permission.stub");
+        $this->filesystem->put(app_path() . "{$this->ds}Permission.php", $stub);
+        $this->info('app\Permission.php was updated');
+        $bar->advance();
+
 
         if(!Storage::disk('public')->exists('navigation_dashboard.csv'))
         {

@@ -184,7 +184,7 @@
                     </a>
                     <div class="dropdown-menu dropdown-menu-lang dropdown-menu-right animated zoomIn">
                         <ul class="dropdown-lang">
-                            <li>@lang('dashboard.header.setlang')</li>
+                            <li>@lang('ironside::dashboard/general.setlang')</li>
                             @foreach (Localizer::allowedLanguages() as $code => $value)
                                 <li>
                                     <a href="{{ Localizer::setRoute($code) }}">

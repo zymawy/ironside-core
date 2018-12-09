@@ -64,6 +64,7 @@ return [
 
 
     'activities' => 'النشاطات',
+    'setlang' => 'اختر اللغة',
     'see_all_activities' => 'اظهار جميع النشاطات',
     'activities_count_message' => 'لديك  <strong id="js-activities-badge" class="badge badge-success">0</strong> من النشاطات ',
 ];
