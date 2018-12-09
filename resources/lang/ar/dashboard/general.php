@@ -48,4 +48,22 @@ return [
     'successfully' => 'بالنجاح',
     'successfully-updated' => 'تم تحديث الطلب',
     'currently-no-notices' => 'لا يوجد حاليا أي إشعارات',
+
+    //Document
+
+    'view_document' => 'View Document',
+    'text_to_display_placeholder' => 'Text to display',
+    'select_document_placeholder' => 'Please select a Document',
+
+    // pagination
+
+    'showing' => 'اظهار',
+    'to' => 'الى',
+    'of' => 'من ',
+    'entries' => 'entries',
+
+
+    'activities' => 'النشاطات',
+    'see_all_activities' => 'اظهار جميع النشاطات',
+    'activities_count_message' => 'لديك  <strong id="js-activities-badge" class="badge badge-success">0</strong> من النشاطات ',
 ];

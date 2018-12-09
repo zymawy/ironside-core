@@ -64,4 +64,9 @@ return [
     'to' => 'to',
     'of' => 'of',
     'entries' => 'entries',
+
+
+    'activities' => 'Activities',
+    'see_all_activities' => 'See All Activities',
+    'activities_count_message' => 'You have new activities',
 ];

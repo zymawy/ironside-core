@@ -13,7 +13,7 @@ function getHeaderNotifications()
                     for (var i = 0; i < cookie.length; i++) {
                         items.push({'id': cookie[i]['id'], 'read': true});
                     }
-                    $.cookie(type, items, {expires: 2, path: '/admin'});
+                    $.cookie(type, items, {expires: 2, path: '/dashboard'});
                     $('#js-' + type + '-badge').hide();
                 }
             }
@@ -33,6 +33,7 @@ function getHeaderNotifications()
             if (items.length > 0) {
                 $('#js-' + type + '-badge').show();
                 $('#js-' + type + '-badge').html(items.length);
+                $('#js-'+ type +'-show-heart').css('display','block');
 
             } else {
                 $('#js-' + type + '-badge').hide();
@@ -49,13 +50,14 @@ function getHeaderNotifications()
             for (var i = 0; i < items.length; i++) {
                 var item = items[i];
 
-                var html = '<li><a href="#"><p style="margin-left: 0px; color: #444">';
-                html += item['title'];
-                html += '<small class="pull-right"><i class="fa fa-clock-o"></i> ';
-                html += item['created_at'];
-                html += '</small></p><p style="margin-left: 0px;">';
-                html += item['message'];
-                html += '</p></a></li>';
+                var html = '<a href="#">';
+                html += '<div class="btn btn-primary btn-circle m-r-10"><i class="ti-user"></i></div>';
+                html += '<div class="mail-contnet m-r-9">' +
+                    '<h5>' + item["title"] + '</h5>' +
+                    '<span class="mail-desc">' + item["message"] + '</span>' +
+                    '<span class="time text-left"> <i class="fa fa-clock-o"></i> ' + item["created_at"] + '</span>' +
+                    '</div>';
+                html += '</a>';
 
                 // if cookie
                 if (cookie) {
@@ -76,11 +78,14 @@ function getHeaderNotifications()
             // update counter
             if (total > 0) {
                 $('#js-' + type + '-badge').html(total);
+                $('#js-'+ type +'-show-heart').css('display','block');
+
             } else { // hide if all is read
-                $('#js-' + type + '-badge').hide();
+                // $('#js-' + type + '-badge').hide();
+                $('#js-'+ type +'-show-heart').css('display','none');
             }
 
-            $.cookie(type, cookieItems, {expires: 2, path: '/admin'});
+            $.cookie(type, cookieItems, {expires: 2, path: '/dashboard'});
         }
     }
 
@@ -101,8 +106,9 @@ function getHeaderNotifications()
 
         var items = response['data'];
         if (items.length > 0) {
-            $('#js-notifications-badge').show();
+            // $('#js-notifications-badge').show();
             $('#js-notifications-badge').html(items.length);
+            $('#js-notifications-show-heart').css('display','block');
 
         } else {
             $('#js-notifications-badge').hide();
