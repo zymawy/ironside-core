@@ -1,5 +1,5 @@
 {
-    "name": "zymawy/ironside",
+    "name": "zymawy/ironside-core",
     "description": "Useful classes you can use for every Laravel project",
 	"keywords": [
       "laravel",
