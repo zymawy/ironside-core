@@ -70,4 +70,6 @@ return [
     'setlang' => 'Select Languages',
     'see_all_activities' => 'See All Activities',
     'activities_count_message' => 'You have new activities',
+
+    'list_all' => 'List All ',
 ];

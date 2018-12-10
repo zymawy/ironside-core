@@ -1,4 +1,4 @@
-@extends('ironside::layouts.dashboard')
+@extends('ironside::layouts.dashboard.app')
 
 @section('styles')
     <style>
@@ -23,16 +23,16 @@
 
 @section('content')
     <div class="row cropper-container">
-        <div class="col-xs-12">
-            <div class="box box-primary box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title">
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header bg-primary with-border">
+                    <h3 class="card-title text-white">
                         <span><i class="fa fa-crop"></i></span>
                         <span>Crop {{ $photo->name }}</span>
                     </h3>
                 </div>
 
-                <div class="box-body">
+                <div class="card-body">
                     <div class="row">
                         <div class="col-md-3">
                             <h4>Current Thumb</h4>
@@ -68,7 +68,7 @@
     </div>
 @endsection
 
-@section('scripts')
+@section('js')
     @parent
     <script type="text/javascript" charset="utf-8">
         $(function () {
@@ -145,7 +145,7 @@
                 cropperData['photoable_type'] = "{{ str_replace('\\','\\\\',get_class($photoable)) }}";
                 cropperData['photoable_type_name'] = "{{ (new \ReflectionClass($photoable))->getShortName() }}";
 
-                doAjax("/admin/photos/crop/{{ $photo->id }}", cropperData, function (response) {
+                doAjax("/dashboard/photos/crop/{{ $photo->id }}", cropperData, function (response) {
                     BUTTON.reset('.btn-ajax-submit');
 
                     if (response.error) {

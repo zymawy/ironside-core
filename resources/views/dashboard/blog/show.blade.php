@@ -3,9 +3,9 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <div class="card card-primary card-solid">
-                <div class="card-header with-border">
-                    <h3 class="card-title">
+            <div class="card card-primary">
+                <div class="card-header bg-primary with-border">
+                    <h3 class="card-title text-white">
                         <span><i class="fa fa-eye"></i></span>
                         <span>{{ trans('ironside::dashboard/indexes.articles')  }} - {{ $item->title }}</span>
                     </h3>

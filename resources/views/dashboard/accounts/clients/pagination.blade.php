@@ -1,11 +1,19 @@
 <table class="table-pagination table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
     <tr>
-        <th>Fullname</th>
-        <th>Cellphone</th>
-        <th>Email</th>
-        <th>Roles</th>
-        <th>Action</th>
+        <th>
+            {{ trans('ironside::dashboard/indexes.full_name') }}
+        </th>
+        <th>
+            {{ trans('ironside::dashboard/indexes.cell_phone') }}
+            </th>
+        <th>
+            {{ trans('ironside::dashboard/indexes.email') }}
+        </th>
+        <th>
+            {{ trans('ironside::dashboard/indexes.roles') }}
+        </th>
+        <th>{{ trans('ironside::dashboard/indexes.action') }}</th>
     </tr>
     </thead>
     <tbody>
@@ -18,13 +26,13 @@
             <td>
 
                 <div class="btn-group">
-                    <a href="/dashboard/accounts/clients/{{$item->id}}" class="btn btn-default btn-xs" data-toggle="tooltip" title="Show {{$item->fullname}}">
+                    <a href="/dashboard/accounts/clients/{{$item->id}}" class="btn btn-default btn-xs" data-toggle="tooltip" title="{{trans('ironside::dashboard/indexes.show') . $item->fullname}}">
                         <i class="fa fa-eye"></i>
                     </a>
                 </div>
 
                 <div class="btn-group">
-                    <a href="/dashboard/accounts/clients/{{$item->id}}/edit" class="btn btn-primary btn-xs" data-toggle="tooltip" title="Edit {{ $item->fullname }}">
+                    <a href="/dashboard/accounts/clients/{{$item->id}}/edit" class="btn btn-primary btn-xs" data-toggle="tooltip" title="{{trans('ironside::dashboard/indexes.edit') . $item->fullname }}">
                         <i class="fa fa-edit"></i>
                     </a>
                 </div>
@@ -34,7 +42,7 @@
                         <input name="_method" type="hidden" value="DELETE">
                         <input name="_token" type="hidden" value="{{ csrf_token() }}">
                         <input name="_id" type="hidden" value="{{ $item->id }}">
-                        <a data-form="form-delete-row{{ $item->id }}" class="btn btn-danger btn-xs btn-delete-row" data-toggle="tooltip" title="Delete {{ $item->fullname }}">
+                        <a data-form="form-delete-row{{ $item->id }}" class="btn btn-danger btn-xs btn-delete-row" data-toggle="tooltip" title="{{trans('ironside::dashboard/indexes.delete') . $item->fullname }}">
                             <i class="fa fa-trash"></i>
                         </a>
                     </form>
@@ -45,7 +53,7 @@
                         <form id="impersonate-login-form-{{$item->id}}" action="{{route('impersonate.login', $item->id)}}" method="post">
                             <input name="_token" type="hidden" value="{{csrf_token()}}">
                             <input name="redirect_to" type="hidden" value="/{{$item->logged_in_as}}">
-                            <a data-form="impersonate-login-form-{{$item->id}}" class="btn btn-warning btn-xs btn-confirm-modal-row" data-toggle="tooltip" title="Impersonate {{ $item->fullname }}">
+                            <a data-form="impersonate-login-form-{{$item->id}}" class="btn btn-warning btn-xs btn-confirm-modal-row" data-toggle="tooltip" title="{{trans('ironside::dashboard/indexes.impersonate') . $item->fullname }}">
                                 <i class="fa fa-user-secret"></i>
                             </a>
                         </form>
@@ -54,7 +62,7 @@
 
                 <div class="btn-group">
                     <span class="label label-{{ $item->confirmed_at ? 'success':'warning' }}">
-                        {{ $item->confirmed_at ? 'Confirmed ' . $item->confirmed_at->format('d M Y') : 'Not confirmed yet' }}
+                        {{ $item->confirmed_at ?  trans('ironside::dashboard/indexes.confirmed') . $item->confirmed_at->format('d M Y') : trans('ironside::dashboard/indexes.confirmed_yat') }}
                     </span>
                 </div>
             </td>

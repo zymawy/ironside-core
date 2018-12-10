@@ -2,16 +2,16 @@
 
 @section('content')
     <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-primary box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title">
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header bg-primary with-border">
+                    <h3 class="card-title text-white">
                         <span><i class="fa fa-eye"></i></span>
                         <span>News - {{ $item->title }}</span>
                     </h3>
                 </div>
 
-                <div class="box-body no-padding">
+                <div class="card-body no-padding">
 
                     @include('ironside::dashboard.partials.info')
 

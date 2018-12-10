@@ -3,9 +3,9 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <div class="card card-primary card-solid">
-                <div class="card-header with-border">
-                    <h3 class="card-title">
+            <div class="card card-primary">
+                <div class="card-header bg-primary with-border">
+                    <h3 class="card-title text-white">
                         <span><i class="fa fa-edit"></i></span>
                         <span>{{ isset($item)? trans('ironside::dashboard.forms.edit_the') . $item->title . trans('ironside::dashboard.forms.create_user_text_article'): trans('ironside::dashboard.forms.create_user_text_article') }}</span>
                     </h3>

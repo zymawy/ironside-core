@@ -1,11 +1,11 @@
-@extends('ironside::layouts.dashboard')
+@extends('ironside::layouts.dashboard.app')
 
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <div class="card card-primary card-solid">
-                <div class="card-header with-border">
-                    <h3 class="card-title">
+            <div class="card card-solid">
+                <div class="card-header bg-primary with-border">
+                    <h3 class="card-title text-white">
                         <span><i class="fa fa-eye"></i></span>
                         <span>{{ trans('ironside::dashboard/indexes.banner')  }} - {{ $item->name }}</span>
                     </h3>
@@ -20,14 +20,14 @@
                             <div class="row">
                                 <section class="col col-6">
                                     <section class="form-group">
-                                        <label>{{ trans('ironside::dashboard.forms.name') }}</label>
+                                        <label>{{ trans('ironside::dashboard/forms.name') }}</label>
                                         <input type="text" class="form-control" value="{{ $item->name }}" readonly>
                                     </section>
                                 </section>
 
                                 <section class="col col-6">
                                     <section class="form-group">
-                                        <label>{{ trans('ironside::dashboard.forms.summary') }}</label>
+                                        <label>{{ trans('ironside::dashboard/forms.summary') }}</label>
                                         <input type="text" class="form-control" value="{{ $item->summary }}" readonly>
                                     </section>
                                 </section>
@@ -36,14 +36,14 @@
                             <div class="row">
                                 <div class="col col-6">
                                     <section class="form-group">
-                                        <label>{{ trans('ironside::dashboard.forms.action_name') }}</label>
+                                        <label>{{ trans('ironside::dashboard/forms.action_name') }}</label>
                                         <input type="text" class="form-control" value="{{ $item->action_name }}" readonly>
                                     </section>
                                 </div>
 
                                 <div class="col col-6">
                                     <section class="form-group">
-                                        <label>{{ trans('ironside::dashboard.forms.action_url') }}</label>
+                                        <label>{{ trans('ironside::dashboard/forms.action_url') }}</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" value="{{ $item->action_url }}" readonly>
                                             <span class="input-group-addon"><i class="fa fa-link"></i></span>
@@ -55,7 +55,7 @@
                             <div class="row">
                                 <div class="col col-6">
                                     <section class="form-group">
-                                        <label>{{ trans('ironside::dashboard.forms.action_from') }}</label>
+                                        <label>{{ trans('ironside::dashboard/forms.action_from') }}</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" value="{{ $item->active_from }}" readonly>
                                             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
@@ -65,7 +65,7 @@
 
                                 <div class="col col-6">
                                     <section class="form-group">
-                                        <label>{{ trans('ironside::dashboard.forms.action_to') }}</label>
+                                        <label>{{ trans('ironside::dashboard/forms.action_to') }}</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" value="{{ $item->active_to }}" readonly>
                                             <span class="input-group-addon"><i class="fa fa-calendar"></i></span>

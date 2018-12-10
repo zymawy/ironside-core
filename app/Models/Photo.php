@@ -91,7 +91,7 @@ class Photo extends Model
      */
     public function urlForName($name)
     {
-        return config('app.url') . '/uploads/photos/' . $name;
+        return  request()->root() . '/uploads/photos/' . $name;
     }
 
     /**

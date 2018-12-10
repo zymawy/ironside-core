@@ -1,11 +1,11 @@
-@extends('ironside::layouts.dashboard')
+@extends('ironside::layouts.dashboard.app')
 
 @section('content')
     <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-primary" id="box-main-chart">
-                <div class="box-header with-border">
-                    <h3 class="box-title">
+        <div class="col-lg-12">
+            <div class="card card-primary" id="box-main-chart">
+                <div class="card-header bg-primary with-border">
+                    <h3 class="card-title text-white">
                         <span><i class="fa fa-comment-o"></i></span>
                         <span>Contact Us</span>
                     </h3>

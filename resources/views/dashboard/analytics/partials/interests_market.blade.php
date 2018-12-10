@@ -5,7 +5,7 @@
             <span>{{ trans('ironside::dashboard/analytics.top-interests-market') }}</span>
         </h3>
 
-        @include('dashboard.partials.boxes.toolbar')
+        @include('ironside::dashboard.partials.boxes.toolbar')
     </div>
 
     <div class="card-body">

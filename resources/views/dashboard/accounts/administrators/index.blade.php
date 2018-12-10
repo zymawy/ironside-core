@@ -1,37 +1,37 @@
-@extends('ironside::layouts.dashboard')
+@extends('ironside::layouts.dashboard.app')
 
 @section('content')
     <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-primary box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title">
+        <div class="col-lg-12">
+            <div class="card card-primary box-solid">
+                <div class="card-header bg-primary with-border">
+                    <h3 class="card-title text-white">
                         <span><i class="fa fa-users"></i></span>
-                        <span>List All {{ ucfirst(str_plural($resource)) }}</span>
+                        <span>{{ trans('ironside::dashboard/general.list_all') }} {{ ucfirst(str_plural($resource)) }}</span>
                     </h3>
                 </div>
 
-                <div class="box-body">
+                <div class="card-body">
 
                     @include('ironside::dashboard.partials.info')
 
                     <div class="well well-sm well-toolbar">
                         <a class="btn btn-labeled btn-primary" href="{{ request()->url().'/invites' }}">
-                            <span class="btn-label"><i class="fa fa-fw fa-user-plus"></i></span>Invite
-                            Administrator
+                            <span class="btn-label"><i class="fa fa-fw fa-user-plus"></i></span>
+                            {{ trans('ironside::dashboard/indexes.invite_admin_test') }}
                         </a>
                     </div>
 
                     <table id="tbl-list" data-server="false" data-page-length="25" class="dt-table table nowrap table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                         <tr>
-                            <th><i class="fa fa-fw fa-user text-muted"></i> Name</th>
-                            <th><i class="fa fa-fw fa-envelope text-muted"></i> Email</th>
-                            <th><i class="fa fa-fw fa-mobile-phone text-muted"></i> Cellphone</th>
-                            <th>Gender</th>
-                            <th>Roles</th>
-                            <th><i class="fa fa-fw fa-calendar text-muted"></i> Last Login</th>
-                            <th>Action</th>
+                            <th><i class="fa fa-fw fa-user text-muted"></i> {{ trans('ironside::dashboard/forms.name') }} </th>
+                            <th><i class="fa fa-fw fa-envelope text-muted"></i> {{ trans('ironside::dashboard/forms.email') }}</th>
+                            <th><i class="fa fa-fw fa-mobile-phone text-muted"></i>  {{ trans('ironside::dashboard/forms.cellphone') }}</th>
+                            <th>{{ trans('ironside::dashboard/forms.gender') }}</th>
+                            <th>{{ trans('ironside::dashboard/forms.roles') }}</th>
+                            <th><i class="fa fa-fw fa-calendar text-muted"></i> {{ trans('ironside::dashboard/indexes.last_login') }} </th>
+                            <th>{{ trans('ironside::dashboard/indexes.action') }} </th>
                         </tr>
                         </thead>
                         <tbody>
@@ -49,7 +49,8 @@
                                             <div class="btn-group">
                                                 <form id="impersonate-login-form-{{ $item->id }}" action="{{ route('impersonate.login', $item->id) }}" method="post">
                                                     <input name="_token" type="hidden" value="{{ csrf_token() }}">
-                                                    <a data-form="impersonate-login-form-{{ $item->id }}" class="btn btn-warning btn-xs btn-confirm-modal-row" data-toggle="tooltip" title="Impersonate {{ $item->fullname }}">
+                                                    <a data-form="impersonate-login-form-{{ $item->id }}" class="btn btn-warning btn-xs btn-confirm-modal-row" data-toggle="tooltip"
+                                                       title="{{trans('ironside::dashboard.indexes.impersonate') . $item->fullname }}">
                                                         <i class="fa fa-user-secret"></i>
                                                     </a>
                                                 </form>
@@ -60,7 +61,7 @@
 
                                         <div class="btn-group">
                                             <span class="label label-{{ $item->confirmed_at ? 'success':'warning' }}">
-                                                {{ $item->confirmed_at ? 'Confirmed ' . $item->confirmed_at->format('d M Y') : 'Not confirmed yet' }}
+                                                {{ $item->confirmed_at ? trans('ironside::dashboard/indexes.impersonate') . $item->confirmed_at->format('d M Y') : trans('ironside::dashboard/indexes.confirmed_yat') }}
                                             </span>
                                         </div>
                                     </div>

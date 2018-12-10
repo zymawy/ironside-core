@@ -7,7 +7,9 @@
                 <div class="card-header  gradient-z-12">
                     <h3 class="card-title text-white">
                         <span><i class="fa fa-table"></i></span>
-                        <span>List of Clients</span>
+                        <span>
+                            {{ trans('ironside::dashboard/indexes.list_all_clients') }}
+                        </span>
                     </h3>
                 </div>
 
@@ -22,26 +24,28 @@
                                 <div class="col-sm-6 col-md-3">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-user-circle-o"></i></span>
-                                        <input id="filter_name" type="text" class="form-control" placeholder="Client Name" name="name">
+                                        <input id="filter_name" type="text" class="form-control"
+                                               placeholder="{{ trans('ironside::dashboard/indexes.client_name') }}" name="name">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6 col-md-3">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-mobile-phone"></i></span>
-                                        <input id="filter_cellphone" type="text" class="form-control" placeholder="Cellphone" name="cellphone">
+                                        <input id="filter_cellphone" type="text" class="form-control"
+                                               placeholder="{{ trans('ironside::dashboard/forms.cellphone') }}" name="cellphone">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6 col-md-3">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
-                                        <input id="filter_email" type="text" class="form-control" placeholder="Email" name="email">
+                                        <input id="filter_email" type="text" class="form-control" placeholder="{{ trans('ironside::dashboard/forms.email') }}" name="email">
                                     </div>
                                 </div>
 
                                 <div class="col-md-2 col-sm-2">
-                                    <a href="{{ request()->url() }}" class="btn btn-default btn-ajax-submit" data-toggle="tooltip" title="Refresh Filters">
+                                    <a href="{{ request()->url() }}" class="btn btn-default btn-ajax-submit" data-toggle="tooltip" title="{{ trans('ironside::dashboard/forms.refresh_filters') }}">
                                         <i class="fa fa-refresh"></i>
                                     </a>
                                 </div>

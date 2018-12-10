@@ -1,11 +1,11 @@
-@extends('ironside::layouts.dashboard')
+@extends('ironside::layouts.dashboard.app')
 
 @section('content')
     <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-primary box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title">
+        <div class="col-lg-12">
+            <div class="card card-primary">
+                <div class="card-header bg-primary with-border">
+                    <h3 class="card-title text-white">
                         <span><i class="fa fa-table"></i></span>
                         <span>List All Photo Albums</span>
                     </h3>
@@ -43,7 +43,7 @@
                                 <td>
                                     <div class="btn-toolbar">
                                         <div class="btn-group">
-                                            <a href="/admin/photos/albums/{{ $item->id }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Add Photos to {{ $item->name }}">
+                                            <a href="/dashboard/photos/albums/{{ $item->id }}" class="btn btn-info btn-xs" data-toggle="tooltip" title="Add Photos to {{ $item->name }}">
                                                 <i class="fa fa-image"></i>
                                             </a>
                                         </div>

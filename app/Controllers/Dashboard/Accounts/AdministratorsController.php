@@ -23,7 +23,7 @@ class AdministratorsController extends AdminController
     {
         save_resource_url();
 
-        $items = User::with('roles')->whereRole('administrator')->get();
+        $items = User::with('roles')->whereRoleIs('administrator','superadministrator')->get();
 
         return $this->view('ironside::accounts.administrators.index', compact('items'));
     }

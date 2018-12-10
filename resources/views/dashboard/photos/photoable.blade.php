@@ -1,14 +1,14 @@
 <div class="row">
-    <div class="col-sm-12">
-        <div class="box box-primary box-solid">
-            <div class="box-header with-border">
-                <h3 class="box-title">
+    <div class="col-lg-12">
+        <div class="card card-primary">
+            <div class="card-header bg-primary with-border">
+                <h3 class="card-title text-white">
                     <span><i class="fa fa-image"></i></span>
                     <span>{!! $photoable->name !!} Photos</span>
                 </h3>
             </div>
 
-            <div class="box-body superbox">
+            <div class="card-body superbox">
                 @forelse($photos as $photo)
                     <div class="superbox-list">
                         <table class="dt-table">
@@ -59,16 +59,16 @@
 </div>
 
 <div class="row">
-    <div class="col-xs-12">
-        <div class="box box-primary box-solid">
-            <div class="box-header with-border">
-                <h3 class="box-title">
+    <div class="col-lg-12">
+        <div class="card card-primary">
+            <div class="card-header bg-primary with-border">
+                <h3 class="card-title text-white">
                     <span><i class="fa fa-cloud"></i></span>
                     <span>Upload a Photo</span>
                 </h3>
             </div>
 
-            <div class="box-body">
+            <div class="card-body">
 
                 <div class="callout callout-info callout-help">
                     <h4 class="title">How it works?</h4>
@@ -80,7 +80,7 @@
                     </p>
                 </div>
 
-                <form id="formPhotoDropzone" class="dropzone" method="POST" action="/admin/photos/upload" enctype="multipart/form-data">
+                <form id="formPhotoDropzone" class="dropzone" method="POST" action="/dashboard/photos/upload" enctype="multipart/form-data">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <input type="hidden" name="photoable_id" value="{{ $photoable->id }}">
                     <input type="hidden" name="photoable_type" value="{{ get_class($photoable) }}">
@@ -175,7 +175,7 @@
     </div>
 </div>
 
-@section('scripts')
+@section('js')
     @parent
 
     <script type="text/javascript" charset="utf-8">
@@ -217,7 +217,7 @@
 
                 $.ajax({
                     type: 'POST',
-                    url: "/admin/photos/" + id + '/cover',
+                    url: "/dashboard/photos/" + id + '/cover',
                     data: {
                         photoable_id: "{{ $photoable->id }}",
                         photoable_type: "{{ str_replace('\\','\\\\',get_class($photoable)) }}",
@@ -267,7 +267,7 @@
 
                 $.ajax({
                     type: 'POST',
-                    url: "/admin/photos/" + $('#modal-photo-id').val() + '/edit/name',
+                    url: "/dashboard/photos/" + $('#modal-photo-id').val() + '/edit/name',
                     data: {
                         'name': $('#modal-photo-name').val()
                     },

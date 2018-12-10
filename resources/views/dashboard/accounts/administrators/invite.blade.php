@@ -1,13 +1,15 @@
-@extends('ironside::layouts.dashboard')
+@extends('ironside::layouts.dashboard.app')
 
 @section('content')
     <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-primary box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title">
+        <div class="col-lg-12">
+            <div class="card card-primary box-solid">
+                <div class="card-header  bg-primary with-border">
+                    <h3 class="card-title text-white">
                         <span class="widget-icon"><i class="fa fa-user-plus"></i></span>
-                        <span>Invite an Administrator</span>
+                        <span>
+                            {{ trans('ironside::dashboard/indexes.invite_admin_test_inside') }}
+                        </span>
                     </h3>
                 </div>
 
@@ -18,14 +20,19 @@
 
                         <fieldset>
                             <section class="form-group {{ form_error_class('email', $errors) }}">
-                                <label for="id-email">Email address of the user you would like to invite</label>
-                                <input type="text" class="form-control" id="id-email" name="email" placeholder="Please enter the email address" value="{{ old('email') }}">
+                                <label for="id-email">
+                                    {{ trans('ironside::dashboard/indexes.email_to_send_text') }}
+                                </label>
+                                <input type="text" class="form-control" id="id-email" name="email"
+                                       placeholder="{{ trans('ironside::dashboard/forms.email_placeholder') }}" value="{{ old('email') }}">
                                 {!! form_error_message('email', $errors) !!}
                             </section>
                         </fieldset>
 
                         <div class="form-footer">
-                            <button type="submit" class="btn btn-primary btn-submit">Send Invite</button>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                {{ trans('ironside::dashboard/indexes.send_invite') }}
+                            </button>
                         </div>
                     </form>
                 </div>
@@ -34,22 +41,22 @@
     </div>
 
     <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-primary box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title">
+        <div class="col-lg-12">
+            <div class="card card-primary box-solid">
+                <div class="card-header bg-primary with-border">
+                    <h3 class="card-title text-white">
                         <span class="widget-icon"><i class="fa fa-users"></i></span>
                         <span>All Invited Adminstrators</span>
                     </h3>
                 </div>
 
-                <div class="box-body">
+                <div class="card-body">
                     <table id="tbl-list" data-server="false" class="dt-table table nowrap table-striped table-bordered" cellspacing="0" width="100%">
                         <thead>
                         <tr>
-                            <th><i class="fa fa-fw fa-envelope text-muted"></i> Email</th>
-                            <th><i class="fa fa-fw fa-user text-muted"></i> Invited By</th>
-                            <th><i class="fa fa-fw fa-calendar"></i> Created</th>
+                            <th><i class="fa fa-fw fa-envelope text-muted"></i> {{ trans('ironside::dashboard/forms.email') }}</th>
+                            <th><i class="fa fa-fw fa-user text-muted"></i> {{ trans('ironside::dashboard/indexes.invited_by') }}</th>
+                            <th><i class="fa fa-fw fa-calendar"></i> {{ trans('ironside::dashboard/indexes.created') }}</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -60,7 +67,7 @@
                                 <td>
                                     {{ $user->created_at }}
                                     <span class="label label-{{ $user->claimed_at ? 'success':'warning' }}">
-                                        {{ $user->claimed_at ? 'Claimed on ' . $user->claimed_at->format('d M Y') : 'Not claimed yet' }}
+                                        {{ $user->claimed_at ? trans('ironside::dashboard/indexes.claimed_on') . $user->claimed_at->format('d M Y') : trans('ironside::dashboard/indexes.confirmed_yat') }}
                                     </span>
                                 </td>
                             </tr>

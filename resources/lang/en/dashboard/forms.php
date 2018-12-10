@@ -22,13 +22,18 @@ return [
   'cellphone_placeholder' => 'Please insert the Cellphone',
   'telephone' => 'Telephone',
   'telephone_placeholder' => 'Please insert the Telephone',
-  'email_placeholder' => ' Email Address',
+  'email_placeholder' => 'Please insert Email Address',
+  'email' => ' Email',
   'email_readonly' => ' Email Address (readonly)',
   'name' => 'Name',
   'name_placeholder' => 'Please insert the Name',
   'born_at' => 'Date of Birth',
   'born_at_placeholder' => 'Select your birth date',
   'roles' => 'Roles',
+  'gender' => 'Gender',
+  'client_name' => 'Client Name',
+  'refresh_filters' => 'Refresh Filters',
+
 
     //
   'hide_name' => 'Hide Name',

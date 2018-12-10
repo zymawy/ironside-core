@@ -8,10 +8,10 @@
             {{--Change The Icon Algin To Look Cool--}}
                 @if(App::isLocale('ar'))
                     <i class="fa fa-fw fa-{{ $nav->icon }}"></i>
-                    <i class="fa fa-angle-left pull-right"></i>
+                    <i class="hidden-lg-down fa fa-angle-left pull-right"></i>
                 @else
                     <i class="fa fa-fw fa-{{ $nav->icon }}"></i>
-                    <i class="fa fa-angle-right"></i>
+                    <i class="hidden-lg-down fa fa-angle-right"></i>
                 @endif
             <span>{!! $nav->title !!}</span>
            {{-- <pre>{!! dump($nav->title) !!}</pre> --}}

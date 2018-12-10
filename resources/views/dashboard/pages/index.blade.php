@@ -1,17 +1,17 @@
-@extends('ironside::layouts.dashboard')
+@extends('ironside::layouts.dashboard.app')
 
 @section('content')
     <div class="row">
-        <div class="col-xs-12">
-            <div class="box box-primary box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title">
+        <div class="col-lg-12">
+            <div class="card card-primary box-solid">
+                <div class="card-header bg-primary with-border">
+                    <h3 class="box-title text-white">
                         <span><i class="fa fa-table"></i></span>
                         <span>List All Pages</span>
                     </h3>
                 </div>
 
-                <div class="box-body">
+                <div class="card-body">
 
                     @include('ironside::dashboard.partials.info')
 
@@ -62,7 +62,7 @@
                                 <td>
                                     <div class="btn-toolbar">
                                         <div class="btn-group">
-                                            <a href="/admin/pages/{{ $item->id }}/sections" class="btn btn-info btn-xs" data-toggle="tooltip" title="Manage Page Content">
+                                            <a href="/dashboard/pages/{{ $item->id }}/sections" class="btn btn-info btn-xs" data-toggle="tooltip" title="Manage Page Content">
                                                 <i class="fa fa-wpforms"></i>
                                             </a>
                                         </div>
