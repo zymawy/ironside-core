@@ -3,8 +3,8 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <div class="card card-primary box-solid">
-                <div class="card-header bg-ironside">
+            <div class="card box-solid">
+                <div class="card-header bg-primary">
                     <h3 class="card-title text-white">
                         <span><i class="fa fa-edit"></i></span>
                         <span>{{ isset($item)? 'Edit ' . $item->fullname . '': 'Create a new User' }}</span>
@@ -127,7 +127,7 @@
     </div>
 @endsection
 
-@section('scripts')
+@section('js')
     @parent
     <script type="text/javascript" charset="utf-8">
         $(function () {

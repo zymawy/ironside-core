@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -47212,10 +47212,42 @@ if (token) {
 
 /***/ }),
 
-/***/ 1:
+/***/ "./resources/sass/dashboard.scss":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/ltr.scss":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/override.scss":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/rtl.scss":
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("./resources/js/app.js");
+__webpack_require__("./resources/js/app.js");
+__webpack_require__("./resources/sass/dashboard.scss");
+__webpack_require__("./resources/sass/rtl.scss");
+__webpack_require__("./resources/sass/ltr.scss");
+module.exports = __webpack_require__("./resources/sass/override.scss");
 
 
 /***/ })

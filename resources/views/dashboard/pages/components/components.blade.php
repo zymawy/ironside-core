@@ -1,8 +1,8 @@
 <div class="row">
     <div class="col-lg-12">
-        <div class="box box-primary box-solid">
-            <div class="box-header with-border">
-                <h3 class="box-title">
+        <div class="card card-primary box-solid">
+            <div class="card-header bg-primary with-border">
+                <h3 class="card-title">
                     <span><i class="fa fa-table"></i></span>
                     <span>{!! $page->name !!}</span>
                 </h3>
@@ -14,7 +14,7 @@
                 </div>
             </div>
 
-            <div class="box-body">
+            <div class="card-body">
                 @if(($page->sections->count() <= 1))
                     <div class="alert alert-info">
                         <h4 class="title">How to create Page Sections</h4>
@@ -105,7 +105,7 @@
     </div>
 </div>
 
-@section('scripts')
+@section('js')
     @parent
     @include('ironside::dashboard.partials.nestable')
     <script type="text/javascript" charset="utf-8">

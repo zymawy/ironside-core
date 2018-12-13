@@ -28,10 +28,10 @@ Route::group(['middleware' => 'localizer'], function () {
     });
 
 // changelogs
-    Route::resource('changelog', 'Changelogs\Controllers\Website\ChangelogsController');
+//    Route::resource('changelog', 'Changelogs\Controllers\Website\ChangelogsController');
 
 // testimonials
-    Route::resource('testimonials', 'Testimonials\Controllers\Website\TestimonialsController');
+//    Route::resource('testimonials', 'Testimonials\Controllers\Website\TestimonialsController');
 
 // corporate
     Route::group(['prefix' => 'corporate', 'namespace' => 'Corporate\Controllers\Website'],
@@ -67,7 +67,7 @@ Route::group(['middleware' => 'localizer'], function () {
         });
 
         // changelogs
-        Route::resource('settings/changelogs', 'Changelogs\Controllers\Admin\ChangelogsController');
+//        Route::resource('settings/changelogs', 'Changelogs\Controllers\Admin\ChangelogsController');
 
         // testimonials
         Route::group(['prefix' => 'general', 'namespace' => 'Testimonials\Controllers\Admin'],
@@ -94,16 +94,7 @@ Route::group(['middleware' => 'localizer'], function () {
                 Route::resource('annual-reports', 'AnnualReportsController');
             });
 
-        // subscription plans
-        Route::group(['prefix' => 'settings', 'namespace' => 'Subscriptions\Controllers\Admin'],
-            function () {
-                Route::resource('subscription-plans/features', 'FeaturesController');
-                Route::resource('subscription-plans', 'SubscriptionPlansController');
-                Route::get('subscription-plans/{subscription_plan}/features/order',
-                    'SubscriptionPlansController@showFeaturesOrder');
-                Route::post('subscription-plans/{subscription_plan}/features/order',
-                    'SubscriptionPlansController@updateFeaturesOrder');
-            });
+
     });
 
 });

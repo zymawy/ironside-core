@@ -3,15 +3,15 @@
 @section('content')
     <div class="row">
         <div class="col-xs-12">
-            <div class="box box-primary box-solid">
-                <div class="box-header with-border">
-                    <h3 class="box-title">
+            <div class="card card-primary box-solid">
+                <div class="card-header bg-primary with-border">
+                    <h3 class="card-title">
                         <span><i class="fa fa-edit"></i></span>
                         <span>{{ isset($item)? 'Edit the ' . $item->heading . ' entry': 'Create a new Page Content Section' }}</span>
                     </h3>
                 </div>
 
-                <div class="box-body no-padding">
+                <div class="card-body no-padding">
                     <div class="callout callout-info callout-help">
                         <h4 class="title">How it works?</h4>
                         <p>
@@ -24,7 +24,7 @@
                         </p>
                     </div>
 
-                    <form method="POST" action="/admin/pages/{{ $page->id . '/sections/content' . (isset($item)? "/{$item->id}" : '')}}" accept-charset="UTF-8" enctype="multipart/form-data">
+                    <form method="POST" action="/dashboard/pages/{{ $page->id . '/sections/content' . (isset($item)? "/{$item->id}" : '')}}" accept-charset="UTF-8" enctype="multipart/form-data">
                         <input name="_token" type="hidden" value="{{ csrf_token() }}">
                         <input name="page_id" type="hidden" value="{{ $page->id }}">
                         <input name="_method" type="hidden" value="{{isset($item)? 'PUT':'POST'}}">
@@ -86,7 +86,7 @@
                                 </button>
                             @endif
 
-                            <a href="/admin/pages/{{ $page->id }}/edit" class="btn btn-labeled btn-default">
+                            <a href="/dashboard/pages/{{ $page->id }}/edit" class="btn btn-labeled btn-default">
                                 <span class="btn-label"><i class="fa fa-fw fa-chevron-left"></i></span>Back
                             </a>
                         </div>

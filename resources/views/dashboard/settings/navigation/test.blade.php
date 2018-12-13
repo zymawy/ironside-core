@@ -8,7 +8,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
-            <div class="card-header bg-ironside">
+            <div class="card-header bg-primary">
                 <h3 class="card-title text-white">
                     <span><i class="fa fa-table"></i></span>
                     <span>List All {{ ucfirst(str_plural($resource)) }}</span>

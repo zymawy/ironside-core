@@ -1,4 +1,4 @@
-@extends('ironside::layouts.dashboard')
+@extends('ironside::layouts.dashboard.app')
 
 @section('content')
     <div class="row">

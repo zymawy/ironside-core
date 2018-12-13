@@ -3,8 +3,8 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <div class="card  border-primary">
-                <div class="card-header with-border">
+            <div class="card border-primary">
+                <div class="card-header bg-primary with-border">
                     <h3 class="card-title">
                         <span><i class="fa fa-table"></i></span>
                         <span>

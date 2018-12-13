@@ -1,5 +1,5 @@
 <div class="card border-primary" id="card-devices" style="min-height: 400px;">
-    <div class="card-header shadow rounded gradient-z-12">
+    <div class="card-header bg-primary shadow rounded">
         <h3 class="card-title">
             <span><i class="fa fa-mobile"></i></span>
             <span>{{ trans('ironside::dashboard/analytics.top-devices') }}</span>

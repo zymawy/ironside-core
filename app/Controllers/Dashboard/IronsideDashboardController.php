@@ -207,7 +207,7 @@ class IronsideDashboardController extends IronsideController
 
         // development testing
         if (config('app.env') == 'local' && !$nav) {
-            //$nav = NavigationDashboard::find(1);
+//            $nav = NavigationDashboard::find(1);
             dump($url);
             dd('Whoops. Navigation not found - please see if url is in database (navigation_dashboard)');
             //return false;

@@ -5,10 +5,10 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/">
                 <!-- Logo icon -->
-                <b><img src="/images/logo-for.png"
-                        width="120"
-                        height="13"
-                        alt="Logo" class="dark-logo"/></b>
+                {{--<b><img src="/images/logo-for.png"--}}
+                        {{--width="120"--}}
+                        {{--height="13"--}}
+                        {{--alt="Logo" class="dark-logo"/></b>--}}
                 <!--End Logo icon -->
                 <!-- Logo text -->
                 {{--<span><img src="/images/logo-text.png" alt="homepage" class="dark-logo"/></span>--}}

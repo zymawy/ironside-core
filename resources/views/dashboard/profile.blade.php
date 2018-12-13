@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="card">
-                <div class="card-header bg-ironside">
+                <div class="card-header bg-primary">
                     <h3 class="card-title text-white">
                         <img src="{{ profile_image() }}" class="img-circle" alt="User Image" style="width: 25px;">
                         <span>Update Profile</span>
@@ -160,7 +160,7 @@
     </div>
 @endsection
 
-@section('scripts')
+@section('js')
     @parent
     <script type="text/javascript" charset="utf-8">
         $(function ()

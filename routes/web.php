@@ -93,7 +93,7 @@ Route::group(['middleware' => 'localizer'], function () {
     Route::group(['prefix' => 'ajax', 'namespace' => 'Ajax', 'middleware' => 'web'], function () {
         // logs
         Route::group(['prefix' => 'log'], function () {
-            Route::post('social-media', 'LogsController@socialMedia');
+//            Route::post('social-media', 'LogsController@socialMedia');
         });
     });
 

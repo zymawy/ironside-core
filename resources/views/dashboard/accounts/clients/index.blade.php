@@ -62,7 +62,7 @@
     </div>
 @endsection
 
-@section('scripts')
+@section('js')
     @parent
     <script type="text/javascript" charset="utf-8">
         $(function () {

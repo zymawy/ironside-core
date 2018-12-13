@@ -11,7 +11,7 @@
                     </h3>
                 </div>
 
-                <div class="box-body no-padding">
+                <div class="card-body no-padding">
 
                     @include('ironside::dashboard.partials.info')
 

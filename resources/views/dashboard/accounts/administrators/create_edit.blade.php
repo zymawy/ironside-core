@@ -3,8 +3,8 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <div class="card card-primary">
-                <div class="card-header with-border">
+            <div class="card">
+                <div class="card-header bg-primary with-border">
                     <h3 class="card-title">
                         <span><i class="fa fa-edit"></i></span>
                         <span>{{ isset($item)? trans('ironside::dashboard.forms.edit_the') . $item->fullname . '': trans('ironside::dashboard.forms.create_user_text_title') }}</span>
@@ -115,7 +115,7 @@
     </div>
 @endsection
 
-@section('scripts')
+@section('js')
     @parent
     <script type="text/javascript" charset="utf-8">
         $(function ()

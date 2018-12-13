@@ -1,5 +1,5 @@
 <div class="card  border-primary" id="card-browsers" style="min-height: 400px;">
-    <div class="card-header shadow rounded gradient-z-12">
+    <div class="card-header bg-primary shadow rounded">
         <h3 class="card-title text-white">
             <span><i class="fa fa-chrome"></i></span>
             <span>{{ trans('ironside::dashboard/analytics.top-browsers') }}</span>

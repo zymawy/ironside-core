@@ -4,7 +4,7 @@
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="box box-primary box-solid">
-				<div class="box-header with-border">
+				<div class="box-header bg-primary with-border">
 					<h3 class="box-title">
 						<span><i class="fa fa-table"></i></span>
 						<span>List All Tags</span>

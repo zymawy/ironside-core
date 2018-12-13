@@ -3,8 +3,8 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <div class="card card-primary card-solid">
-                <div class="card-header with-border">
+            <div class="card card-solid">
+                <div class="card-header bg-primary with-border">
                     <h3 class="card-title">
                         <span><i class="fa fa-edit"></i></span>
                         <span>{{ isset($item)? trans('ironside::dashboard.forms.edit_the')  . $item->title . trans('ironside::dashboard.forms.entry'): trans('ironside::dashboard.forms.create_banner_text_title') }}</span>

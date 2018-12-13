@@ -1,5 +1,5 @@
 <div class="card card-primary" id="card-interests-other" style="min-height: 400px;">
-    <div class="card-header shadow rounded gradient-z-12">
+    <div class="card-header shadow rounded bg-primary">
         <h3 class="card-title text-white">
             <span><i class="fa fa-file-text"></i></span>
             <span>{{ trans('ironside::dashboard/analytics.top-interests-other') }}</span>

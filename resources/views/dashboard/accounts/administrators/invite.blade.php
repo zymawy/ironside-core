@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <div class="card card-primary box-solid">
+            <div class="card box-solid">
                 <div class="card-header  bg-primary with-border">
                     <h3 class="card-title text-white">
                         <span class="widget-icon"><i class="fa fa-user-plus"></i></span>

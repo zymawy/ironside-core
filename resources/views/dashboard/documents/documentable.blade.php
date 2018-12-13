@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="card card-primary box-solid">
-            <div class="card-header with-border">
+            <div class="card-header bg-primary with-border">
                 <h3 class="card-title">
                     <span><i class="fa fa-image"></i></span>
                     <span>{!! $documentable->name !!} {{ trans('ironside::dashboard/indexes.document') }}</span>
@@ -51,7 +51,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="card card-primary box-solid">
-            <div class="card-header with-border">
+            <div class="card-header bg-primary with-border">
                 <h3 class="card-title">
                     <span><i class="fa fa-cloud"></i></span>
                     <span>

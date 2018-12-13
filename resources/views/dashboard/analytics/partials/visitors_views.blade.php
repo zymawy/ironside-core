@@ -1,5 +1,5 @@
 <div class="card" id="box-total-views">
-    <div class="card-header shadow rounded gradient-z-12">
+    <div class="card-header shadow rounded bg-primary">
         <h3 class="card-title">
             <span><i class="fa fa-users"></i></span>
             <span>{{ trans('ironside::dashboard/analytics.total-page-views') }}</span>

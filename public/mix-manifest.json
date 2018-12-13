@@ -1,12 +1,14 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/dashboard/theme.css": "/css/dashboard/theme.css",
-    "/css/dashboard/rtl.css": "/css/dashboard/rtl.css",
-    "/css/dashboard/ltr.css": "/css/dashboard/ltr.css",
-    "/css/dashboard/override.css": "/css/dashboard/override.css",
-    "/css/dashboard/dashboard.css": "/css/dashboard/dashboard.css",
-    "/js/dashboard/dashboard.js": "/js/dashboard/dashboard.js",
-    "/js/dashboard/theme.js": "/js/dashboard/theme.js",
-    "/css/dashboard/datatable.css": "/css/dashboard/datatable.css",
-    "/js/dashboard/datatable.js": "/js/dashboard/datatable.js"
+    "/dashboard/js/app.js": "/dashboard/js/app.js?id=7d8e7e0dd741f6038317",
+    "/css/dashboard/theme.css": "/css/dashboard/theme.css?id=0d6e5f004a6ec43b2d59",
+    "/css/dashboard/rtl.css": "/css/dashboard/rtl.css?id=115b4787ce372cb031dd",
+    "/css/dashboard/ltr.css": "/css/dashboard/ltr.css?id=c2e59d3f9a5a78bac9ee",
+    "/css/dashboard/override.css": "/css/dashboard/override.css?id=0871e8a3766e27f3a880",
+    "/js/app.js": "/js/app.js?id=e2e623fa992c4333bd00",
+    "/css/dashboard/dashboard.css": "/css/dashboard/dashboard.css?id=d41d8cd98f00b204e980",
+    "/js/dashboard/dashboard.js": "/js/dashboard/dashboard.js?id=deef7cb02c458ec007bc",
+    "/js/dashboard/theme.js": "/js/dashboard/theme.js?id=59bc5bf3ee5e6713c30c",
+    "/css/dashboard/datatable.css": "/css/dashboard/datatable.css?id=1b3b24965ff73ab23c10",
+    "/js/dashboard/datatable.js": "/js/dashboard/datatable.js?id=73cdef9c81d01e79fe0c",
+    "/mix-manifest.json": "/mix-manifest.json?id=6e82bedd61325bf2be7c"
 }

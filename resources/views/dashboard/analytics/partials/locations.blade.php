@@ -1,5 +1,5 @@
 <div class="card" id="card-geo-visitors" style="min-height: 400px;">
-    <div class="card-header shadow rounded gradient-z-12">
+    <div class="card-header shadow rounded bg-primary">
         <h3 class="card-title text-white">
             <span><i class="fa fa-globe"></i></span>
             <span class="text-white">{{ trans('ironside::dashboard/analytics.visitors') }}</span>

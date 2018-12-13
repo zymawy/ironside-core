@@ -1,5 +1,5 @@
-<div class="card bg-primary" id="box-age" style="min-height: 400px;">
-    <div class="card-header shadow rounded gradient-z-12">
+<div class="card" id="box-age" style="min-height: 400px;">
+    <div class="card-header bg-primary shadow rounded gradient-z-12">
         <h3 class="card-title text-white">
             <span><i class="fa fa-user-secret"></i></span>
             <span>{{ trans('ironside::dashboard/analytics.age') }}</span>

@@ -1,5 +1,5 @@
-<div class="card card-primary" id="box-visited-pages" style="min-height: 400px;">
-    <div class="card-header with-border">
+<div class="card" id="box-visited-pages" style="min-height: 400px;">
+    <div class="card-header with-border bg-primary">
         <h3 class="box-title">
             <span><i class="fa fa-codepen"></i></span>
             <span>{{ trans('ironside::dashboard/analytics.most-visited-pages') }}</span>

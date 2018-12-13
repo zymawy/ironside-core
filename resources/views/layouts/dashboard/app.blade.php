@@ -39,11 +39,11 @@
 <body class="fix-header fix-sidebar" dir="{{App::isLocale('ar')? 'rtl':'ltr'}}">
 <h1 class="hidden">{{ isset($title) ? $title : config('app.name') }}</h1>
 <!-- Preloader - style you can find in spinners.css -->
-    <div class="preloader">
-        <svg class="circular" viewBox="25 25 50 50">
-            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-        </svg>
-    </div>
+    {{--<div class="preloader">--}}
+        {{--<svg class="circular" viewBox="25 25 50 50">--}}
+            {{--<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>--}}
+        {{--</svg>--}}
+    {{--</div>--}}
     @include('ironside::layouts.dashboard.includes.header')
 
     @include('ironside::dashboard.partials.navigation')
@@ -69,10 +69,10 @@
     @include('notify::notify')
     @include('ironside::dashboard.partials.modals')
     @include('ironside::layouts.dashboard.includes.footer')
-    <script src="/js/app.js"></script>
-    <script src="/js/dashboard/datatable.js"></script>
-    <script src="/js/dashboard/theme.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/js/dashboard/dashboard.js?v=1"></script>
+    <script src="{{ asset('js/dashboard/app.js') }}"></script>
+    <script src="{{ asset('js/dashboard/datatable.js') }}"></script>
+    <script src="{{ asset('js/dashboard/theme.js') }}"></script>
+    <script type="text/javascript" charset="utf-8" src="{{ asset('js/dashboard/dashboard.js') }}"></script>
     <script type="text/javascript" charset="utf-8">
         $(document).ready(function () {
             initDashboard();

@@ -21,6 +21,8 @@ let DashboradSass =  Sass + 'dashboard/';
     mix.sass( Sass + 'rtl.scss','public/css/dashboard/rtl.css');
     mix.sass( Sass + 'ltr.scss','public/css/dashboard/ltr.css');
 
+    mix.js(Js + 'app.js', 'public/dashboard/js');
+
     mix.styles([
         // // ironside
         path + 'sass/dashboard/css/vendor/select2.css',
@@ -107,11 +109,10 @@ let DashboradSass =  Sass + 'dashboard/';
         'node_modules/datatables.net-select-bs4/js/select.bootstrap4.js',
     ], 'public/js/dashboard/datatable.js');
 
-
 // mix.js(Js + 'app.js', 'public/js/dashboard');
 //    .sass('resources/assets/sass/app.scss', 'public/css')
 //    .sass('resources/assets/sass/override.scss', 'public/css');
 
-if (mix.inProduction()) {
+// if (mix.inProduction()) {
     mix.version();
-}
+// }
